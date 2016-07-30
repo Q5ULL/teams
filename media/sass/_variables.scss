@@ -1,0 +1,40 @@
+$primary-color: #444466;
+$header-color: beige;
+$body-color: white;
+$asics-black: #1f2525;
+$asics-red: #d20e32;
+$asics-orange: #fc442a;
+$asics-blue: #046d9a;
+$asics-pink: #e87390;
+$asics-beige: #e0cca7;
+$asics-yellow: #FFE237;
+$asics-green: #048686;
+
+$column-1-3: 1 / 3 * 100%;
+$column-1-1: 100%;
+$column-9-10: 9/10 * 100%;
+
+$text-narrow: 95%;
+$text-wide: 640px;
+
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
+$desktopXL-breakpoint: 1400px;
+
+@mixin bp-tablet {
+  	@media only screen and ( min-width: $tablet-breakpoint){
+		@content;
+	}
+}
+
+@mixin bp-desktop {
+  	@media only screen and ( min-width: $desktop-breakpoint){
+		@content;
+	}
+}
+
+@mixin bp-xlDesktop {
+  	@media only screen and ( min-width: $desktopXL-breakpoint){
+		@content;
+	}
+}

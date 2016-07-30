@@ -1,0 +1,638 @@
+/* _________________________________________
+CONTENT:	Asics Animation Webpage
+AUTHOR:		Melissa I. Sattler
+____________________________________________
+
+TABLE OF CONTENTS:
+
+1. VARIABLES
+2. TYPOGRAPHY
+3. CONTENT
+
+========================================================== */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizinshoe-side2g: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*keep content on float element from going over eachother*/
+/* 1. VARIABLES  ========================================= */
+.shoe_container.redmode {
+  background-image: url(../img/red_dot_bkg.jpg);
+}
+
+.shoe_container.redmode .background_triangle {
+  background-color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .shoe_container.redmode .background_triangle {
+    right: -20%;
+  }
+}
+
+.shoe_container.redmode header {
+  background-color: #d20e32;
+}
+
+.shoe_container.redmode header ul li {
+  color: white;
+}
+
+.shoe_container.redmode header ul li .cart {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.shoe_container.redmode header #logo_black {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.shoe_container.redmode .shoe-container2 .round-button .round-button-circle {
+  border: 10px solid #d20e32;
+  background: #d20e32;
+  box-shadow: 0 0 3px #555;
+}
+
+.shoe_container.redmode .shoe-container2 .round-button .round-button-circle:hover {
+  background: white;
+  opacity: 0.9;
+  -webkit-transform: scale(1.2);
+  background-color: white;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shoe_container.redmode .shoe_description {
+  text-shadow: 0 0 3px #d20e32;
+  color: white;
+}
+
+.shoe_container.pinkmode {
+  background-image: url(../img/pink_dot_bkg.jpg);
+}
+
+.shoe_container.pinkmode .background_triangle {
+  background-color: #048686;
+}
+
+@media only screen and (min-width: 768px) {
+  .shoe_container.pinkmode .background_triangle {
+    right: -20%;
+  }
+}
+
+.shoe_container.pinkmode header {
+  background-color: #e87390;
+}
+
+.shoe_container.pinkmode header ul li {
+  color: white;
+}
+
+.shoe_container.pinkmode header ul li .cart {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.shoe_container.pinkmode header #logo_black {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.shoe_container.pinkmode .shoe-container2 .round-button .round-button-circle {
+  border: 10px solid white;
+  background: white;
+  box-shadow: 0 0 3px #555;
+}
+
+.shoe_container.pinkmode .shoe-container2 .round-button .round-button-circle:hover {
+  border: 10px solid #048686;
+  background: #e87390;
+  background-color: #e87390;
+}
+
+.shoe_container.pinkmode .shoe_description {
+  text-shadow: 0 0 3px #e87390;
+  color: white;
+}
+
+.shoe_container.bluemode {
+  background-image: url(../img/blue_dot_bkg.jpg);
+}
+
+.shoe_container.bluemode .background_triangle {
+  background-color: #fc442a;
+}
+
+@media only screen and (min-width: 768px) {
+  .shoe_container.bluemode .background_triangle {
+    right: -20%;
+  }
+}
+
+.shoe_container.bluemode header {
+  background-color: #046d9a;
+}
+
+.shoe_container.bluemode header ul li {
+  color: white;
+}
+
+.shoe_container.bluemode header ul li .cart {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.shoe_container.bluemode header #logo_black {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.shoe_container.bluemode .shoe-container2 .round-button .round-button-circle {
+  border: 10px solid #fc442a;
+  background: #fc442a;
+  box-shadow: 0 0 3px #555;
+}
+
+.shoe_container.bluemode .shoe-container2 .round-button .round-button-circle:hover {
+  border: 10px solid #e0cca7;
+  background: #046d9a;
+  background-color: #046d9a;
+}
+
+.shoe_container.bluemode .shoe_description {
+  text-shadow: 0 0 3px #046d9a;
+  color: white;
+}
+
+/* 2. TYPOGRAPHY  ======================================== */
+body {
+  font-family: "Campton";
+}
+
+@font-face {
+  font-family: Campton;
+  font-weight: normal;
+  src: url(../font/Campton-LightDEMO.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Campton;
+  font-weight: bold;
+  src: url(../font/Campton-BoldDEMO.otf) format("opentype");
+}
+
+/*  CONTENT  =============================================== */
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #1f2525;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  z-index: 100;
+  transition-duration: 0.5s;
+}
+
+.menu-small {
+  width: 10%;
+  transition-duration: 0.5s;
+}
+
+.big-image, .second-big-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-attachment: fixed;
+  transition-duration: 0.5s;
+}
+
+#scene {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#scene .layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#scene .layer .background {
+  transform: scale(1.2);
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #000000;
+  transition-duration: 0.5s;
+}
+
+#scene .layer .person1 {
+  position: absolute;
+  top: 10%;
+  left: -9%;
+  height: auto;
+  width: 100%;
+  transition-duration: 0.5s;
+  animation-name: hvr-ripple-out;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@media only screen and (min-width: 768px) {
+  #scene .layer .person1 {
+    top: 12%;
+    left: 14%;
+    width: 100%;
+  }
+}
+
+#scene .layer .person2 {
+  position: absolute;
+  top: 4%;
+  left: 41%;
+  height: auto;
+  width: 100%;
+  transition-duration: 0.5s;
+  animation-name: hvr-ripple-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+@media only screen and (min-width: 768px) {
+  #scene .layer .person2 {
+    top: 10%;
+    left: 58%;
+    width: 100%;
+    height: auto;
+  }
+}
+
+#scene .layer .person3 {
+  position: absolute;
+  top: 17%;
+  left: 1%;
+  transition-duration: 0.5s;
+  height: auto;
+  width: 100%;
+  animation-name: hvr-ripple-out;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@media only screen and (min-width: 768px) {
+  #scene .layer .person3 {
+    top: 0%;
+    left: 0%;
+    width: 100%;
+  }
+}
+
+#scene .layer .person4 {
+  position: absolute;
+  top: 17%;
+  left: 1%;
+  transition-duration: 0.5s;
+  height: auto;
+  width: 100%;
+  animation-name: hvr-ripple-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+@media only screen and (min-width: 768px) {
+  #scene .layer .person4 {
+    top: 0%;
+    left: 0%;
+    width: 100%;
+  }
+}
+
+#scene .layer .quote {
+  position: absolute;
+  top: 70%;
+  left: 34%;
+  width: 54%;
+  height: auto;
+  font-size: 1em;
+  font-weight: bold;
+  text-shadow: 1px 1px black;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+@media only screen and (min-width: 768px) {
+  #scene .layer .quote {
+    width: 54%;
+    font-size: 1.25em;
+    line-height: 1.2em;
+  }
+}
+
+#scene .layer .logo {
+  position: absolute;
+  display: block;
+  left: 0px;
+  top: 0px;
+  transform: translate3d(-78.75px, 3.825px, 0px);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  #scene .layer .logo {
+    width: 120px;
+  }
+}
+
+.panel {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.panel p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.panel #scene2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.panel #target img#plane {
+  position: absolute;
+  top: 0;
+  left: -58px;
+}
+
+.green {
+  margin-bottom: 400px;
+  background-color: #22d659;
+}
+
+.green .changeSlide {
+  position: relative;
+  width: 500px;
+  height: 281px;
+  margin: 0 auto;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/moon_base.jpg");
+  -webkit-clip-path: circle(34% at 50% 50%);
+  clip-path: circle(34% at 50% 50%);
+  z-index: 1;
+}
+
+.green .changeSlide .slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+}
+
+.green .changeSlide .slides .slide1, .green .changeSlide .slides .slide2, .green .changeSlide .slides .slide3, .green .changeSlide .slides .slide4, .green .changeSlide .slides .slide5, .green .changeSlide .slides .slide6, .green .changeSlide .slides .slide7, .green .changeSlide .slides .slide8, .green .changeSlide .slides .slide9 {
+  float: left;
+  width: 11.11111111111111%;
+  height: 100%;
+}
+
+.green .changeSlide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.green .changeSlide .description {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  background-color: #26252a;
+  margin-top: 281px;
+  z-index: 1;
+}
+
+.green .changeSlide .description p {
+  text-align: left;
+  font-size: 1em;
+  padding: 10px;
+  color: white;
+  line-height: 1.2em;
+  text-shadow: 1px 1px 1px black;
+}
+
+.green .angle1 {
+  position: absolute;
+  z-index: 1;
+}
+
+.blue {
+  margin-bottom: 400px;
+  background-color: #3883d8;
+}
+
+.turqoise {
+  background-color: #38ced7;
+}
+
+.bordeaux {
+  background-color: #953543;
+}
+
+.image-band {
+  position: fixed;
+  top: 100px;
+  left: 200px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+}
+
+.back-to-top {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 30;
+  width: 30px;
+  height: 30px;
+  border-radius: 60px;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  background-color: #333;
+}
+
+section h1, section h3, section p {
+  max-width: 300px;
+  margin: 15px auto;
+}
+
+.animate #shoe-front {
+  transform: rotateZ(360deg);
+  transition-duration: 1s;
+}
+
+.animate #shoe-side {
+  transform: translateX(90px) rotateZ(360deg);
+  transition-duration: 1s;
+}
+
+@media only screen and (min-width: 768px) {
+  .animate #shoe-side {
+    transform: translateX(160px) rotateZ(360deg);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .animate #shoe-side {
+    transform: translateX(230px) rotateZ(360deg);
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .animate #shoe-side {
+    transform: translateX(320px) rotateZ(360deg);
+  }
+}
+
+.animate #shoe-back {
+  transform: translateX(-100px) rotateZ(360deg);
+  transition-duration: 1s;
+}
+
+@media only screen and (min-width: 768px) {
+  .animate #shoe-back {
+    transform: translateX(-160px) rotateZ(360deg);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .animate #shoe-back {
+    transform: translateX(-240px) rotateZ(360deg);
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .animate #shoe-back {
+    transform: translateX(-320px) rotateZ(360deg);
+  }
+}
+
+/* <><><><><><><><><><><><><><><ANIMATIONS<><><><><><><><><>><><> */
+@keyframes wiggle_x_rotate {
+  0% {
+    transform: rotate(25deg);
+  }
+  25% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(25deg);
+  }
+}
+
+@keyframes wiggle_y {
+  0% {
+    bottom: 5%;
+  }
+  50% {
+    bottom: 6%;
+  }
+  100% {
+    bottom: 5%;
+  }
+  @media only screen and (min-width: 768px) {
+    0% {
+      bottom: 10%;
+    }
+    50% {
+      bottom: 11%;
+    }
+    100% {
+      bottom: 10%;
+    }
+  }
+}
+
+@keyframes scale_logo {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0.2;
+  }
+}
