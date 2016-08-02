@@ -77,19 +77,23 @@ header{
 	position: fixed;
 	top: 15%;
 	left: 10%;
-	width: 100%;
-	height: 100%;
-	background-image: url(../img/alien/Alien-floating.png);
-	background-size: 20%;
-	background-repeat: no-repeat;
-	animation-name: wiggle_x_rotate;
-	animation-duration: 2s;
-	animation-iteration-count: infinite; //1 -default
-	// animation-direction: reverse; //alternate
-	animation-direction: alternate; //alternate
-	animation-timing-function: ease-out;
+	width: 20%;
+    height: 38%;
+	// background: url(../img/alien/Alien-Falling-sprite.png);
+	animation: freak-out 1.5s steps(2) infinite;
+    background: url(../img/alien/Alien-Falling-sprite.png) 0 0 no-repeat;
+    background-size: 100% auto;
+	// background-size: 20% auto;
+	// background-repeat: no-repeat;
+	// animation-name: freak-out;
+	// animation-duration: 2s;
+	// animation-iteration-count: infinite; //1 -default
+	// // animation-direction: reverse; //alternate
+	// animation-direction: alternate; //alternate
+	// animation-timing-function: ease-out;
 	z-index: 10;
 }
+
 #scene{
 	position: absolute;
 	width: 100%;
@@ -488,6 +492,16 @@ section{
 
 
 /* <><><><><><><><><><><><><><><ANIMATIONS<><><><><><><><><>><><> */
+
+@keyframes freak-out {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 200%;
+  }
+}
+
 
 @keyframes wiggle_x_rotate{
 	0%		{transform: rotate(1deg);}
