@@ -63,7 +63,7 @@ header {
   transition-duration: 0.5s;
 }
 
-.big-image, .second-big-image {
+.big-image {
   position: relative;
   width: 100%;
   height: 100%;
@@ -113,7 +113,7 @@ header {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-color: #000000;
+  background-image: url("../img/transition-slide.png");
   transition-duration: 0.5s;
 }
 
@@ -223,6 +223,64 @@ header {
   }
 }
 
+.second-big-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-attachment: fixed;
+  transition-duration: 0.5s;
+  background-image: url(../img/transition-slide.png);
+  background-size: 110%;
+  background-position: 0 0;
+}
+
+#scene2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#scene2 .layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#scene2 .layer .scene2__background {
+  transform: scale(1.2);
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("../img/transition-slide.png");
+  transition-duration: 0.5s;
+}
+
+#scene2 .layer .scene2__tunnel {
+  position: absolute;
+  top: -75px;
+  left: 57px;
+  height: auto;
+  width: 110%;
+  transition-duration: 0.5s;
+}
+
+#scene2 .layer .scene2__tunnel-overlay {
+  position: absolute;
+  top: -75px;
+  left: 57px;
+  height: auto;
+  width: 110%;
+  transition-duration: 0.5s;
+}
+
 .panel {
   position: relative;
   height: 100%;
@@ -235,13 +293,7 @@ header {
   left: 50%;
 }
 
-.panel #scene2 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.panel #target img#plane {
+.panel #target img#bottle {
   position: absolute;
   top: 0;
   left: -58px;
@@ -314,9 +366,8 @@ header {
   z-index: 1;
 }
 
-.blue {
+.panel__two {
   margin-bottom: 400px;
-  background-color: #3883d8;
 }
 
 .turqoise {

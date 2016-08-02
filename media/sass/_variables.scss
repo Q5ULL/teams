@@ -21,6 +21,16 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1024px;
 $desktopXL-breakpoint: 1400px;
 
+@mixin parralax__scene{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-size: cover;
+	background-attachment: fixed;
+	transition-duration: 0.5s;
+}
+
 @mixin bp-tablet {
   	@media only screen and ( min-width: $tablet-breakpoint){
 		@content;

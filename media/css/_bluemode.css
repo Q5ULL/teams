@@ -6,6 +6,12 @@
   background-color: #fc442a;
 }
 
+@media only screen and (min-width: 768px) {
+  .shoe_container.bluemode .background_triangle {
+    right: -20%;
+  }
+}
+
 .shoe_container.bluemode header {
   background-color: #046d9a;
 }

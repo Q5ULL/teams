@@ -6,6 +6,12 @@
   background-color: #048686;
 }
 
+@media only screen and (min-width: 768px) {
+  .shoe_container.pinkmode .background_triangle {
+    right: -20%;
+  }
+}
+
 .shoe_container.pinkmode header {
   background-color: #e87390;
 }

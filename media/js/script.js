@@ -77,9 +77,9 @@ $(function () { // wait for document ready
 
 	// create tween
 	var tween = new TimelineMax()
-		.add(TweenMax.to($("#plane"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
-		.add(TweenMax.to($("#plane"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
-		.add(TweenMax.to($("#plane"), 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
+		.add(TweenMax.to($("#bottle"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
+		.add(TweenMax.to($("#bottle"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
+		.add(TweenMax.to($("#bottle"), 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
 
 	// build scene
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 500, offset: -100})

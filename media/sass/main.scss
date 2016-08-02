@@ -70,15 +70,8 @@ header{
 	// height: 200px;
 }
 
-.big-image, .second-big-image{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	background-size: cover;
-	background-attachment: fixed;
-	transition-duration: 0.5s;
-	// background-image: url(../img/pug.jpeg)
+.big-image{
+	@include parralax__scene;
 }
 .alien{
 	position: fixed;
@@ -101,8 +94,6 @@ header{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	// top: -5%;
-	// left: -5%;
 
 	.layer{
 		position: relative;
@@ -121,8 +112,8 @@ header{
 			background-size: cover;
 			background-attachment: fixed;
 			background-repeat: no-repeat;
-			background-color: #000000;
-			// background-image: url('../img/outdoors.jpeg');
+			// background-color: #000000;
+			background-image: url('../img/transition-slide.png');
 			transition-duration: 0.5s;
 		}	
 		.person1{
@@ -248,6 +239,73 @@ header{
 		}
 	}
 }
+.second-big-image{
+	@include parralax__scene;
+	background-image: url(../img/transition-slide.png);
+	background-size: 110%;
+	background-position: 0 0;
+}
+#scene2{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	.layer{
+		position: relative;
+		width: 100%;
+		height: 100%;
+
+		.scene2__background{
+			//hack for backgournd cover tags
+			transform: scale(1.2);
+			width: 100%;
+			height: 100%;
+			min-width: 100%;
+			min-height: 100%;
+			overflow: hidden;
+			background-position: 50% 50%;
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			// background-color: #000000;
+			background-image: url('../img/transition-slide.png');
+			transition-duration: 0.5s;
+		}	
+		.scene2__tunnel{
+			position: absolute;
+			top: -75px;
+		    left: 57px;
+		    height: auto;
+		    width: 110%;
+			transition-duration: 0.5s;
+			
+			// @include bp-tablet{
+			// 	top: 12%;
+			// 	left: 14%;
+			// 	width: 100%;
+
+			// }
+		}
+		.scene2__tunnel-overlay{
+			position: absolute;
+			top: -75px;
+		    left: 57px;
+		    height: auto;
+		    width: 110%;
+   			transition-duration: 0.5s;
+
+			// @include bp-tablet{
+			// 	top: 10%;
+			// 	left: 58%;
+			// 	width: 100%;
+			// 	height: auto;
+			// 	// width: 20%;
+			// }
+		}
+	}
+}
+
+
+
 
 .panel {
 	position: relative;
@@ -258,15 +316,10 @@ header{
 		top: 50%;
 		left: 50%;
 	}
-	#scene2{
-		position: absolute;
-		width: 100%;
-		height: 100%;
-	}
 	#target{
 		// width: 100px;
 		// height: 100px;
-		img#plane{
+		img#bottle{
 			position: absolute;
 		    top: 0;
 		    left: -58px;
@@ -335,9 +388,9 @@ header{
 		z-index: 1;
 	}
 }
-.blue {
+.panel__two {
 	margin-bottom: 400px;
-	background-color: #3883d8;
+	// background-color: #3883d8;
 }
 .turqoise {
 	background-color: #38ced7;
