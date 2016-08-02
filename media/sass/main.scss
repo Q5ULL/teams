@@ -73,16 +73,17 @@ header{
 .big-image{
 	@include parralax__scene;
 }
-.alien--sprite{
+.alien--sprite__falling{
 	position: fixed;
 	top: 15%;
-	left: 10%;
-	width: 20%;
-    height: 38%;
+	left: 50%;
+	width: 300px;
+    height: 388px;
 	// background: url(../img/alien/Alien-Falling-sprite.png);
 	animation: freak-out 1.5s steps(2) infinite;
     background: url(../img/alien/Alien-Falling-sprite--small.png) 0 0 no-repeat;
     background-size: 100% auto;
+    transition-duration: 1s;
 	// background-size: 20% auto;
 	// background-repeat: no-repeat;
 	// animation-name: freak-out;
@@ -91,6 +92,25 @@ header{
 	// // animation-direction: reverse; //alternate
 	// animation-direction: alternate; //alternate
 	// animation-timing-function: ease-out;
+	z-index: 10;
+}
+.alien--sprite__steady{
+	position: fixed;
+	top: 15%;
+	left: 70%;
+	width: 400px;
+    height: 518px;
+	// background: url(../img/alien/Alien-Falling-sprite.png);
+	// animation: freak-out 1.5s steps(2) infinite;
+    background: url(../img/alien/Alien-floating--small.png) 0 0 no-repeat;
+    background-size: 100% auto;
+	animation-name: hvr-hang;
+	animation-duration: 2s;
+	transition-duration: 0.2s;
+	animation-iteration-count: infinite; //1 -default
+	// animation-direction: reverse; //alternate
+	animation-direction: alternate; //alternate
+	animation-timing-function: ease-out;
 	z-index: 10;
 }
 
@@ -210,35 +230,6 @@ header{
 				left: 0%;
 				width: 100%;
 
-			}
-		}
-		.quote{
-			position: absolute;
-			top: 70%;
-			left: 34%;
-			width: 54%;
-			height: auto;
-			font-size: 1em;
-			font-weight: bold;
-    		text-shadow: 1px 1px black;
-			color: white;
-			transition-duration: 0.5s;
-			@include bp-tablet{
-				width: 54%;
-				font-size: 1.25em;
-				line-height: 1.2em;
-
-			}
-		}
-		.logo{
-			position: absolute; 
-			display: block; 
-			left: 0px; top: 0px; 
-			transform: translate3d(-78.75px, 3.825px, 0px); 
-			transform-style: preserve-3d; 
-			backface-visibility: hidden;
-			@include bp-tablet{
-				width: 120px;
 			}
 		}
 	}
@@ -424,6 +415,7 @@ header{
 	padding: 20px;
 	color: white;
 	background-color: #333;
+	z-index: 20;
 }
 
 section{
@@ -495,20 +487,25 @@ section{
 
 @keyframes freak-out {
   0% {
+  	transform: rotate(1deg);
     background-position: 0 0;
   }
+	25% 	{transform: rotate(-1deg); }//left starts and stops at same pt
+	50%		{transform: rotate(1deg);}
+	75% 	{transform: rotate(-1deg); }
   100% {
+  	transform: rotate(1deg);
     background-position: 0 200%;
   }
 }
 
 
 @keyframes wiggle_x_rotate{
-	0%		{transform: rotate(1deg);}
-	25% 	{transform: rotate(-1deg);}//left starts and stops at same pt
-	50%		{transform: rotate(1deg);}
-	75% 	{transform: rotate(-1deg);}
-	100% 	{transform: rotate(1deg);}
+	0%		{transform: rotate(1deg) scale(1.1);}
+	25% 	{transform: rotate(-1deg) scale(1.1);}//left starts and stops at same pt
+	50%		{transform: rotate(1deg) scale(1.13);}
+	75% 	{transform: rotate(-1deg) scale(1.1);}
+	100% 	{transform: rotate(1deg) scale(1.1);}
 }
 
 @keyframes wiggle_y{
@@ -533,8 +530,16 @@ section{
     	-webkit-transform: translateY(8px);
     	transform: translateY(8px);
   	}
+  	25% {
+    	-webkit-transform: translateY(4px);
+    	transform: translateY(4px);
+  	}
 
   	50% {
+    	-webkit-transform: translateY(8px);
+    	transform: translateY(8px);
+  	}
+  	75% {
     	-webkit-transform: translateY(4px);
     	transform: translateY(4px);
   	}

@@ -73,15 +73,33 @@ header {
   transition-duration: 0.5s;
 }
 
-.alien--sprite {
+.alien--sprite__falling {
   position: fixed;
   top: 15%;
-  left: 10%;
-  width: 400px;
-  height: 513px;
+  left: 50%;
+  width: 300px;
+  height: 388px;
   animation: freak-out 1.5s steps(2) infinite;
   background: url(../img/alien/Alien-Falling-sprite--small.png) 0 0 no-repeat;
   background-size: 100% auto;
+  transition-duration: 1s;
+  z-index: 10;
+}
+
+.alien--sprite__steady {
+  position: fixed;
+  top: 15%;
+  left: 70%;
+  width: 400px;
+  height: 518px;
+  background: url(../img/alien/Alien-floating--small.png) 0 0 no-repeat;
+  background-size: 100% auto;
+  animation-name: hvr-hang;
+  animation-duration: 2s;
+  transition-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
   z-index: 10;
 }
 
@@ -178,43 +196,6 @@ header {
     top: 0%;
     left: 0%;
     width: 100%;
-  }
-}
-
-#scene .layer .quote {
-  position: absolute;
-  top: 70%;
-  left: 34%;
-  width: 54%;
-  height: auto;
-  font-size: 1em;
-  font-weight: bold;
-  text-shadow: 1px 1px black;
-  color: white;
-  transition-duration: 0.5s;
-}
-
-@media only screen and (min-width: 768px) {
-  #scene .layer .quote {
-    width: 54%;
-    font-size: 1.25em;
-    line-height: 1.2em;
-  }
-}
-
-#scene .layer .logo {
-  position: absolute;
-  display: block;
-  left: 0px;
-  top: 0px;
-  transform: translate3d(-78.75px, 3.825px, 0px);
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-}
-
-@media only screen and (min-width: 768px) {
-  #scene .layer .logo {
-    width: 120px;
   }
 }
 
@@ -394,6 +375,7 @@ header {
   padding: 20px;
   color: white;
   background-color: #333;
+  z-index: 20;
 }
 
 section h1, section h3, section p {
@@ -455,16 +437,8 @@ section h1, section h3, section p {
 /* <><><><><><><><><><><><><><><ANIMATIONS<><><><><><><><><>><><> */
 @keyframes freak-out {
   0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 200%;
-  }
-}
-
-@keyframes wiggle_x_rotate {
-  0% {
     transform: rotate(1deg);
+    background-position: 0 0;
   }
   25% {
     transform: rotate(-1deg);
@@ -477,6 +451,25 @@ section h1, section h3, section p {
   }
   100% {
     transform: rotate(1deg);
+    background-position: 0 200%;
+  }
+}
+
+@keyframes wiggle_x_rotate {
+  0% {
+    transform: rotate(1deg) scale(1.1);
+  }
+  25% {
+    transform: rotate(-1deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(1deg) scale(1.13);
+  }
+  75% {
+    transform: rotate(-1deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(1deg) scale(1.1);
   }
 }
 
@@ -520,7 +513,15 @@ section h1, section h3, section p {
     -webkit-transform: translateY(8px);
     transform: translateY(8px);
   }
+  25% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
   50% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  75% {
     -webkit-transform: translateY(4px);
     transform: translateY(4px);
   }

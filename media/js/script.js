@@ -92,7 +92,7 @@ $(function () { // wait for document ready
 $(window).on("scroll", function() {
 		
 		var position = $(window).scrollTop();
-		//console.log( "position:" + $(window).scrollTop() );
+		console.log( "position:" + $(window).scrollTop() );
 		// if ($(window).innerWidth() < 768){	
 		// 	if(position >= 496){
 		// 		$(".logo").addClass("logo-small");
@@ -113,6 +113,17 @@ $(window).on("scroll", function() {
 				$("header").removeClass("menu-small");
 			}
 		};
+		if ($(window).innerWidth() >= 0){
+			if(position >= 160){
+				$(".alien").removeClass("alien--sprite__steady");
+				$(".alien").addClass("alien--sprite__falling");
+			}
+			if(position <= 160){
+				$(".alien").removeClass("alien--sprite__falling");
+				$(".alien").addClass("alien--sprite__steady ");
+			}
+		}
+
 	});
 
 //Trash slowly moving away
