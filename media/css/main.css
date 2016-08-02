@@ -73,14 +73,14 @@ header {
   transition-duration: 0.5s;
 }
 
-.alien {
+.alien--sprite {
   position: fixed;
   top: 15%;
   left: 10%;
   width: 20%;
   height: 38%;
   animation: freak-out 1.5s steps(2) infinite;
-  background: url(../img/alien/Alien-Falling-sprite.png) 0 0 no-repeat;
+  background: url(../img/alien/Alien-Falling-sprite--small.png) 0 0 no-repeat;
   background-size: 100% auto;
   z-index: 10;
 }
