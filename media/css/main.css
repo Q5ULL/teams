@@ -77,8 +77,8 @@ header {
   position: fixed;
   top: 15%;
   left: 10%;
-  width: 20%;
-  height: 38%;
+  width: 400px;
+  height: 513px;
   animation: freak-out 1.5s steps(2) infinite;
   background: url(../img/alien/Alien-Falling-sprite--small.png) 0 0 no-repeat;
   background-size: 100% auto;
