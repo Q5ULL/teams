@@ -73,7 +73,7 @@ header{
 .big-image{
 	@include parralax__scene;
 }
-.alien{
+.alien--sprite{
 	position: fixed;
 	top: 15%;
 	left: 10%;
@@ -81,7 +81,7 @@ header{
     height: 38%;
 	// background: url(../img/alien/Alien-Falling-sprite.png);
 	animation: freak-out 1.5s steps(2) infinite;
-    background: url(../img/alien/Alien-Falling-sprite.png) 0 0 no-repeat;
+    background: url(../img/alien/Alien-Falling-sprite--small.png) 0 0 no-repeat;
     background-size: 100% auto;
 	// background-size: 20% auto;
 	// background-repeat: no-repeat;
