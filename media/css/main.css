@@ -41,14 +41,14 @@ body {
 }
 
 /*  CONTENT  =============================================== */
-div {
+.frame {
   background-color: white;
   position: relative;
 }
 
-div #bottle-planet1,
-div #bottle-planet2,
-div #bottle-planet3 {
+.frame #bottle-planet1,
+.frame #bottle-planet2,
+.frame #bottle-planet3 {
   position: absolute;
   width: 400px;
   height: auto;

@@ -49,7 +49,7 @@ body{
 
 /*  CONTENT  =============================================== */
 
-div{
+.frame{
 	background-color: white;
 	position: relative;
 	#bottle-planet1,
@@ -303,9 +303,12 @@ header{
 
 
 .panel {
-	position: relative;
+	position: absolute;
+	top: 300%;
+	left: 0;
 	height: 100%;
 	width: 100%;
+	// z-index: -20;
 	p{
 		position: absolute;
 		top: 50%;
@@ -318,81 +321,82 @@ header{
 			position: absolute;
 		    top: 0;
 		    left: -58px;
+		    z-index: 10;
 			// width: 20%;
 			// height: 20%;
 		}
 	}	
 }
-.green {
-	margin-bottom: 400px;
-	background-color: #22d659;
-	.changeSlide{
-		position: relative;
-		width: 500px;
-	    height: 281px;
-	    margin: 0 auto;
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-image: url('../img/moon_base.jpg');
-		-webkit-clip-path: circle(34% at 50% 50%);
-		clip-path: circle(34% at 50% 50%);
-		// overflow: hidden;
-		z-index: 1;
-		.slides{
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			z-index: 15;
-			.slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7, .slide8, .slide9{
-				float: left;
-				width: 11.11111111111111%;
-				height: 100%;	
-			}
-		}
-		img{
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-		}
-		.description{
-			position: absolute;
-			width: 100%;
-			overflow: hidden;
-			height: auto;
-			background-color: #26252a;
-			margin-top: 281px;
-			z-index: 1;
-			p{	
-				text-align: left;
-				font-size: 1em;
-				padding: 10px;
-				color: $body-color;
-				line-height: 1.2em;
-				text-shadow:1px 1px 1px black;
-			}
-		}
-	}
-	.angle1{
-		position: absolute;
-		z-index: 1;
-	}
-}
+// .green {
+// 	margin-bottom: 400px;
+	
+// 	.changeSlide{
+// 		position: relative;
+// 		width: 500px;
+// 	    height: 281px;
+// 	    margin: 0 auto;
+// 		background-size: 100%;
+// 		background-position: center;
+// 		background-repeat: no-repeat;
+// 		background-image: url('../img/moon_base.jpg');
+// 		-webkit-clip-path: circle(34% at 50% 50%);
+// 		clip-path: circle(34% at 50% 50%);
+// 		// overflow: hidden;
+// 		z-index: 1;
+// 		.slides{
+// 			position: absolute;
+// 			top: 0;
+// 			left: 0;
+// 			width: 100%;
+// 			height: 100%;
+// 			z-index: 15;
+// 			.slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7, .slide8, .slide9{
+// 				float: left;
+// 				width: 11.11111111111111%;
+// 				height: 100%;	
+// 			}
+// 		}
+// 		img{
+// 			position: absolute;
+// 			top: 0;
+// 			left: 0;
+// 			width: 100%;
+// 			height: 100%;
+// 			overflow: hidden;
+// 		}
+// 		.description{
+// 			position: absolute;
+// 			width: 100%;
+// 			overflow: hidden;
+// 			height: auto;
+// 			background-color: #26252a;
+// 			margin-top: 281px;
+// 			z-index: 1;
+// 			p{	
+// 				text-align: left;
+// 				font-size: 1em;
+// 				padding: 10px;
+// 				color: $body-color;
+// 				line-height: 1.2em;
+// 				text-shadow:1px 1px 1px black;
+// 			}
+// 		}
+// 	}
+// 	.angle1{
+// 		position: absolute;
+// 		z-index: 1;
+// 	}
+// }
 .panel__two {
 	margin-bottom: 400px;
 	// background-color: #3883d8;
 }
-.turqoise {
-	background-color: #38ced7;
-}
-.bordeaux {
-    background-color: #953543;
-}
+// .turqoise {
+// 	background-color: #38ced7;
+// }
+// .bordeaux {
+//     background-color: #953543;
+// }
 
 .image-band{
 	position: fixed;
@@ -400,7 +404,6 @@ header{
 	left: 200px;
 	width:	10px;
 	height: 10px;
-	background-color: #fff;
 }
 
 .back-to-top{
@@ -408,13 +411,13 @@ header{
     top: 80%;
     left: 0;
 	z-index: 30;
-	width: 30px;
-	height: 30px;
-	border-radius: 60px;
+	width: 60px;
+	height: 60px;
+	// border-radius: 60px;
 	text-align: center;
 	padding: 20px;
 	color: white;
-	background-color: #333;
+	background-color: rgb(173, 115, 42);
 	z-index: 20;
 }
 
