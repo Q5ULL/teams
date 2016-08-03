@@ -26,6 +26,7 @@ TABLE OF CONTENTS:
 /* 2. TYPOGRAPHY  ======================================== */
 body {
   font-family: "Orator";
+  text-decoration: uppercase;
 }
 
 @font-face {
@@ -185,6 +186,7 @@ header {
   transition-duration: 0.5s;
   height: auto;
   width: 100%;
+  opacity: 0.15;
 }
 
 @media only screen and (min-width: 768px) {
@@ -214,14 +216,22 @@ header {
 
 #scene .layer .title {
   position: absolute;
-  font-size: 134px;
-  text-decoration: uppercase;
-  color: white;
-  top: 10%;
-  left: 20%;
-  transition-duration: 0.5s;
+  text-align: center;
   height: auto;
   width: 100%;
+  top: 10%;
+  left: 0;
+  transition-duration: 0.5s;
+  color: white;
+}
+
+#scene .layer .title .title__title {
+  font-size: 134px;
+  margin-bottom: -36px;
+}
+
+#scene .layer .title .title__description {
+  font-size: 44px;
 }
 
 .second-big-image {
@@ -329,11 +339,6 @@ header {
   color: white;
   background-color: #ad732a;
   z-index: 20;
-}
-
-section h1, section h3, section p {
-  max-width: 300px;
-  margin: 15px auto;
 }
 
 /* <><><><><><><><><><><><><><><ANIMATIONS<><><><><><><><><>><><> */

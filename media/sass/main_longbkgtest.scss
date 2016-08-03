@@ -33,6 +33,7 @@ TABLE OF CONTENTS:
 
 body{
 	font-family: "Orator";
+	text-decoration: uppercase;
 	// font-family: "Montserrat";
 }
 @font-face {
@@ -189,6 +190,7 @@ header{
 			// width: 25%;
 			height: auto;
 			width: 100%;
+			opacity: 0.15;
 
 			@include bp-tablet{
 				top: 0%;
@@ -215,23 +217,24 @@ header{
 		}
 		.title{
 			position: absolute;
-			font-size: 134px;
-			text-decoration: uppercase;
-			color: white;
-			top: 10%;
-    		left: 20%;
-			transition-duration: 0.5s;
-			// width: 25%;
+			text-align: center;
 			height: auto;
 			width: 100%;
-
-			// @include bp-tablet{
-			// 	top: 0%;
-			// 	left: 0%;
-			// 	width: 100%;
-
-			// }
+			top: 10%;
+    		left: 0;
+			transition-duration: 0.5s;
+			color: white;
+			.title__title{
+				font-size: 134px;
+				margin-bottom: -36px;	
+				
+			}
+			.title__description{
+				font-size: 44px;
+			}
+			
 		}
+
 	}
 }
 .second-big-image{
@@ -421,13 +424,13 @@ header{
 	z-index: 20;
 }
 
-section{
+// section{
 
-	h1, h3, p {
-		max-width: 300px;
-		margin: 15px auto;
-	}
-}	
+// 	h1, h3, p {
+// 		max-width: 300px;
+// 		margin: 15px auto;
+// 	}
+// }	
 
 /* <><><><><><><><><><><><><><><ANIMATIONS<><><><><><><><><>><><> */
 
