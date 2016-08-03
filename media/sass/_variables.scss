@@ -22,13 +22,22 @@ $desktop-breakpoint: 1024px;
 $desktopXL-breakpoint: 1400px;
 
 @mixin parralax__scene{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	background-size: cover;
-	background-attachment: fixed;
-	transition-duration: 0.5s;
+	// position: relative;
+	// width: 100%;
+	// height: 100%;
+	// overflow: hidden;
+	// background-size: cover;
+	// background-attachment: fixed;
+	// transition-duration: 0.5s;
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+    transition-duration: 0.5s;
 }
 
 @mixin bp-tablet {
