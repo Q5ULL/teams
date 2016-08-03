@@ -1,6 +1,6 @@
 console.log("script2.js");
 
-/* 	Melissa Sattler - 05-19-16
+/* - 08-3-16
 	Plugin to make elements drag and drop, by adding .draggable to the image
 	Dragged Elements dispatch these events: startdrag, stopdrag
 */
@@ -33,28 +33,21 @@ var restart = document.getElementById("restart");
 		mouseStart.x = event.clientX;
 		mouseStart.y = event.clientY;
 
-		// imgStart.left = this.style.left;
-		// imgStart.top = this.style.top;
+
 		imgStart.left = parseInt(window.getComputedStyle(this).getPropertyValue("left"));
 		imgStart.top = parseInt(window.getComputedStyle(this).getPropertyValue("top"));
 
-		//$0 int he DOM reference to the image you just clicked
-
 		window.addEventListener("mousemove", doDrag);
-		window.addEventListener("mouseup", stopDrag);
-    window.addEventListener("mouseup", flyAway);
+	  window.addEventListener("mouseup", stopDrag);
 	}
 
 	var stopDrag = function(){
-    // window.addEventListener("mouseup", flyAway);
 		window.removeEventListener("mousemove", doDrag);
     
-
-		// $beingDragged.dispatchEvent( stopDragEvent );
-    $beingDragged.dispatchEvent( flyAwayEvent );
     
-		// window.removeEventListener("mouseup", stopDrag);
-		// event.stopPropagation();
+	    // console.log(this);
+	    // 'this' refers to the image element that was clicked, i.e. the thing with the event listener on it
+	    TweenMax.to($beingDragged, .5, {left: "200%"});
 	};
 
 	var doDrag = function(){
@@ -76,36 +69,7 @@ var restart = document.getElementById("restart");
 		$beingDragged.style.top = imageCurrent.top + "px";
 
 	}
-  //this is where I am trying to get the images to move individually
-  var flyAway = function(){
-  	//console.log("flyaway", this, event);
-  	
-    var tl = new TimelineMax({
-    	paused: true
-    });
-    var tl2 = new TimelineMax({
-    	paused: true
-    });
-    var tl3 = new TimelineMax({
-    	paused: true
-    });
 
-    $("img#bottle-planet1").on("mouseup", function(){
-		tl.play();
-	});
-	document.querySelector("img#bottle-planet2").addEventListener("mouseup", function(){
-		tl2.play();
-	});
-	document.querySelector("img#bottle-planet3").addEventListener("mouseup", function(){
-		tl3.play();
-	});
-
-    
-    tl.to("img#bottle-planet1", 1, {left:"200%", transitionDuration: "5s"});
-    tl2.to("img#bottle-planet2", 1, {left:"200%", transitionDuration: "5s"});
-    tl3.to("img#bottle-planet3", 1, {left:"200%", transitionDuration: "5s"});
-
-  }
   
   
 	var $draggables = document.querySelectorAll(".draggable");
@@ -120,9 +84,12 @@ var restart = document.getElementById("restart");
 			$draggables[i].style.left=0 + "px";
 		}
 		
-		// $draggables[i].style.top=0 + "px";
-		// $draggables[i].style.left=0 + "px";
+
 		$draggables[i].addEventListener("mousedown", startDrag);
+    
+    // let the images themselves control their own mouse down and up behavior
+    // don't assign event listeners multiple times
+    // $draggables[i].addEventListener("mouseup", stopDrag);
 	};
 
 })();
@@ -143,8 +110,3 @@ var restart = document.getElementById("restart");
 
 // timelinePhone.to("puzzle-piece", 0.75, {left: 740}, 0);
 // });
-//Try to solve the mouse moving to fast problem
-//Hint: the mouse has to be on the image, right now, to let go of it (mouseup) or move it (mousemove)
-
-
-

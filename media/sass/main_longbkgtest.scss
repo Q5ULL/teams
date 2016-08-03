@@ -1,0 +1,485 @@
+/* _________________________________________
+CONTENT:	Asics Animation Webpage
+AUTHOR:		Melissa I. Sattler
+____________________________________________
+
+TABLE OF CONTENTS:
+
+1. VARIABLES
+2. TYPOGRAPHY
+3. CONTENT
+
+========================================================== */
+*{
+	box-sizing: border-box;
+	-webkit-box-sizinshoe-side2g: border-box; 
+}
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}/*keep content on float element from going over eachother*/
+
+/* 1. VARIABLES  ========================================= */
+
+@import "variables";
+// @import "redmode";
+// @import "pinkmode";
+// @import "bluemode";
+// @font-face {font-family: 'Onick';src: url('webfonts/310FE3_0_0.eot');src: url('webfonts/310FE3_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/310FE3_0_0.woff2') format('woff2'),url('webfonts/310FE3_0_0.woff') format('woff'),url('webfonts/310FE3_0_0.ttf') format('truetype');}
+
+
+/* 2. TYPOGRAPHY  ======================================== */
+
+body{
+	font-family: "Campton";
+	// font-family: "Montserrat";
+}
+@font-face {
+	font-family: Campton;
+	font-weight: normal;
+	src: url(../font/Campton-LightDEMO.otf) format("opentype");
+}
+
+@font-face {
+	font-family: Campton;
+	font-weight: bold;
+	src: url(../font/Campton-BoldDEMO.otf) format("opentype");
+}
+
+/*  CONTENT  =============================================== */
+
+div{
+	background-color: white;
+	position: relative;
+	#bottle-planet1,
+	#bottle-planet2,
+	#bottle-planet3{
+		position: absolute;
+		width: 400px;
+		height: auto;
+		transition: all .2s ease-out;
+	}
+}
+
+
+body{
+	.body__starbkg{
+		width: 100%;
+		height: auto;
+		// width: 100%;
+		// height: auto;
+		// background: url(../img/bkgs/startbkg--original.png) no-repeat;
+		// background-size: 100%;
+	}
+}
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	background-color: white;
+	z-index: 100;
+	transition-duration: 0.5s;
+}
+.menu-small{
+	width: 10%;
+	transition-duration: 0.5s;
+	// height: 200px;
+}
+
+.big-image{
+	@include parralax__scene;
+}
+.alien--sprite__falling{
+	position: fixed;
+	top: 15%;
+	left: 50%;
+	width: 300px;
+    height: 388px;
+	// background: url(../img/alien/Alien-Falling-sprite.png);
+	animation: freak-out 1.5s steps(2) infinite;
+    background: url(../img/alien/Alien-Falling-sprite--small.png) 0 0 no-repeat;
+    background-size: 100% auto;
+    transition-duration: 1s;
+	z-index: 10;
+}
+.alien--sprite__steady{
+	position: fixed;
+	top: 15%;
+	left: 70%;
+	width: 400px;
+    height: 518px;
+	// background: url(../img/alien/Alien-Falling-sprite.png);
+	// animation: freak-out 1.5s steps(2) infinite;
+    background: url(../img/alien/Alien-floating--small.png) 0 0 no-repeat;
+    background-size: 100% auto;
+	animation-name: hvr-hang;
+	animation-duration: 2s;
+	transition-duration: 0.2s;
+	animation-iteration-count: infinite; //1 -default
+	// animation-direction: reverse; //alternate
+	animation-direction: alternate; //alternate
+	animation-timing-function: ease-out;
+	z-index: 10;
+}
+
+#scene{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	.layer{
+		position: relative;
+		width: 100%;
+		height: 100%;
+
+		.background{
+			//hack for backgournd cover tags
+			transform: scale(1.2);
+			width: 100%;
+			height: 100%;
+			min-width: 100%;
+			min-height: 100%;
+			overflow: hidden;
+			background-position: 50% 50%;
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			// background-color: #000000;
+			background-image: url('../img/transition-slide.png');
+			transition-duration: 0.5s;
+		}	
+		.person1{
+			position: absolute;
+			top: 10%;
+    		left: -9%;
+			height: auto;
+			width: 100%;
+			transition-duration: 0.5s;
+			@include bp-tablet{
+				top: 12%;
+				left: 14%;
+				width: 100%;
+
+			}
+		}
+		.person2{
+			position: absolute;
+			top: 4%;
+    		left: 41%;
+   			height: auto;
+   			width: 100%;
+   			transition-duration: 0.5s;
+
+			@include bp-tablet{
+				top: 10%;
+				left: 58%;
+				width: 100%;
+				height: auto;
+				// width: 20%;
+			}
+		}
+		.person3{
+			position: absolute;
+			top: 17%;
+    		left: 1%;
+			transition-duration: 0.5s;
+			// width: 25%;
+			height: auto;
+			width: 100%;
+
+			@include bp-tablet{
+				top: 0%;
+				left: 0%;
+				width: 100%;
+
+			}
+		}
+		.person4{
+			position: absolute;
+			top: 17%;
+    		left: 1%;
+			transition-duration: 0.5s;
+			// width: 25%;
+			height: auto;
+			width: 100%;
+
+			@include bp-tablet{
+				top: 0%;
+				left: 0%;
+				width: 100%;
+
+			}
+		}
+	}
+}
+.second-big-image{
+	@include parralax__scene;
+	background-image: url(../img/transition-slide.png);
+	background-size: 110%;
+	background-position: 0 0;
+}
+#scene2{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	.layer{
+		position: relative;
+		width: 100%;
+		height: 100%;
+
+		.scene2__background{
+			//hack for backgournd cover tags
+			transform: scale(1.2);
+			width: 100%;
+			height: 100%;
+			min-width: 100%;
+			min-height: 100%;
+			overflow: hidden;
+			background-position: 50% 50%;
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			// background-color: #000000;
+			background-image: url('../img/transition-slide.png');
+			transition-duration: 0.5s;
+		}	
+		.scene2__tunnel{
+			position: absolute;
+			top: -75px;
+		    left: 57px;
+		    height: auto;
+		    width: 110%;
+			transition-duration: 0.5s;
+			
+			// @include bp-tablet{
+			// 	top: 12%;
+			// 	left: 14%;
+			// 	width: 100%;
+
+			// }
+		}
+		.scene2__tunnel-overlay{
+			position: absolute;
+			top: -75px;
+		    left: 57px;
+		    height: auto;
+		    width: 110%;
+   			transition-duration: 0.5s;
+
+			// @include bp-tablet{
+			// 	top: 10%;
+			// 	left: 58%;
+			// 	width: 100%;
+			// 	height: auto;
+			// 	// width: 20%;
+			// }
+		}
+	}
+}
+
+
+
+
+.panel {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	p{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+	}
+	#target{
+		// width: 100px;
+		// height: 100px;
+		img#bottle{
+			position: absolute;
+		    top: 0;
+		    left: -58px;
+			// width: 20%;
+			// height: 20%;
+		}
+	}	
+}
+.green {
+	margin-bottom: 400px;
+	background-color: #22d659;
+	.changeSlide{
+		position: relative;
+		width: 500px;
+	    height: 281px;
+	    margin: 0 auto;
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url('../img/moon_base.jpg');
+		-webkit-clip-path: circle(34% at 50% 50%);
+		clip-path: circle(34% at 50% 50%);
+		// overflow: hidden;
+		z-index: 1;
+		.slides{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 15;
+			.slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7, .slide8, .slide9{
+				float: left;
+				width: 11.11111111111111%;
+				height: 100%;	
+			}
+		}
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.description{
+			position: absolute;
+			width: 100%;
+			overflow: hidden;
+			height: auto;
+			background-color: #26252a;
+			margin-top: 281px;
+			z-index: 1;
+			p{	
+				text-align: left;
+				font-size: 1em;
+				padding: 10px;
+				color: $body-color;
+				line-height: 1.2em;
+				text-shadow:1px 1px 1px black;
+			}
+		}
+	}
+	.angle1{
+		position: absolute;
+		z-index: 1;
+	}
+}
+.panel__two {
+	margin-bottom: 400px;
+	// background-color: #3883d8;
+}
+.turqoise {
+	background-color: #38ced7;
+}
+.bordeaux {
+    background-color: #953543;
+}
+
+.image-band{
+	position: fixed;
+	top: 100px;
+	left: 200px;
+	width:	10px;
+	height: 10px;
+	background-color: #fff;
+}
+
+.back-to-top{
+	position: fixed;
+    top: 50%;
+    right: 0;
+	z-index: 30;
+	width: 30px;
+	height: 30px;
+	border-radius: 60px;
+	text-align: center;
+	padding: 20px;
+	color: white;
+	background-color: #333;
+	z-index: 20;
+}
+
+section{
+
+	h1, h3, p {
+		max-width: 300px;
+		margin: 15px auto;
+	}
+}	
+
+/* <><><><><><><><><><><><><><><ANIMATIONS<><><><><><><><><>><><> */
+
+@keyframes freak-out {
+  0% {
+  	transform: rotate(1deg);
+    background-position: 0 0;
+  }
+	25% 	{transform: rotate(-1deg); }//left starts and stops at same pt
+	50%		{transform: rotate(1deg);}
+	75% 	{transform: rotate(-1deg); }
+  100% {
+  	transform: rotate(1deg);
+    background-position: 0 200%;
+  }
+}
+
+
+@keyframes wiggle_x_rotate{
+	0%		{transform: rotate(1deg) scale(1.1);}
+	25% 	{transform: rotate(-1deg) scale(1.1);}//left starts and stops at same pt
+	50%		{transform: rotate(1deg) scale(1.13);}
+	75% 	{transform: rotate(-1deg) scale(1.1);}
+	100% 	{transform: rotate(1deg) scale(1.1);}
+}
+
+@keyframes wiggle_y{
+	0% 		{bottom: 5%;}//left starts and stops at same pt
+	50% 	{bottom: 6%;}
+	100% 	{bottom: 5%;}
+	@include bp-tablet{
+		0% 		{bottom: 10%;}//left starts and stops at same pt
+		50% 	{bottom: 11%;}
+		100% 	{bottom: 10%;}
+	}
+}
+
+@keyframes scale_logo{
+	0% 		{transform: scale(1.1);}//left starts and stops at same pt
+	50% 	{transform: scale(1.2);}
+	100% 	{transform: scale(1.1);}
+}
+
+@keyframes hvr-hang{
+  	0% {
+    	-webkit-transform: translateY(8px);
+    	transform: translateY(8px);
+  	}
+  	25% {
+    	-webkit-transform: translateY(4px);
+    	transform: translateY(4px);
+  	}
+
+  	50% {
+    	-webkit-transform: translateY(8px);
+    	transform: translateY(8px);
+  	}
+  	75% {
+    	-webkit-transform: translateY(4px);
+    	transform: translateY(4px);
+  	}
+
+  	100% {
+    	-webkit-transform: translateY(8px);
+    	transform: translateY(8px);
+  	}
+}
+
+@keyframes hvr-ripple-out{
+	100% {
+		top: -12px;
+		right: -12px;
+		bottom: -12px;
+		left: -12px;
+		opacity: 0.2;
+	}
+}
