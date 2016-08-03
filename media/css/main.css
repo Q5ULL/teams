@@ -42,11 +42,16 @@ body {
 
 /*  CONTENT  =============================================== */
 div {
+  background-color: white;
   position: relative;
 }
 
-div #bottle-planet {
+div #bottle-planet1,
+div #bottle-planet2,
+div #bottle-planet3 {
   position: absolute;
+  width: 400px;
+  height: auto;
   transition: all .2s ease-out;
 }
 

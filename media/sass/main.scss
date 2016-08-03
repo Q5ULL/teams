@@ -50,9 +50,14 @@ body{
 /*  CONTENT  =============================================== */
 
 div{
+	background-color: white;
 	position: relative;
-	#bottle-planet {
+	#bottle-planet1,
+	#bottle-planet2,
+	#bottle-planet3{
 		position: absolute;
+		width: 400px;
+		height: auto;
 		transition: all .2s ease-out;
 	}
 }

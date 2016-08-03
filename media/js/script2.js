@@ -1,4 +1,4 @@
-// window.addEventListener("load", 
+console.log("script2.js");
 
 /* 	Melissa Sattler - 05-19-16
 	Plugin to make elements drag and drop, by adding .draggable to the image
@@ -78,18 +78,33 @@ var restart = document.getElementById("restart");
 	}
   //this is where I am trying to get the images to move individually
   var flyAway = function(){
-  	var $beingDragged2 = $("img#bottle-planet");
+  	//console.log("flyaway", this, event);
   	
-    console.log(this);
-    var tl = new TimelineMax();
-    // var tl2 = new TimelineMax();
-    // var tl3 = new TimelineMax();
-    tl.to( $beingDragged2, .1, {left:"200%", scale:1.4, transitionDuration: "5s"})
-    // tl.to(".puzzle-piece:eq(1)", .1, {left:"50%", scale:1.4, transitionDuration: "1s"})
-    // tl.to(".puzzle-piece:eq(2)", .1, {left:"50%", scale:1.4, transitionDuration: "1s"})
-    // tl2.to(".puzzle-piece2", .1, {left:"50%", rotate:180})
-    // tl3.to(".puzzle-piece3", .1, {left:"50%", rotate:180})
-    // document.log("draggable", this, event);
+    var tl = new TimelineMax({
+    	paused: true
+    });
+    var tl2 = new TimelineMax({
+    	paused: true
+    });
+    var tl3 = new TimelineMax({
+    	paused: true
+    });
+
+    $("img#bottle-planet1").on("mouseup", function(){
+		tl.play();
+	});
+	document.querySelector("img#bottle-planet2").addEventListener("mouseup", function(){
+		tl2.play();
+	});
+	document.querySelector("img#bottle-planet3").addEventListener("mouseup", function(){
+		tl3.play();
+	});
+
+    
+    tl.to("img#bottle-planet1", 1, {left:"200%", transitionDuration: "5s"});
+    tl2.to("img#bottle-planet2", 1, {left:"200%", transitionDuration: "5s"});
+    tl3.to("img#bottle-planet3", 1, {left:"200%", transitionDuration: "5s"});
+
   }
   
   
