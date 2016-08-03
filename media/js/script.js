@@ -25,18 +25,18 @@ $(function () { // wait for document ready
 		}
 	});
 
-	// get all slides
-	var slides = document.querySelectorAll("section.panel");
+	// // get all slides
+	// var slides = document.querySelectorAll("section.panel");
 
-	// create scene for every slide
-	for (var i=0; i<slides.length; i++) {
-		new ScrollMagic.Scene({
-				triggerElement: slides[i]
-			})
-			.setPin(slides[i])
-			//.addIndicators() // add indicators (requires plugin)
-			.addTo(controller)
-	}
+	// // create scene for every slide
+	// for (var i=0; i<slides.length; i++) {
+	// 	new ScrollMagic.Scene({
+	// 			triggerElement: slides[i]
+	// 		})
+	// 		.setPin(slides[i])
+	// 		//.addIndicators() // add indicators (requires plugin)
+	// 		.addTo(controller)
+	// }
 });
 
 $(function () { // wait for document ready

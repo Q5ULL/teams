@@ -41,6 +41,15 @@ body {
 }
 
 /*  CONTENT  =============================================== */
+div {
+  position: relative;
+}
+
+div #bottle-planet {
+  position: absolute;
+  transition: all .2s ease-out;
+}
+
 html, body {
   width: 100%;
   height: 100%;
