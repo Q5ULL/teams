@@ -4,7 +4,7 @@ console.log("script2.js");
 	Plugin to make elements drag and drop, by adding .draggable to the image
 	Dragged Elements dispatch these events: startdrag, stopdrag
 */
-var restart = document.getElementById("restart");
+// var restart = document.getElementById("restart");
 
 (function(){
 	var imgStart = {};
@@ -22,7 +22,7 @@ var restart = document.getElementById("restart");
   	var flyAwayEvent = new Event("flyaway");
 
 	var startDrag = function() {
-		// console.log("start drag", this, event);
+		console.log("start drag", this, event);
 
 		event.preventDefault();
 
@@ -43,11 +43,11 @@ var restart = document.getElementById("restart");
 
 	var stopDrag = function(){
 		window.removeEventListener("mousemove", doDrag);
-    
+    	console.log("stop drag", this, event);
     
 	    // console.log(this);
 	    // 'this' refers to the image element that was clicked, i.e. the thing with the event listener on it
-	    TweenMax.to($beingDragged, .5, {left: "200%"});
+	    TweenMax.to($beingDragged, .5, {left: "1500px", scale: '1.2'});
 	};
 
 	var doDrag = function(){

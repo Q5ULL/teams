@@ -45,8 +45,8 @@ $(function () { // wait for document ready
 			curviness: 1.25,
 			autoRotate: true,
 			values: [
-					{x: 100,	y: -20},
-					{x: 300,	y: 10}
+					{x: 10,	y: -20},
+					{x: 30,	y: 10}
 				]
 		},
 		looping : {
@@ -77,9 +77,9 @@ $(function () { // wait for document ready
 
 	// create tween
 	var tween = new TimelineMax()
-		.add(TweenMax.to($("#bottle"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
-		.add(TweenMax.to($("#bottle"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
-		.add(TweenMax.to($("#bottle"), 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
+		.add(TweenMax.to($("#drunk_badguy"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
+		.add(TweenMax.to($("#drunk_badguy"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
+		.add(TweenMax.to($("#drunk_badguy"), 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
 
 	// build scene
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 500, offset: -100})
@@ -93,16 +93,7 @@ $(window).on("scroll", function() {
 		
 		var position = $(window).scrollTop();
 		console.log( "position:" + $(window).scrollTop() );
-		// if ($(window).innerWidth() < 768){	
-		// 	if(position >= 496){
-		// 		$(".logo").addClass("logo-small");
-		// 		console.log("small-change");
-		// 	}
 
-		// 	if(position < 496){
-		// 		$(".logo").removeClass("logo-small");
-		// 	}
-		// };
 		if ($(window).innerWidth() >= 0){	
 			if(position >= 60){
 				$("header").addClass("menu-small");
@@ -122,111 +113,25 @@ $(window).on("scroll", function() {
 				$(".alien").removeClass("alien--sprite__falling");
 				$(".alien").addClass("alien--sprite__steady ");
 			}
+			if(position >= 2080){
+				$(".alien").removeClass("alien--sprite__falling");
+				$(".alien").addClass("alien--sprite__steady ");
+			}
+			// if(position <= 1019){
+			// 	$(".alien").removeClass("alien--sprite__falling");
+			// 	$(".alien").addClass("alien--sprite__steady ");
+			// }
 		}
 
+
+
 	});
+//gets rid of regular image of planet and shows layers that become draggable
+$('img.planet-fg').on("mouseenter", function(){
+	$('img.planet-fg').addClass("hidden");
+	$('.frame').removeClass("hidden");
+})
 
-//Trash slowly moving away
-$(".slide1").on("mouseenter", function(){
-	$(".image1").addClass("angle1");
-	$(".image2").removeClass("angle1");
-	$(".image3").removeClass("angle1");
-	$(".image4").removeClass("angle1");
-	$(".image5").removeClass("angle1");
-	$(".image6").removeClass("angle1");
-	$(".image7").removeClass("angle1");
-	$(".image8").removeClass("angle1");
-	$(".image9").removeClass("angle1");
-})
-$(".slide2").on("mouseenter", function(){
-	$(".image2").addClass("angle1");
-	$(".image1").removeClass("angle1");
-	$(".image3").removeClass("angle1");
-	$(".image4").removeClass("angle1");
-	$(".image5").removeClass("angle1");
-	$(".image6").removeClass("angle1");
-	$(".image7").removeClass("angle1");
-	$(".image8").removeClass("angle1");
-	$(".image9").removeClass("angle1");
-
-})
-$(".slide3").on("mouseenter", function(){
-	$(".image3").addClass("angle1");
-	$(".image2").removeClass("angle1");
-	$(".image1").removeClass("angle1");
-	$(".image4").removeClass("angle1");
-	$(".image5").removeClass("angle1");
-	$(".image6").removeClass("angle1");
-	$(".image7").removeClass("angle1");
-	$(".image8").removeClass("angle1");
-	$(".image9").removeClass("angle1");
-})
-$(".slide4").on("mouseenter", function(){
-	$(".image4").addClass("angle1");
-	$(".image2").removeClass("angle1");
-	$(".image3").removeClass("angle1");
-	$(".image1").removeClass("angle1");
-	$(".image5").removeClass("angle1");
-	$(".image6").removeClass("angle1");
-	$(".image7").removeClass("angle1");
-	$(".image8").removeClass("angle1");
-	$(".image9").removeClass("angle1");
-})
-$(".slide5").on("mouseenter", function(){
-	$(".image5").addClass("angle1");
-	$(".image2").removeClass("angle1");
-	$(".image3").removeClass("angle1");
-	$(".image4").removeClass("angle1");
-	$(".image1").removeClass("angle1");
-	$(".image6").removeClass("angle1");
-	$(".image7").removeClass("angle1");
-	$(".image8").removeClass("angle1");
-	$(".image9").removeClass("angle1");
-})
-$(".slide6").on("mouseenter", function(){
-	$(".image6").addClass("angle1");
-	$(".image2").removeClass("angle1");
-	$(".image3").removeClass("angle1");
-	$(".image4").removeClass("angle1");
-	$(".image5").removeClass("angle1");
-	$(".image1").removeClass("angle1");
-	$(".image7").removeClass("angle1");
-	$(".image8").removeClass("angle1");
-	$(".image9").removeClass("angle1");
-})
-$(".slide7").on("mouseenter", function(){
-	$(".image7").addClass("angle1");
-	$(".image2").removeClass("angle1");
-	$(".image3").removeClass("angle1");
-	$(".image4").removeClass("angle1");
-	$(".image5").removeClass("angle1");
-	$(".image6").removeClass("angle1");
-	$(".image1").removeClass("angle1");
-	$(".image8").removeClass("angle1");
-	$(".image9").removeClass("angle1");
-})
-$(".slide8").on("mouseenter", function(){
-	$(".image8").addClass("angle1");
-	$(".image2").removeClass("angle1");
-	$(".image3").removeClass("angle1");
-	$(".image4").removeClass("angle1");
-	$(".image5").removeClass("angle1");
-	$(".image6").removeClass("angle1");
-	$(".image7").removeClass("angle1");
-	$(".image1").removeClass("angle1");
-	$(".image9").removeClass("angle1");
-})
-$(".slide9").on("mouseenter", function(){
-	$(".image9").addClass("angle1");
-	$(".image2").removeClass("angle1");
-	$(".image3").removeClass("angle1");
-	$(".image4").removeClass("angle1");
-	$(".image5").removeClass("angle1");
-	$(".image6").removeClass("angle1");
-	$(".image7").removeClass("angle1");
-	$(".image8").removeClass("angle1");
-	$(".image1").removeClass("angle1");
-})
 //NEW MOUSEENTER
 
 var n = 0;
