@@ -130,76 +130,26 @@ header {
   background-repeat: no-repeat;
   background-image: url("../img/transition-slide.png");
   transition-duration: 0.5s;
+  opacity: 0.5;
 }
 
-#scene .layer .person1 {
+#scene .layer .goldStars {
   position: absolute;
-  top: 10%;
-  left: -9%;
+  top: 0%;
+  left: 0%;
   height: auto;
   width: 100%;
   transition-duration: 0.5s;
 }
 
-@media only screen and (min-width: 768px) {
-  #scene .layer .person1 {
-    top: 12%;
-    left: 14%;
-    width: 100%;
-  }
-}
-
-#scene .layer .person2 {
+#scene .layer .e__logo--transparent {
   position: absolute;
-  top: 4%;
-  left: 41%;
-  height: auto;
-  width: 100%;
-  transition-duration: 0.5s;
-}
-
-@media only screen and (min-width: 768px) {
-  #scene .layer .person2 {
-    top: 10%;
-    left: 58%;
-    width: 100%;
-    height: auto;
-  }
-}
-
-#scene .layer .person3 {
-  position: absolute;
-  top: 17%;
-  left: 1%;
+  top: 120px;
+  left: 0%;
   transition-duration: 0.5s;
   height: auto;
   width: 100%;
   opacity: 0.15;
-}
-
-@media only screen and (min-width: 768px) {
-  #scene .layer .person3 {
-    top: 0%;
-    left: 0%;
-    width: 100%;
-  }
-}
-
-#scene .layer .person4 {
-  position: absolute;
-  top: 17%;
-  left: 1%;
-  transition-duration: 0.5s;
-  height: auto;
-  width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  #scene .layer .person4 {
-    top: 0%;
-    left: 0%;
-    width: 100%;
-  }
 }
 
 #scene .layer .title {
@@ -207,7 +157,7 @@ header {
   text-align: center;
   height: auto;
   width: 100%;
-  top: 10%;
+  top: 200px;
   left: 0;
   transition-duration: 0.5s;
   color: white;
