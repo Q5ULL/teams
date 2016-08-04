@@ -17,6 +17,8 @@ $(document).ready(function(){
 
 });
 
+
+
 $(function () { // wait for document ready
 	// init
 	var controller = new ScrollMagic.Controller({
@@ -88,6 +90,9 @@ $(function () { // wait for document ready
 		//.addIndicators() // add indicators (requires plugin)
 		.addTo(controller);
 })
+
+var $header__logo= document.getElementById("header__logo");
+
 //changing the menu to make smaller-need to update for this projects
 $(window).on("scroll", function() {
 		
@@ -97,11 +102,15 @@ $(window).on("scroll", function() {
 		if ($(window).innerWidth() >= 0){	
 			if(position >= 60){
 				$("header").addClass("menu-small");
+				$header__logo.src = "media/img/logos/EarthDayLogo_white.png";
+				$header__logo.style.transitionDuration = "0.5s";
 			}
 
 			if(position < 60){
 				// $(".logo").addClass(".logo-large");
 				$("header").removeClass("menu-small");
+				$header__logo.src = "media/img/logos/EarthDayLogo_blue.png";
+				$header__logo.style.transitionDuration = "0.5s";
 			}
 		};
 		if ($(window).innerWidth() >= 0){
