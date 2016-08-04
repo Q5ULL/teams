@@ -103,14 +103,14 @@ $(window).on("scroll", function() {
 			if(position >= 60){
 				$("header").addClass("menu-small");
 				$header__logo.src = "media/img/logos/EarthDayLogo_white.png";
-				$header__logo.style.transitionDuration = "0.5s";
+				$header__logo.style.transitionDuration = "0.7s";
 			}
 
 			if(position < 60){
 				// $(".logo").addClass(".logo-large");
 				$("header").removeClass("menu-small");
 				$header__logo.src = "media/img/logos/EarthDayLogo_blue.png";
-				$header__logo.style.transitionDuration = "0.5s";
+				$header__logo.style.transitionDuration = "0.7s";
 			}
 		};
 		if ($(window).innerWidth() >= 0){
