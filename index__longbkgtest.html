@@ -53,28 +53,42 @@
 		</ul>
 	</section>
 
-<!--
-	<section class="panel panel__two">
-		<p>ONE</p>
-		<section class="second-big-image">
-			<ul id="scene2">
-				<li class="layer" data-depth="0.20">
-					<div class="scene2__background"></div>
-				</li>
-				<li class="layer" data-depth="0.60"><img class="scene2__tunnel" src="media/img/tunnel/Tunnel1.png"></li>
 
-				<li class="layer" data-depth="0.80"><img class="scene2__tunnel-overlay" src="media/img/tunnel/tunnel-overlay.png"></li>
-			</ul>
-		</section>
+	<section class="tunnel">
+		<ul>
+			<li class="layer" data-depth="0.20">
+				<div class="scene2__background"></div>
+			</li>
+			<li class="layer" data-depth="0.60"><img class="scene2__tunnel" src="media/img/tunnel/Tunnel1.png"></li>
+
+			<li class="layer overlay" data-depth="0.80"><img class="tunnel-overlay" src="media/img/tunnel/tunnel-overlay.png"></li>
+		</ul>
 	</section>
--->	
+
+	<section class="planet">
+		<div class="frame--planet">
+			<img class="planet-bkg" src="media/img/planets/PlasticPlanet.png">
+			<img class="planet-fg" src="media/img/planets/bottles.png">
+		</div>
+
+		<div class="frame hidden">
+			
+			<img id="bottle-planet1" class="puzzle-piece draggable" src="media/img/bottles/Bottles1.png" alt="" />
+		
+			<img id="bottle-planet2" class="puzzle-piece draggable" src="media/img/bottles/Bottles2.png" alt="" />
+		
+			<img id="bottle-planet3" class="puzzle-piece draggable" src="media/img/bottles/Bottles3.png" alt="" />
+
+		</div>
+	</section>
+	
 	<section class="panel turqoise">
-		<p>TWO</p>
+		<!-- <p>TWO</p> -->
 		<section class="demo" id="bezier">
 			<div class="spacer s2"></div>
 			<div class="spacer s0" id="trigger"></div>
 			<div id="target">
-				<img id="bottle" src="media/img/bottle_1.png">
+				<img id="drunk_badguy" src="media/img/alien/drunk_badguy.png">
 			</div>
 		</section>
 	<div class="spacer s2"></div>
@@ -140,6 +154,7 @@
 	<script type="text/javascript" src="media/js/scrollmagic/uncompressed/ScrollMagic.js"></script>
 	<script type="text/javascript" src="media/js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
 	<script type="text/javascript" src="media/js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+	<script type="text/javascript" src="media/js/script2.js"></script>
 	<script type="text/javascript" src="media/js/script.js"></script>
 
 </body>
