@@ -189,6 +189,13 @@ header {
   z-index: 30;
 }
 
+.tunnel .layer .tunnel__stars {
+  position: absolute;
+  height: 1440px;
+  width: 1440px;
+  z-index: 20;
+}
+
 .planet .frame--planet {
   position: absolute;
   top: 300%;
