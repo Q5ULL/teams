@@ -15,6 +15,14 @@ $(document).ready(function(){
 
 	});
 
+	$('.clouds').click(function() {
+         // $(this).css( "opacity", "-=0.1" );
+         // if($( '.img3' ).css( "opacity") >=1)
+		$( '.img1' ).css( "opacity", "-=0.3" );
+		$( '.img2' ).css( "opacity", "-=0.5" );
+		$( '.img3' ).css( "opacity", "0" );
+	});
+
 });
 
 
@@ -113,6 +121,7 @@ $(window).on("scroll", function() {
 				$header__logo.style.transitionDuration = "0.7s";
 			}
 		};
+
 		if ($(window).innerWidth() >= 0){
 			if(position >= 160){
 				$(".alien").removeClass("alien--sprite__steady");
@@ -140,179 +149,30 @@ $(window).on("scroll", function() {
 			// }
 		}
 
-		// if ($(window).innerWidth() >= 0){
-			
-		// }
+		//if ($(window).innerWidth() >= 0){
+		//var $backToTop = document.querySelector(".back-to-top");
 
-
+			if(position <= 8070){
+				$(".back-to-top").css({"left": "-180px"});
+				// $backToTop.addEventListener("hover", function(){
+				// 	$backToTop.style.left= 0 + "px";   
+				// });
+			}else{
+				$(".back-to-top").css({"left": "0"});
+			}
+		//}
 
 	});
+
 //gets rid of regular image of planet and shows layers that become draggable
 $('img.planet-fg').on("mouseenter", function(){
 	$('img.planet-fg').addClass("hidden");
 	$('.frame').removeClass("hidden");
-})
-
-//NEW MOUSEENTER
-
-var n = 0;
-$( "div.enterleave" ).mouseenter(function() {
-	$( "p:first", this ).text( "mouse enter" );
-	$( "p:last", this ).text( ++n );
-})
-.mouseleave(function() {
-	$( "p:first", this ).text( "mouse leave" );
 });
 
-// var waypoint = new Waypoint({
-//  element: document.getElementById('waypoint'),
-//  handler: function() {
-//    document.body.className = "animate";
-// }
- // },
- // offset: 25
-
-// });
-
-// var $shoe_zoom = document.querySelector(".round-button-circle");
-// var $shoe_mode2= document.querySelector(".shoe");
-
-// var $yellow_btn= document.querySelector(".yellow_button");
-// var $pink_btn= document.querySelector(".pink_button");
-// var $red_btn= document.querySelector(".red_button");
-// var $blue_btn= document.querySelector(".blue_button");
-// var $shoe_mode= document.querySelector(".shoe_container");
-
-// var $logo= document.getElementById("logo_black");
-// var side_shoe = document.getElementById("shoe-side");
-// var back_shoe = document.getElementById("shoe-back");
-// var front_shoe = document.getElementById("shoe-front");
-
-// $logo.addEventListener("mouseover", function(){
-	
-// 	if( $shoe_mode.getAttribute("class")== "shoe_container pinkmode"){
-// 		$logo.src = "media/img/tiger_logo_invert.png";
-// 		$logo.style.transitionDuration = "0.5s";
-// 	}
-// 	if( $shoe_mode.getAttribute("class")== "shoe_container bluemode"){
-// 		$logo.src = "media/img/tiger_logo_invert.png";
-// 		$logo.style.transitionDuration = "0.5s";
-// 	}
-// 	if( $shoe_mode.getAttribute("class")== "shoe_container redmode"){
-// 		$logo.src = "media/img/tiger_logo_invert.png";
-// 		$logo.style.transitionDuration = "0.5s";
-// 	}
-// 	if( $shoe_mode.getAttribute("class")== "shoe_container"){
-// 		$logo.src = "media/img/tiger_logo.png";
-// 		$logo.style.transitionDuration = "0.5s";
-// 	}
-// 	// $logo.src = "media/img/tiger_logo.png";
-// 	// $logo.style.width= 200 + "px";
-// 	// $logo.style.height= "auto";
-// 	// $logo.style.padding= 0 + "px";
-// 	// $logo.style.margin= -20 + "px";
-// });
-
-// $logo.addEventListener("mouseout", function(){
-// 	$logo.src = "media/img/onitsuka-tiger-logo.png";
-// 	$logo.style.transitionDuration = "0.5s";
-// 	// $logo.style.width= 120 + "px";
-// 	// $logo.style.height= "auto";
-// 	// $logo.style.padding= 20 + "px";
-// 	// $logo.style.margin= 0 + "px";
-
-
-// });
-
-// $yellow_btn.addEventListener("click", function(){
-// 	console.log("Button clicked");
-
-// 	if( $shoe_mode.getAttribute("class") != "shoe_container"){
-// 		$shoe_mode.setAttribute("class", "shoe_container");
-// 		side_shoe.src = "media/img/shoe_side.png";
-// 		front_shoe.src = "media/img/shoe_front.png";
-// 		back_shoe.src = "media/img/shoe_back.png";
-// 		side_shoe.style.transitionDuration = "0.5s";
-// 		front_shoe.style.transitionDuration = "0.5s";
-// 		back_shoe.style.transitionDuration = "0.5s";
-// 	} else {
-		
-// 	}
-// 	// $thing.setAttribute("class", "thing active");
-	
-// });
-
-// $pink_btn.addEventListener("click", function(){
-// 	console.log("Button clicked");
-
-// 	if( $shoe_mode.getAttribute("class") != "shoe_container pinkmode"){
-// 		$shoe_mode.setAttribute("class", "shoe_container pinkmode");
-// 		side_shoe.src = "media/img/pink-shoe_side.png";
-// 		front_shoe.src = "media/img/pink-shoe_front.png";
-// 		back_shoe.src = "media/img/pink-shoe_back.png";
-// 		side_shoe.style.transitionDuration = "0.5s";
-// 		front_shoe.style.transitionDuration = "0.5s";
-// 		back_shoe.style.transitionDuration = "0.5s";
-// 	} else {
-
-// 	}
-// });
-
-// $red_btn.addEventListener("click", function(){
-// 	console.log("Button clicked");
-
-// 	if( $shoe_mode.getAttribute("class") != "shoe_container redmode"){
-// 		$shoe_mode.setAttribute("class", "shoe_container redmode");
-// 		side_shoe.src = "media/img/red-shoe_side.png";
-// 		front_shoe.src = "media/img/red-shoe_front.png";
-// 		back_shoe.src = "media/img/red-shoe_back.png";
-// 		side_shoe.style.transitionDuration = "0.5s";
-// 		front_shoe.style.transitionDuration = "0.5s";
-// 		back_shoe.style.transitionDuration = "0.5s";
-// 	} else {
-		
-// 	}
-	
-// });
-// $blue_btn.addEventListener("click", function(){
-// 	console.log("Button clicked");
-
-// 	if( $shoe_mode.getAttribute("class") != "shoe_container bluemode"){
-// 		$shoe_mode.setAttribute("class", "shoe_container bluemode");
-// 		side_shoe.src = "media/img/blue-shoe_side.png";
-// 		front_shoe.src = "media/img/blue-shoe_front.png";
-// 		back_shoe.src = "media/img/blue-shoe_back.png";
-// 		side_shoe.style.transitionDuration = "0.5s";
-// 		front_shoe.style.transitionDuration = "0.5s";
-// 		back_shoe.style.transitionDuration = "0.5s";
-// 	} else {
-		
-// 	}
-	
-// });
-
-// $shoe_zoom.addEventListener("click", function(){
-// 	console.log("Button pressed");
-
-// 	if( side_shoe.getAttribute("id") != "shoe-side2"){
-// 		side_shoe.setAttribute("id", "shoe-side2");
-// 	} else {
-// 		side_shoe.setAttribute("id", "shoe-side");
-// 	}
-
-// 	if( back_shoe.getAttribute("id") != "shoe-back2"){
-// 		back_shoe.setAttribute("id", "shoe-back2");
-// 	} else {
-// 		back_shoe.setAttribute("id", "shoe-back");
-// 	}
-
-// 	if( front_shoe.getAttribute("id") != "shoe-front2"){
-// 		front_shoe.setAttribute("id", "shoe-front2");
-// 	} else {
-// 		front_shoe.setAttribute("id", "shoe-front");
-// 	}
-
-	
-// });
+$(document).ready(function() {
+       
+  
+   });
 
 new WOW().init();
