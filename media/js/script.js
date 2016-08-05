@@ -8,7 +8,7 @@ $(document).ready(function(){
 	$('#scene2').parallax();
 
 
-	$(".back-to-top").click(function(){
+	$(".back-to-top__button").click(function(){
 		console.log("scrollTo Works");
 		$.scrollTo( $(".big-image"), 3000 );
 		// $.scrollTo( 150, 2000 );//scroll to top: 150

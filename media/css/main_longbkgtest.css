@@ -39,6 +39,7 @@ body {
 body.index {
   background-color: #424242;
   -webkit-font-smoothing: antialiased;
+  background-image: url("../img/stars/GoldStars.png");
 }
 
 body.index .body__starbkg {
