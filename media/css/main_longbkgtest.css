@@ -313,10 +313,6 @@ header {
   z-index: 20;
 }
 
-.panel__two {
-  margin-bottom: 400px;
-}
-
 .image-band {
   position: fixed;
   top: 100px;
@@ -325,19 +321,80 @@ header {
   height: 10px;
 }
 
+.planet2 .frame--planet2 {
+  position: absolute;
+  top: 550%;
+  right: -150px;
+  z-index: 30;
+}
+
+.planet2 .frame--planet2 .planet2-bkg {
+  position: absolute;
+  top: 28px;
+  right: -70px;
+  width: 1440px;
+  height: auto;
+}
+
+.planet2 .frame--planet2 .planet2-fg {
+  position: absolute;
+  top: 86px;
+  right: 39px;
+  width: 1440px;
+  height: auto;
+  transition-duration: 1s;
+  z-index: 35;
+}
+
+.planet2 .hidden {
+  display: none;
+  transition-duration: 1s;
+}
+
+.planet2 .clouds {
+  position: absolute;
+  top: 398%;
+  right: -115px;
+  z-index: 35;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+
+.planet2 .clouds #clouds {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  transition: all .2s ease-out;
+  transition-duration: 1s;
+}
+
 .back-to-top {
   position: fixed;
-  top: 80%;
-  left: 0;
-  z-index: 30;
-  width: 60px;
-  height: 60px;
+  top: 70%;
+  left: -180px;
+  width: 195px;
+  height: 142px;
   text-decoration: uppercase;
   text-align: center;
-  padding: 20px;
+  padding-top: 25px;
   color: white;
   background-color: #ad732a;
   z-index: 100;
+  transition-duration: 0.5s;
+}
+
+.back-to-top p {
+  font-size: 40px;
+  text-decoration: uppercase;
+}
+
+.back-to-top .font_large {
+  font-size: 72px;
+}
+
+.back-to-top:hover {
+  transition-duration: 0.5s;
+  left: 0px;
 }
 
 /* <><><><><><><><><><><><><><><ANIMATIONS<><><><><><><><><>><><> */
