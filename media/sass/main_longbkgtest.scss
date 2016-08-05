@@ -313,77 +313,6 @@ header{
 
 }
 
-// .green {
-// 	margin-bottom: 400px;
-	
-// 	.changeSlide{
-// 		position: relative;
-// 		width: 500px;
-// 	    height: 281px;
-// 	    margin: 0 auto;
-// 		background-size: 100%;
-// 		background-position: center;
-// 		background-repeat: no-repeat;
-// 		background-image: url('../img/moon_base.jpg');
-// 		-webkit-clip-path: circle(34% at 50% 50%);
-// 		clip-path: circle(34% at 50% 50%);
-// 		// overflow: hidden;
-// 		z-index: 1;
-// 		.slides{
-// 			position: absolute;
-// 			top: 0;
-// 			left: 0;
-// 			width: 100%;
-// 			height: 100%;
-// 			z-index: 15;
-// 			.slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7, .slide8, .slide9{
-// 				float: left;
-// 				width: 11.11111111111111%;
-// 				height: 100%;	
-// 			}
-// 		}
-// 		img{
-// 			position: absolute;
-// 			top: 0;
-// 			left: 0;
-// 			width: 100%;
-// 			height: 100%;
-// 			overflow: hidden;
-// 		}
-// 		.description{
-// 			position: absolute;
-// 			width: 100%;
-// 			overflow: hidden;
-// 			height: auto;
-// 			background-color: #26252a;
-// 			margin-top: 281px;
-// 			z-index: 1;
-// 			p{	
-// 				text-align: left;
-// 				font-size: 1em;
-// 				padding: 10px;
-// 				color: $body-color;
-// 				line-height: 1.2em;
-// 				text-shadow:1px 1px 1px black;
-// 			}
-// 		}
-// 	}
-// 	.angle1{
-// 		position: absolute;
-// 		z-index: 1;
-// 	}
-// }
-.panel__two {
-	margin-bottom: 400px;
-	// background-color: #3883d8;
-}
-// .turqoise {
-// 	background-color: #38ced7;
-// }
-// .bordeaux {
-//     background-color: #953543;
-// }
-
 .image-band{
 	position: fixed;
 	top: 100px;
@@ -392,21 +321,84 @@ header{
 	height: 10px;
 }
 
+.planet2{
+	// position: absolute;
+ //    top: 250%;
+ //    left: 0;
+ //    z-index: 35;
+	.frame--planet2{
+		position: absolute;
+		top: 550%;
+		right: -150px;
+		z-index: 30;
+		.planet2-bkg{
+			position: absolute;
+			top: 28px;
+		    right: -70px;
+		    width: 1440px;
+		    height: auto;
+		}
+		.planet2-fg{
+			position: absolute;
+		    top: 86px;
+    		right: 39px;
+		    width: 1440px;
+		    height: auto;
+		    transition-duration: 1s;
+		    z-index: 35;
+		}
+	}
+	.hidden{
+		display: none;
+		transition-duration: 1s;
+	}
+	.clouds{
+		position: absolute;
+		top: 398%;
+    	right: -115px;
+ 	    // width: 1440px;
+ 	    // height: 1440px;
+		z-index: 35;
+		transition-duration: 1s;
+		overflow: hidden;
+		#clouds {
+			position: absolute;
+			width: 100px;
+			height: auto;
+			transition: all .2s ease-out;
+			transition-duration: 1s;
+
+		}
+	}
+}
+
 .back-to-top{
 	position: fixed;
-    top: 80%;
-    left: 0;
-	z-index: 30;
-	width: 60px;
-	height: 60px;
+    top: 70%;
+    left: -180px;
+	width: 195px;
+	height: 142px;
 	// border-radius: 60px;
 	text-decoration: uppercase;
 	text-align: center;
-	padding: 20px;
+	padding-top: 25px;
 	color: white;
 	background-color: rgb(173, 115, 42);
 	z-index: 100;
-}
+	transition-duration: 0.5s;
+
+	p{
+		font-size: 40px;
+		text-decoration: uppercase;
+	}
+	.font_large{
+		font-size: 72px;
+
+	}&:hover{
+		transition-duration: 0.5s;
+		left: 0px;
+	}
+} 
 
 // section{
 
