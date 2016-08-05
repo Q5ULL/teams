@@ -47,7 +47,7 @@ console.log("script2.js");
     
 	    // console.log(this);
 	    // 'this' refers to the image element that was clicked, i.e. the thing with the event listener on it
-	    TweenMax.to($beingDragged, .5, {left: "1500px", scale: '1.2'});
+	    TweenMax.to($beingDragged, .5, {left: "2000px", scale: '1.2'});
 	};
 
 	var doDrag = function(){

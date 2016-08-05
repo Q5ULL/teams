@@ -120,17 +120,29 @@ $(window).on("scroll", function() {
 			}
 			if(position <= 160){
 				$(".alien").removeClass("alien--sprite__falling");
-				$(".alien").addClass("alien--sprite__steady ");
+				$(".alien").addClass("alien--sprite__steady");
 			}
 			if(position >= 2080){
 				$(".alien").removeClass("alien--sprite__falling");
-				$(".alien").addClass("alien--sprite__steady ");
+				$(".alien").addClass("alien--sprite__steady");
 			}
-			// if(position <= 1019){
-			// 	$(".alien").removeClass("alien--sprite__falling");
-			// 	$(".alien").addClass("alien--sprite__steady ");
+			// if(position <= 2080){
+			// 	$(".alien").removeClass("alien--sprite__steady");
+			// 	$(".alien").addClass("alien--sprite__falling");
+			// }
+			// if(position >= 2802){
+			// 	$(".alien").removeClass("alien--sprite__steady");
+			// 	$(".alien").addClass("alien--sprite__tunnel");
+			// }
+			// if(position <= 2802){
+			// 	$(".alien").removeClass("alien--sprite__tunnel");
+			// 	$(".alien").addClass("alien--sprite__steady");
 			// }
 		}
+
+		// if ($(window).innerWidth() >= 0){
+			
+		// }
 
 
 
