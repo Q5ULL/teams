@@ -346,23 +346,20 @@ header {
   z-index: 35;
 }
 
-.planet2 .hidden {
-  display: none;
-  transition-duration: 1s;
-}
-
 .planet2 .clouds {
   position: absolute;
-  top: 398%;
+  top: 615%;
   right: -115px;
+  width: 1440px;
+  height: 1232px;
   z-index: 35;
   transition-duration: 1s;
   overflow: hidden;
 }
 
-.planet2 .clouds #clouds {
+.planet2 .clouds .cloud {
   position: absolute;
-  width: 100px;
+  width: 1440px;
   height: auto;
   transition: all .2s ease-out;
   transition-duration: 1s;

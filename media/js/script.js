@@ -10,17 +10,18 @@ $(document).ready(function(){
 
 	$(".back-to-top").click(function(){
 		console.log("scrollTo Works");
-		$.scrollTo( $(".big-image"), 2000 );
+		$.scrollTo( $(".big-image"), 3000 );
 		// $.scrollTo( 150, 2000 );//scroll to top: 150
 
 	});
-
+//makes cloud pollution slowly disappear
 	$('.clouds').click(function() {
          // $(this).css( "opacity", "-=0.1" );
          // if($( '.img3' ).css( "opacity") >=1)
-		$( '.img1' ).css( "opacity", "-=0.3" );
-		$( '.img2' ).css( "opacity", "-=0.5" );
-		$( '.img3' ).css( "opacity", "0" );
+        $( '.img1' ).css( "opacity", "-=0.2" );
+		$( '.img2' ).css( "opacity", "-=0.3" );
+		$( '.img3' ).css( "opacity", "-=0.5" );
+		$( '.img4' ).css( "opacity", "-=0.4" );
 	});
 
 });
@@ -35,18 +36,6 @@ $(function () { // wait for document ready
 		}
 	});
 
-	// // get all slides
-	// var slides = document.querySelectorAll("section.panel");
-
-	// // create scene for every slide
-	// for (var i=0; i<slides.length; i++) {
-	// 	new ScrollMagic.Scene({
-	// 			triggerElement: slides[i]
-	// 		})
-	// 		.setPin(slides[i])
-	// 		//.addIndicators() // add indicators (requires plugin)
-	// 		.addTo(controller)
-	// }
 });
 
 $(function () { // wait for document ready
@@ -140,16 +129,19 @@ $(window).on("scroll", function() {
 	}
 
 	if ($(window).innerWidth() >= 0){
-	//var $backToTop = document.querySelector(".back-to-top");
+	// var $backToTop = document.querySelector(".back-to-top");
+
+	// 	$backToTop.addEventListener("hover", function(){
+	// 		$backToTop.style.left= 0 + "px";   
+	// 	});
 
 		if(position_backTop <= 8070){
 			$(".back-to-top").css({"left": "-180px"});
-			// $backToTop.addEventListener("hover", function(){
-			// 	$backToTop.style.left= 0 + "px";   
-			// });
+			
 		} else{
 			$(".back-to-top").css({"left": "0"});
 		}
+		
 	}
 
 });

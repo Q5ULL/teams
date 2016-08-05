@@ -348,26 +348,26 @@ header{
 		    z-index: 35;
 		}
 	}
-	.hidden{
-		display: none;
-		transition-duration: 1s;
-	}
+	// .hidden{
+	// 	display: none;
+	// 	transition-duration: 1s;
+	// }
 	.clouds{
 		position: absolute;
-		top: 398%;
+		top: 615%;
     	right: -115px;
- 	    // width: 1440px;
- 	    // height: 1440px;
+ 	    width: 1440px;
+ 	    height: 1232px;
 		z-index: 35;
 		transition-duration: 1s;
 		overflow: hidden;
-		#clouds {
+		.cloud {
 			position: absolute;
-			width: 100px;
+			width: 1440px;
 			height: auto;
 			transition: all .2s ease-out;
 			transition-duration: 1s;
-
+			//z-index: 35;
 		}
 	}
 }
