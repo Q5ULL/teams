@@ -36,13 +36,26 @@ body {
 }
 
 /*  CONTENT  =============================================== */
-body .body__starbkg {
+body.index {
+  background-color: #424242;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.index .body__starbkg {
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  height: auto;
+  width: 1440px;
+  height: 11264px;
+  margin: 0 auto;
   z-index: -10;
+}
+
+div.page-wrapper {
+  position: relative;
+  width: 1440px;
+  height: 11264px;
+  margin: 0 auto;
 }
 
 header {
@@ -72,6 +85,8 @@ header {
   background-size: cover;
   background-attachment: fixed;
   transition-duration: 0.5s;
+  width: 1440px;
+  height: 970px;
 }
 
 .alien--sprite__falling {
@@ -188,7 +203,7 @@ header {
 
 .tunnel {
   position: absolute;
-  top: 100%;
+  top: 970px;
   left: 0;
 }
 
@@ -207,12 +222,12 @@ header {
   position: absolute;
   height: 1440px;
   width: 1440px;
-  z-index: 20;
+  z-index: 0;
 }
 
 .planet .frame--planet {
   position: absolute;
-  top: 300%;
+  top: 3320px;
   left: -150px;
   z-index: 30;
 }
@@ -242,10 +257,10 @@ header {
 
 .planet .frame {
   position: absolute;
-  top: 298%;
+  top: 3320px;
   left: -115px;
   width: 1440px;
-  height: 1440px;
+  height: 1170px;
   z-index: 35;
   transition-duration: 1s;
   overflow: hidden;
@@ -267,11 +282,12 @@ header {
 
 .panel {
   position: absolute;
-  top: 300%;
+  top: 3300px;
   left: 0;
-  height: 100%;
-  width: 100%;
+  height: 1440px;
+  width: 1440px;
   overflow: hidden;
+  z-index: 30;
 }
 
 .panel p {
@@ -286,12 +302,11 @@ header {
   left: -58px;
   width: 120px;
   height: 296px;
-  z-index: 40;
 }
 
 .tunnel-two {
   position: absolute;
-  top: 395%;
+  top: 4080px;
   left: 0;
 }
 
@@ -310,7 +325,7 @@ header {
   position: absolute;
   height: 1440px;
   width: 1440px;
-  z-index: 20;
+  z-index: 0;
 }
 
 .image-band {
@@ -323,7 +338,7 @@ header {
 
 .planet2 .frame--planet2 {
   position: absolute;
-  top: 550%;
+  top: 6580px;
   right: 0px;
   width: 1440px;
   height: 1938px;
@@ -333,7 +348,6 @@ header {
 
 .planet2 .frame--planet2 .planet2-bkg {
   position: absolute;
-  top: 28px;
   right: -270px;
   width: 1440px;
   height: auto;
@@ -341,7 +355,6 @@ header {
 
 .planet2 .frame--planet2 .planet2-fg {
   position: absolute;
-  top: 86px;
   right: -165px;
   width: 1440px;
   height: auto;
@@ -351,7 +364,7 @@ header {
 
 .planet2 .clouds {
   position: absolute;
-  top: 615%;
+  top: 6580px;
   right: 0px;
   width: 1440px;
   height: 1232px;
@@ -371,7 +384,7 @@ header {
 
 .tunnel-three {
   position: absolute;
-  top: 700%;
+  top: 7394px;
   left: 0;
 }
 
@@ -391,12 +404,12 @@ header {
   position: absolute;
   height: 1440px;
   width: 1440px;
-  z-index: 20;
+  z-index: 0;
 }
 
 .back-to-top {
   position: fixed;
-  top: 70%;
+  bottom: 170px;
   left: -180px;
   width: 195px;
   height: 142px;
@@ -421,6 +434,19 @@ header {
 .back-to-top:hover {
   transition-duration: 0.5s;
   left: 0px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  width: 1440px;
+  height: 970px;
+}
+
+footer img {
+  width: 1440px;
+  height: 970px;
 }
 
 /* <><><><><><><><><><><><><><><ANIMATIONS<><><><><><><><><>><><> */
