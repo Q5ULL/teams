@@ -94,34 +94,19 @@ header{
 	left: 560px;
 	// width: 300px;
  //    height: 388px;
-    width: 260px;
-    height: 330px;
-	// background: url(../img/alien/Alien-Falling-sprite.png);
-	animation: freak-out 1.5s steps(2) infinite;
-    background: url(../img/alien/Alien-Falling-sprite--small.png) 0 0 no-repeat;
-    background-size: 100% auto;
-    transform: scale(0.8);
-    transition-duration: 1s;
-	z-index: 10;
+  	@include tunnel__animation;
 }
 .alien--sprite__steady{
 	position: fixed;
 	top: 15%;
 	left: 70%;
-	width: 400px;
-    height: 518px;
-	// background: url(../img/alien/Alien-Falling-sprite.png);
-	// animation: freak-out 1.5s steps(2) infinite;
-    background: url(../img/alien/Alien-floating--small.png) 0 0 no-repeat;
-    background-size: 100% auto;
-	animation-name: hvr-hang;
-	animation-duration: 2s;
-	transition-duration: 0.2s;
-	animation-iteration-count: infinite; //1 -default
-	// animation-direction: reverse; //alternate
-	animation-direction: alternate; //alternate
-	animation-timing-function: ease-out;
-	z-index: 10;
+	@include steady__animation;
+}
+.alien--sprite__tunnel{
+	position: fixed;
+	top: 15%;
+	left: 460px;
+	@include tunnel__animation;
 }
 
 #scene{
@@ -226,20 +211,20 @@ header{
 	.frame--planet{
 		position: absolute;
 		top: 300%;
-		left: 0;
+		left: -150px;
 		z-index: 30;
 		.planet-bkg{
 			position: absolute;
 			top: 28px;
-		    left: -45px;
-		    width: 777px;
+		    left: -70px;
+		    width: 1440px;
 		    height: auto;
 		}
 		.planet-fg{
 			position: absolute;
-		    top: -16px;
-    		left: -20px;
-		    width: 777px;
+		    top: -42px;
+    		left: -39px;
+		    width: 1440px;
 		    height: auto;
 		    transition-duration: 1s;
 		    z-index: 35;
@@ -251,18 +236,22 @@ header{
 	}
 	.frame{
 		position: absolute;
-		top: 300%;
- 	    left: 0;
+		top: 298%;
+    	left: -115px;
+ 	    width: 1440px;
+ 	    height: 1440px;
 		z-index: 35;
 		transition-duration: 1s;
+		overflow: hidden;
 		#bottle-planet1,
 		#bottle-planet2,
 		#bottle-planet3{
 			position: absolute;
-			width: 770px;
+			width: 1440px;
 			height: auto;
 			transition: all .2s ease-out;
 			transition-duration: 1s;
+
 		}
 	}
 }
@@ -298,6 +287,30 @@ header{
 			// height: 20%;
 		}
 	}	
+}
+
+.tunnel-two{
+    position: absolute;
+    top: 395%;
+    left: 0;
+    .layer{
+    	position: absolute;
+    	.tunnel-overlay-two{
+    		position: absolute;
+    	    height: 1938px;
+    		width: 1440px;
+    		z-index: 25;
+			// width: 1440px;
+			// height: auto;
+		}
+		.tunnel__stars-two{
+			position: absolute;
+    	    height: 1440px;
+    		width: 1440px;
+    		z-index: 20;
+		}
+    }
+
 }
 
 // .green {

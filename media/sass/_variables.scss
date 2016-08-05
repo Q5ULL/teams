@@ -39,6 +39,33 @@ $desktopXL-breakpoint: 1400px;
     background-attachment: fixed;
     transition-duration: 0.5s;
 }
+@mixin steady__animation{
+	width: 400px;
+    height: 518px;
+	// background: url(../img/alien/Alien-Falling-sprite.png);
+	// animation: freak-out 1.5s steps(2) infinite;
+    background: url(../img/alien/Alien-floating--small.png) 0 0 no-repeat;
+    background-size: 100% auto;
+	animation-name: hvr-hang;
+	animation-duration: 2s;
+	transition-duration: 0.2s;
+	animation-iteration-count: infinite; //1 -default
+	// animation-direction: reverse; //alternate
+	animation-direction: alternate; //alternate
+	animation-timing-function: ease-out;
+	z-index: 10;
+}
+@mixin tunnel__animation{
+	width: 260px;
+    height: 330px;
+	// background: url(../img/alien/Alien-Falling-sprite.png);
+	animation: freak-out 1.5s steps(2) infinite;
+    background: url(../img/alien/Alien-Falling-sprite--small.png) 0 0 no-repeat;
+    background-size: 100% auto;
+    transform: scale(0.8);
+    transition-duration: 1s;
+	z-index: 10;
+}
 
 @mixin bp-tablet {
   	@media only screen and ( min-width: $tablet-breakpoint){
