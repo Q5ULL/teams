@@ -329,19 +329,23 @@ header{
 	.frame--planet2{
 		position: absolute;
 		top: 550%;
-		right: -150px;
-		z-index: 30;
+		right: 0px;
+		width: 1440px;
+	    height: 1938px;
+	    z-index: 30;
+	    overflow: hidden;
+
 		.planet2-bkg{
 			position: absolute;
 			top: 28px;
-		    right: -70px;
+		    right: -270px;
 		    width: 1440px;
 		    height: auto;
 		}
 		.planet2-fg{
 			position: absolute;
 		    top: 86px;
-    		right: 39px;
+    		right: -165px;
 		    width: 1440px;
 		    height: auto;
 		    transition-duration: 1s;
@@ -355,7 +359,7 @@ header{
 	.clouds{
 		position: absolute;
 		top: 615%;
-    	right: -115px;
+    	right: 0px;
  	    width: 1440px;
  	    height: 1232px;
 		z-index: 35;
@@ -363,6 +367,7 @@ header{
 		overflow: hidden;
 		.cloud {
 			position: absolute;
+			right: -100px;
 			width: 1440px;
 			height: auto;
 			transition: all .2s ease-out;
@@ -370,6 +375,29 @@ header{
 			//z-index: 35;
 		}
 	}
+}
+.tunnel-three{
+    position: absolute;
+    top: 700%;
+    left: 0;
+    .layer{
+    	position: absolute;
+
+    	.tunnel-overlay-three{
+    		position: absolute;
+    	    height: 1938px;
+    		width: 1440px;
+    		z-index: 25;
+    		overflow: hidden;
+		}
+		.tunnel__stars-three{
+			position: absolute;
+    	    height: 1440px;
+    		width: 1440px;
+    		z-index: 20;
+		}
+    }
+
 }
 
 .back-to-top{
