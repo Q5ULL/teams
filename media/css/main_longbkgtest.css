@@ -105,6 +105,20 @@ header {
   z-index: 10;
 }
 
+.alien--sprite__tunnel {
+  position: fixed;
+  top: 15%;
+  left: 460px;
+  width: 260px;
+  height: 330px;
+  animation: freak-out 1.5s steps(2) infinite;
+  background: url(../img/alien/Alien-Falling-sprite--small.png) 0 0 no-repeat;
+  background-size: 100% auto;
+  transform: scale(0.8);
+  transition-duration: 1s;
+  z-index: 10;
+}
+
 #scene {
   position: absolute;
   width: 100%;
@@ -199,23 +213,23 @@ header {
 .planet .frame--planet {
   position: absolute;
   top: 300%;
-  left: 0;
+  left: -150px;
   z-index: 30;
 }
 
 .planet .frame--planet .planet-bkg {
   position: absolute;
   top: 28px;
-  left: -45px;
-  width: 777px;
+  left: -70px;
+  width: 1440px;
   height: auto;
 }
 
 .planet .frame--planet .planet-fg {
   position: absolute;
-  top: -16px;
-  left: -20px;
-  width: 777px;
+  top: -42px;
+  left: -39px;
+  width: 1440px;
   height: auto;
   transition-duration: 1s;
   z-index: 35;
@@ -228,17 +242,20 @@ header {
 
 .planet .frame {
   position: absolute;
-  top: 300%;
-  left: 0;
+  top: 298%;
+  left: -115px;
+  width: 1440px;
+  height: 1440px;
   z-index: 35;
   transition-duration: 1s;
+  overflow: hidden;
 }
 
 .planet .frame #bottle-planet1,
 .planet .frame #bottle-planet2,
 .planet .frame #bottle-planet3 {
   position: absolute;
-  width: 770px;
+  width: 1440px;
   height: auto;
   transition: all .2s ease-out;
   transition-duration: 1s;
@@ -270,6 +287,30 @@ header {
   width: 120px;
   height: 296px;
   z-index: 40;
+}
+
+.tunnel-two {
+  position: absolute;
+  top: 395%;
+  left: 0;
+}
+
+.tunnel-two .layer {
+  position: absolute;
+}
+
+.tunnel-two .layer .tunnel-overlay-two {
+  position: absolute;
+  height: 1938px;
+  width: 1440px;
+  z-index: 25;
+}
+
+.tunnel-two .layer .tunnel__stars-two {
+  position: absolute;
+  height: 1440px;
+  width: 1440px;
+  z-index: 20;
 }
 
 .panel__two {
