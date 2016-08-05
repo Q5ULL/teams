@@ -94,7 +94,7 @@ header {
   left: 70%;
   width: 400px;
   height: 518px;
-  background: url(../img/alien/Alien-floating--small.png) 0 0 no-repeat;
+  background: url(../img/alien/Alien-Floating--small.png) 0 0 no-repeat;
   background-size: 100% auto;
   animation-name: hvr-hang;
   animation-duration: 2s;

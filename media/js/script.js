@@ -104,65 +104,55 @@ var $header__logo= document.getElementById("header__logo");
 //changing the menu to make smaller-need to update for this projects
 $(window).on("scroll", function() {
 		
-		var position = $(window).scrollTop();
-		console.log( "position:" + $(window).scrollTop() );
+	var position_alien = $(window).scrollTop();
+	var position = $(window).scrollTop();
+	var position_backTop = $(window).scrollTop();
+	console.log( "position:" + $(window).scrollTop() );
 
-		if ($(window).innerWidth() >= 0){	
-			if(position >= 60){
-				$("header").addClass("menu-small");
-				$header__logo.src = "media/img/logos/EarthDayLogo_white.png";
-				$header__logo.style.transitionDuration = "0.7s";
-			}
-
-			if(position < 60){
-				// $(".logo").addClass(".logo-large");
-				$("header").removeClass("menu-small");
-				$header__logo.src = "media/img/logos/EarthDayLogo_blue.png";
-				$header__logo.style.transitionDuration = "0.7s";
-			}
-		};
-
-		if ($(window).innerWidth() >= 0){
-			if(position >= 160){
-				$(".alien").removeClass("alien--sprite__steady");
-				$(".alien").addClass("alien--sprite__falling");
-			}
-			if(position <= 160){
-				$(".alien").removeClass("alien--sprite__falling");
-				$(".alien").addClass("alien--sprite__steady");
-			}
-			if(position >= 2080){
-				$(".alien").removeClass("alien--sprite__falling");
-				$(".alien").addClass("alien--sprite__steady");
-			}
-			// if(position <= 2080){
-			// 	$(".alien").removeClass("alien--sprite__steady");
-			// 	$(".alien").addClass("alien--sprite__falling");
-			// }
-			// if(position >= 2802){
-			// 	$(".alien").removeClass("alien--sprite__steady");
-			// 	$(".alien").addClass("alien--sprite__tunnel");
-			// }
-			// if(position <= 2802){
-			// 	$(".alien").removeClass("alien--sprite__tunnel");
-			// 	$(".alien").addClass("alien--sprite__steady");
-			// }
+	if ($(window).innerWidth() >= 0){	
+		if(position >= 60){
+			$("header").addClass("menu-small");
+			$header__logo.src = "media/img/logos/EarthDayLogo_white.png";
+			$header__logo.style.transitionDuration = "0.7s";
 		}
 
-		//if ($(window).innerWidth() >= 0){
-		//var $backToTop = document.querySelector(".back-to-top");
+		if(position < 60){
+			// $(".logo").addClass(".logo-large");
+			$("header").removeClass("menu-small");
+			$header__logo.src = "media/img/logos/EarthDayLogo_blue.png";
+			$header__logo.style.transitionDuration = "0.7s";
+		}
+	};
 
-			if(position <= 8070){
-				$(".back-to-top").css({"left": "-180px"});
-				// $backToTop.addEventListener("hover", function(){
-				// 	$backToTop.style.left= 0 + "px";   
-				// });
-			}else{
-				$(".back-to-top").css({"left": "0"});
-			}
-		//}
+	if ($(window).innerWidth() >= 0){
+		if(position_alien >= 160){
+			$(".alien").removeClass("alien--sprite__steady");
+			$(".alien").addClass("alien--sprite__falling");
+		}
+		if(position_alien <= 160){
+			$(".alien").removeClass("alien--sprite__falling");
+			$(".alien").addClass("alien--sprite__steady");
+		}
+		if(position_alien >= 2080){
+			$(".alien").removeClass("alien--sprite__falling");
+			$(".alien").addClass("alien--sprite__steady");
+		}
+	}
 
-	});
+	if ($(window).innerWidth() >= 0){
+	//var $backToTop = document.querySelector(".back-to-top");
+
+		if(position_backTop <= 8070){
+			$(".back-to-top").css({"left": "-180px"});
+			// $backToTop.addEventListener("hover", function(){
+			// 	$backToTop.style.left= 0 + "px";   
+			// });
+		} else{
+			$(".back-to-top").css({"left": "0"});
+		}
+	}
+
+});
 
 //gets rid of regular image of planet and shows layers that become draggable
 $('img.planet-fg').on("mouseenter", function(){
@@ -170,9 +160,5 @@ $('img.planet-fg').on("mouseenter", function(){
 	$('.frame').removeClass("hidden");
 });
 
-$(document).ready(function() {
-       
-  
-   });
 
 new WOW().init();
