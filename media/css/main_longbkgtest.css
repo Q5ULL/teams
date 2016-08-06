@@ -230,6 +230,9 @@ header {
   position: absolute;
   top: 3320px;
   left: -150px;
+  width: 1440px;
+  height: 1232px;
+  overflow: hidden;
   z-index: 30;
 }
 
@@ -264,7 +267,6 @@ header {
   height: 1170px;
   z-index: 35;
   transition-duration: 1s;
-  overflow: hidden;
 }
 
 .planet .frame #bottle-planet1,
@@ -445,7 +447,35 @@ footer {
   height: 970px;
 }
 
-footer img {
+footer .footer__title {
+  position: absolute;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  top: 200px;
+  left: 0;
+  transition-duration: 0.5s;
+  color: white;
+}
+
+footer .footer__title .title__title {
+  font-size: 134px;
+  margin-bottom: -36px;
+}
+
+footer .footer__title .title__description {
+  font-size: 44px;
+}
+
+footer .footer__title .para {
+  font-size: 28px;
+  line-height: 1.8em;
+  padding: 33px 248px 0 248px;
+  background: url(../img/border.png) no-repeat;
+  background-position: 50% 0%;
+}
+
+footer .footer-planet {
   width: 1440px;
   height: 970px;
 }
