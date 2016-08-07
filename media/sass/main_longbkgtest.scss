@@ -488,6 +488,62 @@ header{
 		left: 0px;
 	}
 } 
+//<><><><><><><><><><><><><>hero forest animation <><><><
+
+.hero {
+    width: 1440px;
+    height: 1000px;
+    position: relative;
+    top: -1537px;
+    left: 0;
+    z-index: -1;
+}
+.layer-1,.layer-2,.layer-3, .layer-4 {
+  transform-origin: 0% 0%;
+  //border: 1px solid green;
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-size: cover;
+}
+.layer-1 {
+    -webkit-animation: parallax_fg1 linear 12s both infinite;
+          animation: parallax_fg1 linear 12s both infinite;
+    background: url(../img/forest/Forest2small.png);
+    background-position: 100% 0%;
+
+}
+.layer-2 {
+    background: url(../img/forest/Forest1small.png);
+    background-position: 100% 0%;
+}
+.layer-3 {
+    -webkit-animation: parallax_fg linear 15s both infinite;
+          animation: parallax_fg linear 15s both infinite;
+    background: url(../img/forest/Forest1small.png);
+        background-size: 100%;
+        background-position: 0 -19%;
+
+}
+.layer-4 {
+    background: url(../img/forest/Forest2small.png) no-repeat;
+    background-position: 100% 6%;
+}
+
+.animateTree {
+    -webkit-animation: parallax_fg1 linear 20s both infinite;
+            animation: parallax_fg1 linear 20s both infinite;  
+}
+.animateTree2 {
+    -webkit-animation: parallax_fg linear 40s both infinite;
+            animation: parallax_fg linear 40s both infinite;
+}
+///<><><><><><end of forest animation <><><><><><
 
 footer{
 	position: absolute;
@@ -687,4 +743,44 @@ footer{
 	to {
 		transform: rotate(360deg);
 	}
+}
+@-webkit-keyframes parallax_fg {
+  0% {
+    background-position: 2000px;
+  }
+  100% {
+    background-position: 1440px;
+  }
+}
+
+@keyframes parallax_fg {
+  0% {
+    background-position: 2765px;
+  }
+  100% {
+    background-position: 1440px;
+  }
+}
+
+@-webkit-keyframes parallax_fg1 {
+/*  0% {
+    background-position: -2765px 90%;
+  }
+  100% {
+    background-position: -550px 90%;
+  }*/
+    0% {
+    background-position: -27px 90%;
+  }
+  100% {
+    background-position: 1440px 90%;
+  }
+}
+@keyframes parallax_fg1 {
+  0% {
+    background-position: -27px 90%;
+  }
+  100% {
+    background-position: 1440px 90%;
+  }
 }
