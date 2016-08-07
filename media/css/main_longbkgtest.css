@@ -90,6 +90,23 @@ header {
   height: 970px;
 }
 
+.alien {
+  position: fixed;
+  top: 120px;
+  left: 1000px;
+  width: 400px;
+  height: 518px;
+  background: url(../img/alien/Alien-Floating--small.png) 0 0 no-repeat;
+  background-size: 100% auto;
+  animation-name: hvr-hang;
+  animation-duration: 2s;
+  transition-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+  z-index: 10;
+}
+
 .alien--sprite__falling {
   position: fixed;
   top: 15%;
@@ -106,8 +123,14 @@ header {
 
 .alien--sprite__steady {
   position: fixed;
-  top: 15%;
-  left: 70%;
+  top: 50px;
+  left: 1000px;
+}
+
+.alien--sprite__planet2 {
+  position: fixed;
+  top: 50px;
+  left: 60px;
   width: 400px;
   height: 518px;
   background: url(../img/alien/Alien-Floating--small.png) 0 0 no-repeat;
@@ -121,18 +144,8 @@ header {
   z-index: 10;
 }
 
-.alien--sprite__tunnel {
-  position: fixed;
-  top: 15%;
-  left: 460px;
-  width: 260px;
-  height: 330px;
-  animation: freak-out 1.5s steps(2) infinite;
-  background: url(../img/alien/Alien-Falling-sprite--small.png) 0 0 no-repeat;
-  background-size: 100% auto;
-  transform: scale(0.8);
-  transition-duration: 1s;
-  z-index: 10;
+.alien--sprite__behind {
+  z-index: 0;
 }
 
 #scene {

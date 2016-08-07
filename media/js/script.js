@@ -121,17 +121,43 @@ $(window).on("scroll", function() {
 
 	if ($(window).innerWidth() >= 0){
 		if(position_alien >= 160){
-			$(".alien").removeClass("alien--sprite__steady");
+			// $(".alien").removeClass("alien--sprite__steady");
 			$(".alien").addClass("alien--sprite__falling");
+			$(".alien").removeClass("alien--sprite__steady");
 		}
 		if(position_alien <= 160){
 			$(".alien").removeClass("alien--sprite__falling");
-			$(".alien").addClass("alien--sprite__steady");
+			$(".alien").removeClass("alien--sprite__steady");
 		}
 		if(position_alien >= 2080){
 			$(".alien").removeClass("alien--sprite__falling");
 			$(".alien").addClass("alien--sprite__steady");
 		}
+		if(position_alien >= 3050){
+			$(".alien").addClass("alien--sprite__falling");
+			$(".alien").removeClass("alien--sprite__steady");
+			$(".alien").removeClass("alien--sprite__planet2");
+		}
+		if(position_alien >= 5864){
+			$(".alien").addClass("alien--sprite__planet2");
+			$(".alien").removeClass("alien--sprite__steady");
+			$(".alien").removeClass("alien--sprite__falling");
+		}
+		if(position_alien >= 6948){
+			$(".alien").addClass("alien--sprite__falling");
+			$(".alien").removeClass("alien--sprite__steady");
+			$(".alien").removeClass("alien--sprite__planet2");
+		}
+		if(position_alien <= 8808){
+			$(".alien").removeClass("alien--sprite__behind");
+		}
+
+		if(position_alien >= 8808){
+			$(".alien").addClass("alien--sprite__behind");
+		}
+
+
+
 	}
 
 	if ($(window).innerWidth() >= 0){

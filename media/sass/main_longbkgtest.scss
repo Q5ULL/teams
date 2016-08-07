@@ -96,6 +96,12 @@ header{
 	width: 1440px;
 	height: 970px;
 }
+.alien{
+	position: fixed;
+	top: 120px;
+	left: 1000px;
+	@include steady__animation;
+}
 .alien--sprite__falling{
 	position: fixed;
 	top: 15%;
@@ -106,15 +112,18 @@ header{
 }
 .alien--sprite__steady{
 	position: fixed;
-	top: 15%;
-	left: 70%;
+	top: 50px;
+	left: 1000px;
+	// @include steady__animation;
+}
+.alien--sprite__planet2{
+	position: fixed;
+	top: 50px;
+	left: 60px;
 	@include steady__animation;
 }
-.alien--sprite__tunnel{
-	position: fixed;
-	top: 15%;
-	left: 460px;
-	@include tunnel__animation;
+.alien--sprite__behind{
+	z-index: 0;
 }
 
 #scene{
