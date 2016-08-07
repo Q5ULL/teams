@@ -145,7 +145,7 @@ header {
 }
 
 .alien--sprite__behind {
-  z-index: 0;
+  z-index: -1;
 }
 
 #scene {

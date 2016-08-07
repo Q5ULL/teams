@@ -123,7 +123,7 @@ header{
 	@include steady__animation;
 }
 .alien--sprite__behind{
-	z-index: 0;
+	z-index: -1;
 }
 
 #scene{
