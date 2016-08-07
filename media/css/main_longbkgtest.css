@@ -504,6 +504,7 @@ footer {
   left: 0;
   width: 1440px;
   height: 970px;
+  overflow: hidden;
 }
 
 footer .footer__title {
