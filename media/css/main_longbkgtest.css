@@ -279,7 +279,6 @@ header {
   width: 1440px;
   height: 1232px;
   overflow: hidden;
-  z-index: 30;
 }
 
 .planet .frame--planet .planet-bkg {
@@ -288,6 +287,7 @@ header {
   left: -70px;
   width: 1440px;
   height: auto;
+  z-index: 30;
 }
 
 .planet .frame--planet .planet-fg {
@@ -297,7 +297,7 @@ header {
   width: 1440px;
   height: auto;
   transition-duration: 1s;
-  z-index: 35;
+  z-index: 50;
 }
 
 .planet .hidden {
@@ -333,10 +333,9 @@ header {
   position: absolute;
   top: 3300px;
   left: 0;
-  height: 1440px;
+  height: 1000px;
   width: 1440px;
   overflow: hidden;
-  z-index: 30;
 }
 
 .panel p {
@@ -348,9 +347,9 @@ header {
 .panel #target img#drunk_badguy {
   position: absolute;
   top: 0;
-  left: -58px;
-  width: 120px;
-  height: 296px;
+  left: -68px;
+  width: 140px;
+  height: 336px;
 }
 
 .tunnel-two {

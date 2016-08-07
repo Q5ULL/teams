@@ -14,6 +14,12 @@ $(document).ready(function(){
 		// $.scrollTo( 150, 2000 );//scroll to top: 150
 
 	});
+	$(".scrollTo__planet1").click(function(){
+		console.log("scrollTo Works");
+		$.scrollTo( $(".tunnel"), 2000 );
+		// $.scrollTo( 150, 2000 );//scroll to top: 150
+
+	});
 //makes cloud pollution slowly disappear
 	$('.clouds').click(function() {
          // $(this).css( "opacity", "-=0.1" );
@@ -55,9 +61,9 @@ $(function () { // wait for document ready
 					{x: 510,	y: 60},
 					{x: 620,	y: -60},
 					{x: 500,	y: -100},
-					{x: 380,	y: 20},
+					{x: 380,	y: -20},
 					{x: 500,	y: 60},
-					{x: 580,	y: 20},
+					{x: 580,	y: -20},
 					{x: 620,	y: 15}
 				]
 		},
@@ -65,9 +71,9 @@ $(function () { // wait for document ready
 			curviness: 1.25,
 			autoRotate: true,
 			values: [
-					{x: 660,	y: 20},
-					{x: 800,	y: 130},
-					{x: $(window).width() + 200,	y: -100},
+					{x: 200,	y: 20},
+					{x: 330,	y: 130},
+					{x: $(window).width() + 200,	y: 100},
 				]
 		}
 	};
@@ -129,11 +135,6 @@ $(window).on("scroll", function() {
 	}
 
 	if ($(window).innerWidth() >= 0){
-	// var $backToTop = document.querySelector(".back-to-top");
-
-	// 	$backToTop.addEventListener("hover", function(){
-	// 		$backToTop.style.left= 0 + "px";   
-	// 	});
 
 		if(position_backTop <= 8070){
 			$(".back-to-top").css({"left": "-170px"});
