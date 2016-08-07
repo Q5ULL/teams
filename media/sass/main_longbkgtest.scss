@@ -35,7 +35,6 @@ body{
 	font-family: "Orator";
 	text-decoration: uppercase;
 	// font-family: "Montserrat";
-
 	//setting width of website
 	// width: 1440px;
 	// margin: 0 auto;
@@ -93,7 +92,6 @@ header{
 }
 
 .big-image{
-
 	@include parralax__scene;
 	width: 1440px;
 	height: 970px;
@@ -155,6 +153,20 @@ header{
    			transition-duration: 0.5s;
 
 		}
+		.scene__intro{
+			position: absolute;
+			top: 375px;
+			width: 567px;
+			height: 203px;
+			margin: 0 437px;
+			padding-top: 27px;
+			color: white;
+			text-align: center;
+			line-height: 1.2em;
+			font-size: 34px;
+			background: url(../img/scene__intro-square.png) no-repeat;
+		}
+
 		.e__logo--transparent{
 			position: absolute;
 			top: 120px;
@@ -177,13 +189,40 @@ header{
 			color: white;
 			.title__title{
 				font-size: 134px;
-				margin-bottom: -36px;	
-				
+				margin-bottom: -36px;		
 			}
 			.title__description{
 				font-size: 44px;
+			}	
+		}
+		div{
+			cursor: pointer;
+			.scene__scrollButton{
+				position: absolute;
+				top: 880px;
+				width: 200px;
+				height: 69px;
+				margin: 0 620px;
+				padding-top: 16px;
+				color: white;
+				text-transform: uppercase;
+				text-align: center;
+				font-size: 60px;
+				cursor: pointer;
+				background: url(../img/enter__button.png) no-repeat;
 			}
-			
+			.scene__buddy{
+				position: absolute;
+				top: 710px;
+				// left: 50%;
+				margin: 0 644px;
+				transition-duration: 1s;
+				&:hover{
+					transform-origin: 50%, 50%;
+					transform: rotate(360deg) scale(0.8);
+					transition-duration: 1s;
+				}
+			}
 		}
 
 	}
@@ -415,8 +454,8 @@ header{
 .back-to-top{
 	position: fixed;
     bottom: 170px;
-    left: -180px;
-	width: 195px;
+    left: -170px;
+	width: 200px;
 	height: 142px;
 	// border-radius: 60px;
 	text-decoration: uppercase;
@@ -424,9 +463,9 @@ header{
 	padding-top: 25px;
 	color: white;
 	background-color: rgb(173, 115, 42);
-	z-index: 100;
+	z-index: 200;
 	transition-duration: 0.5s;
-
+	cursor: pointer;
 	p{
 		font-size: 40px;
 		text-decoration: uppercase;
@@ -471,10 +510,23 @@ footer{
 				padding: 33px 248px 0 248px;
 				background: url(../img/border.png) no-repeat;
 				background-position: 50% 0%;
-				
 			}
 			
 		}
+	.footer__button{
+		position: absolute;
+		text-align: center;
+		height: auto;
+		width: 100%;
+		top: 100px;
+		left: 720px;
+		transition-duration: 0.5s;
+		color: white;
+
+	}
+	#footer__logo{
+		padding: 0 50px;
+	}
 	.footer-planet{
 		width: 1440px;
 		height: 970px;

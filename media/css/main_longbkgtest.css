@@ -172,6 +172,20 @@ header {
   transition-duration: 0.5s;
 }
 
+#scene .layer .scene__intro {
+  position: absolute;
+  top: 375px;
+  width: 567px;
+  height: 203px;
+  margin: 0 437px;
+  padding-top: 27px;
+  color: white;
+  text-align: center;
+  line-height: 1.2em;
+  font-size: 34px;
+  background: url(../img/scene__intro-square.png) no-repeat;
+}
+
 #scene .layer .e__logo--transparent {
   position: absolute;
   top: 120px;
@@ -200,6 +214,38 @@ header {
 
 #scene .layer .title .title__description {
   font-size: 44px;
+}
+
+#scene .layer div {
+  cursor: pointer;
+}
+
+#scene .layer div .scene__scrollButton {
+  position: absolute;
+  top: 880px;
+  width: 200px;
+  height: 69px;
+  margin: 0 620px;
+  padding-top: 16px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 60px;
+  cursor: pointer;
+  background: url(../img/enter__button.png) no-repeat;
+}
+
+#scene .layer div .scene__buddy {
+  position: absolute;
+  top: 710px;
+  margin: 0 644px;
+  transition-duration: 1s;
+}
+
+#scene .layer div .scene__buddy:hover {
+  transform-origin: 50%, 50%;
+  transform: rotate(360deg) scale(0.8);
+  transition-duration: 1s;
 }
 
 .tunnel {
@@ -413,16 +459,17 @@ header {
 .back-to-top {
   position: fixed;
   bottom: 170px;
-  left: -180px;
-  width: 195px;
+  left: -170px;
+  width: 200px;
   height: 142px;
   text-decoration: uppercase;
   text-align: center;
   padding-top: 25px;
   color: white;
   background-color: #ad732a;
-  z-index: 100;
+  z-index: 200;
   transition-duration: 0.5s;
+  cursor: pointer;
 }
 
 .back-to-top p {
@@ -473,6 +520,21 @@ footer .footer__title .para {
   padding: 33px 248px 0 248px;
   background: url(../img/border.png) no-repeat;
   background-position: 50% 0%;
+}
+
+footer .footer__button {
+  position: absolute;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  top: 100px;
+  left: 720px;
+  transition-duration: 0.5s;
+  color: white;
+}
+
+footer #footer__logo {
+  padding: 0 50px;
 }
 
 footer .footer-planet {

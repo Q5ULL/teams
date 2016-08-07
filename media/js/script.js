@@ -136,7 +136,7 @@ $(window).on("scroll", function() {
 	// 	});
 
 		if(position_backTop <= 8070){
-			$(".back-to-top").css({"left": "-180px"});
+			$(".back-to-top").css({"left": "-170px"});
 			
 		} else{
 			$(".back-to-top").css({"left": "0"});
@@ -147,10 +147,13 @@ $(window).on("scroll", function() {
 });
 
 //gets rid of regular image of planet and shows layers that become draggable
-$('img.planet-fg').on("mouseenter", function(){
-	$('img.planet-fg').addClass("hidden");
+$('.planet-fg').on("mouseenter", function(){
+	$('.planet-fg').addClass("hidden");
 	$('.frame').removeClass("hidden");
 });
 
+// $('.back-to-top p').on("hover", function(){
+// 	$(".back-to-top").css({"left": "0"});
+// });
 
 new WOW().init();
