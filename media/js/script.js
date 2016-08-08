@@ -183,11 +183,11 @@ $(window).on("scroll", function() {
 	}
 
 	if ($(window).innerWidth() >= 0){
-
+		//$beingDragged2 = .query;
 		if(position >= 4756){
 			$(".planet-fg").removeClass("hidden");
 			$('.frame').addClass("hidden");
-			//TweenMax.to($('.frame'), 0.5, {left: "0px", scale: '1'});
+			TweenMax.to($(".draggable"), 0.5, {left: "0px", scale: '1'});
 		}
 		
 	}
