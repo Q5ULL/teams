@@ -477,7 +477,6 @@ header {
   height: 1232px;
   z-index: 35;
   transition-duration: 1s;
-  overflow: hidden;
 }
 
 .planet2 .clouds .cloud {

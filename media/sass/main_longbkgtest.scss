@@ -450,7 +450,7 @@ header{
  	    height: 1232px;
 		z-index: 35;
 		transition-duration: 1s;
-		overflow: hidden;
+		//overflow: hidden; -figure out how to get to not get cut off on top/bottom
 		.cloud {
 			position: absolute;
 			right: -100px;
