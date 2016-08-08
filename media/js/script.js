@@ -181,7 +181,8 @@ $(window).on("scroll", function() {
 		}
 		
 	}
-
+	
+	//Restart for bottles and clouds
 	if ($(window).innerWidth() >= 0){
 		//$beingDragged2 = .query;
 		if(position >= 4756){
@@ -189,8 +190,16 @@ $(window).on("scroll", function() {
 			$('.frame').addClass("hidden");
 			TweenMax.to($(".draggable"), 0.5, {left: "0px", scale: '1'});
 		}
+		if(position >= 7935){
+			$( '.img1' ).css( "opacity", "1" );
+			$( '.img2' ).css( "opacity", "1" );
+			$( '.img3' ).css( "opacity", "1" );
+			$( '.img4' ).css( "opacity", "1" );
+		}
 		
 	}
+
+
 
 });
 
