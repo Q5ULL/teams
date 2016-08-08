@@ -293,11 +293,8 @@ header {
   z-index: -2;
   background-size: cover;
   background-image: url("../img/background-wave-transition/rightwave3.png");
-<<<<<<< HEAD
   animation: ease-in-out wave 6s infinite;
-=======
   animation: ease-in-out wave 6s infinite reverse;
->>>>>>> origin/master
 }
 
 .tunnel .layer .tunnel__stars {
@@ -858,11 +855,7 @@ footer .footer-logos {
 }
 
 @keyframes wave {
-<<<<<<< HEAD
   0% {
-=======
-  0%{
->>>>>>> origin/master
     background-position: 0px 100%;
   }
   50% {
