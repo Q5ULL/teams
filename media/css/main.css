@@ -25,40 +25,39 @@ TABLE OF CONTENTS:
 /* 1. VARIABLES  ========================================= */
 /* 2. TYPOGRAPHY  ======================================== */
 body {
-  font-family: "Campton";
+  font-family: "Orator";
+  text-decoration: uppercase;
 }
 
 @font-face {
-  font-family: Campton;
+  font-family: Orator;
   font-weight: normal;
-  src: url(../font/Campton-LightDEMO.otf) format("opentype");
-}
-
-@font-face {
-  font-family: Campton;
-  font-weight: bold;
-  src: url(../font/Campton-BoldDEMO.otf) format("opentype");
+  src: url(../font/Orator-Std-Medium.ttf) format("truetype");
 }
 
 /*  CONTENT  =============================================== */
-.frame {
-  background-color: white;
+body.index {
+  background-color: #424242;
+  -webkit-font-smoothing: antialiased;
+  background-image: url("../img/stars/GoldStars.png");
+}
+
+body.index .body__starbkg {
   position: relative;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 11264px;
+  margin: 0 auto;
+  z-index: -10;
 }
 
-.frame #bottle-planet1,
-.frame #bottle-planet2,
-.frame #bottle-planet3 {
-  position: absolute;
-  width: 400px;
-  height: auto;
-  transition: all .2s ease-out;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  background: #1f2525;
+div.page-wrapper {
+  position: relative;
+  width: 1440px;
+  height: 11264px;
+  margin: 0 auto;
+  box-shadow: 0px 100px 39px rgba(0, 0, 0, 0.5);
 }
 
 header {
@@ -66,14 +65,15 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 30px;
+  height: 92px;
   background-color: white;
+  opacity: 0.8;
   z-index: 100;
   transition-duration: 0.5s;
 }
 
 .menu-small {
-  width: 10%;
+  width: 0%;
   transition-duration: 0.5s;
 }
 
@@ -87,28 +87,60 @@ header {
   background-size: cover;
   background-attachment: fixed;
   transition-duration: 0.5s;
+  width: 1440px;
+  height: 970px;
+}
+
+.fixed-container {
+  width: 1440px;
+  position: absolute;
+  left: 1000px;
+  transition-duration: 1s;
+}
+
+.fixed-container .alien {
+  position: fixed;
+  top: 50px;
+  transition-duration: 1s;
+}
+
+.position--tunnelOne {
+  left: 560px;
+  z-index: 0;
+}
+
+.position--planetOne {
+  left: 1060px;
+}
+
+.position--tunnelTwo {
+  left: 465px;
+}
+
+.position--planetTwo {
+  left: 0px;
+  z-index: 50;
+}
+
+.position--tunnelThree {
+  left: 658px;
 }
 
 .alien--sprite__falling {
-  position: fixed;
-  top: 15%;
-  left: 50%;
-  width: 300px;
-  height: 388px;
+  width: 260px;
+  height: 330px;
   animation: freak-out 1.5s steps(2) infinite;
   background: url(../img/alien/Alien-Falling-sprite--small.png) 0 0 no-repeat;
   background-size: 100% auto;
+  transform: scale(0.8);
   transition-duration: 1s;
   z-index: 10;
 }
 
 .alien--sprite__steady {
-  position: fixed;
-  top: 15%;
-  left: 70%;
-  width: 400px;
-  height: 518px;
-  background: url(../img/alien/Alien-floating--small.png) 0 0 no-repeat;
+  width: 360px;
+  height: 466px;
+  background: url(../img/alien/Alien-Floating--small.png) 0 0 no-repeat;
   background-size: 100% auto;
   animation-name: hvr-hang;
   animation-duration: 2s;
@@ -117,6 +149,10 @@ header {
   animation-direction: alternate;
   animation-timing-function: ease-out;
   z-index: 10;
+}
+
+.alien--sprite__behind {
+  z-index: -1;
 }
 
 #scene {
@@ -144,141 +180,285 @@ header {
   background-repeat: no-repeat;
   background-image: url("../img/transition-slide.png");
   transition-duration: 0.5s;
+  opacity: 0.5;
 }
 
-#scene .layer .person1 {
+#scene .layer .goldStars {
   position: absolute;
-  top: 10%;
-  left: -9%;
+  top: 0%;
+  left: 0%;
   height: auto;
   width: 100%;
   transition-duration: 0.5s;
 }
 
-@media only screen and (min-width: 768px) {
-  #scene .layer .person1 {
-    top: 12%;
-    left: 14%;
-    width: 100%;
-  }
-}
-
-#scene .layer .person2 {
+#scene .layer .scene__intro {
   position: absolute;
-  top: 4%;
-  left: 41%;
-  height: auto;
-  width: 100%;
-  transition-duration: 0.5s;
+  top: 375px;
+  width: 567px;
+  height: 203px;
+  margin: 0 437px;
+  padding-top: 27px;
+  color: white;
+  text-align: center;
+  line-height: 1.2em;
+  font-size: 34px;
+  background: url(../img/scene__intro-square.png) no-repeat;
 }
 
-@media only screen and (min-width: 768px) {
-  #scene .layer .person2 {
-    top: 10%;
-    left: 58%;
-    width: 100%;
-    height: auto;
-  }
-}
-
-#scene .layer .person3 {
+#scene .layer .e__logo--transparent {
   position: absolute;
-  top: 17%;
-  left: 1%;
+  top: 120px;
+  left: 0%;
   transition-duration: 0.5s;
   height: auto;
   width: 100%;
+  opacity: 0.15;
 }
 
-@media only screen and (min-width: 768px) {
-  #scene .layer .person3 {
-    top: 0%;
-    left: 0%;
-    width: 100%;
-  }
-}
-
-#scene .layer .person4 {
+#scene .layer .title {
   position: absolute;
-  top: 17%;
-  left: 1%;
-  transition-duration: 0.5s;
+  text-align: center;
   height: auto;
   width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  #scene .layer .person4 {
-    top: 0%;
-    left: 0%;
-    width: 100%;
-  }
-}
-
-.second-big-image {
-  position: absolute;
-  top: 0;
+  top: 200px;
   left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-size: cover;
-  background-attachment: fixed;
   transition-duration: 0.5s;
-  background-image: url(../img/transition-slide.png);
-  background-size: 110%;
-  background-position: 0 0;
+  color: white;
 }
 
-#scene2 {
+#scene .layer .title .title__title {
+  font-size: 134px;
+  margin-bottom: -36px;
+}
+
+#scene .layer .title .title__description {
+  font-size: 44px;
+}
+
+#scene .layer div {
+  cursor: pointer;
+}
+
+#scene .layer div .scene__scrollButton {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  top: 860px;
+  width: 200px;
+  height: 69px;
+  margin: 0 620px;
+  padding-top: 16px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 60px;
+  cursor: pointer;
+  background: url(../img/enter__button.png) no-repeat;
 }
 
-#scene2 .layer {
+#scene .layer div .scene__buddy {
+  position: absolute;
+  top: 690px;
+  margin: 0 644px;
+  transition-duration: 1s;
+}
+
+#scene .layer div .scene__buddy:hover {
+  transform-origin: 50%, 50%;
+  transform: rotate(360deg) scale(0.8);
+  transition-duration: 1s;
+}
+
+.tunnel {
+  position: absolute;
+  top: 970px;
+  left: 0;
+}
+
+.tunnel .layer {
+  position: absolute;
+}
+
+.tunnel .layer .tunnel-overlay {
+  position: absolute;
+  height: 1440px;
+  width: 1440px;
+  z-index: 30;
+}
+
+.tunnel .layer .waves {
+  height: 600px;
+  width: 1440px;
+  top: 200px;
   position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-#scene2 .layer .scene2__background {
-  transform: scale(1.2);
-  width: 100%;
-  height: 100%;
-  min-width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-  background-position: 50% 50%;
+  /*width: 100%;*/
+  z-index: -2;
   background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-image: url("../img/transition-slide.png");
-  transition-duration: 0.5s;
+  background-image: url("../img/background-wave-transition/rightwave3.png");
+  animation: ease-in-out wave 6s infinite;
+  animation: ease-in-out wave 6s infinite reverse;
 }
 
-#scene2 .layer .scene2__tunnel {
+.tunnel .layer .tunnel__stars {
   position: absolute;
-  top: -75px;
-  left: 57px;
-  height: auto;
-  width: 110%;
-  transition-duration: 0.5s;
+  height: 1440px;
+  width: 1440px;
+  z-index: -2;
 }
 
-#scene2 .layer .scene2__tunnel-overlay {
+.tunnel .layer .scene2__tunnel {
   position: absolute;
-  top: -75px;
-  left: 57px;
   height: auto;
-  width: 110%;
-  transition-duration: 0.5s;
+  width: 1440px;
+  z-index: -1;
+}
+
+.transition-bkg {
+  position: absolute;
+  top: 2080px;
+  left: 0;
+}
+
+.transition-bkg .layer {
+  position: absolute;
+}
+
+.transition-bkg .layer .bottles-abovePlanet {
+  height: 878px;
+  width: 1440px;
+  top: 878px;
+  position: relative;
+  /*width: 100%;*/
+  z-index: 1;
+  background-size: cover;
+  background-image: url("../img/bottles/layer-bottles1.png");
+  animation: ease-in-out wave 10s infinite;
+  animation: ease-in-out wave 10s infinite reverse;
+}
+
+.transition-bkg .layer .bottles-abovePlanet_two {
+  height: 878px;
+  width: 1440px;
+  top: 888px;
+  position: relative;
+  /*width: 100%;*/
+  z-index: 1;
+  background-size: cover;
+  background-image: url("../img/bottles/layer-bottles2.png");
+  animation: ease-in-out wave 12s infinite;
+  animation: ease-in-out wave 12s infinite reverse;
+}
+
+.transition-bkg .layer .transition-bkg__stars {
+  position: absolute;
+  height: 1440px;
+  width: 1440px;
+  z-index: -1;
+}
+
+.transition-bkg .layer .bkg {
+  position: absolute;
+  height: auto;
+  width: 1440px;
+  z-index: -2;
+}
+
+.planet {
+  background-image: url("../img/stars/GoldStars.png");
+}
+
+.planet .frame--planet {
+  position: absolute;
+  top: 3320px;
+  left: -150px;
+  width: 1440px;
+  height: 1232px;
+  overflow: hidden;
+}
+
+.planet .frame--planet .planet-bkg {
+  position: absolute;
+  top: 28px;
+  left: -70px;
+  width: 1440px;
+  height: auto;
+  z-index: 30;
+}
+
+.planet .frame--planet .planet-fg {
+  position: absolute;
+  top: -42px;
+  left: -39px;
+  width: 1440px;
+  height: auto;
+  transition-duration: 1s;
+  z-index: 50;
+}
+
+.planet .hidden {
+  display: none;
+  transition-duration: 1s;
+}
+
+.planet .frame {
+  position: absolute;
+  top: 3320px;
+  left: -115px;
+  width: 1440px;
+  height: 1170px;
+  z-index: 35;
+  transition-duration: 1s;
+}
+
+.planet .frame #bottle-planet1 {
+  animation-duration: 6s;
+  position: absolute;
+  width: 1440px;
+  height: auto;
+  transition: all .2s ease-out;
+  animation-name: wiggle_x_rotate;
+  transition-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+.planet .frame #bottle-planet2 {
+  animation-duration: 8s;
+  position: absolute;
+  width: 1440px;
+  height: auto;
+  transition: all .2s ease-out;
+  animation-name: wiggle_x_rotate;
+  transition-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+.planet .frame #bottle-planet3 {
+  animation-duration: 10s;
+  position: absolute;
+  width: 1440px;
+  height: auto;
+  transition: all .2s ease-out;
+  animation-name: wiggle_x_rotate;
+  transition-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+.scrollmagic-pin-spacer {
+  z-index: 30;
 }
 
 .panel {
-  position: relative;
-  height: 100%;
-  width: 100%;
+  position: absolute;
+  top: 3300px;
+  left: 0;
+  height: 1000px;
+  width: 1440px;
+  overflow: hidden;
 }
 
 .panel p {
@@ -287,89 +467,68 @@ header {
   left: 50%;
 }
 
-.panel #target img#bottle {
+.panel #target img#drunk_badguy {
   position: absolute;
   top: 0;
-  left: -58px;
+  left: 0px;
+  width: 190px;
+  height: 436px;
 }
 
-.green {
-  margin-bottom: 400px;
-  background-color: #22d659;
-}
-
-.green .changeSlide {
-  position: relative;
-  width: 500px;
-  height: 281px;
-  margin: 0 auto;
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../img/moon_base.jpg");
-  -webkit-clip-path: circle(34% at 50% 50%);
-  clip-path: circle(34% at 50% 50%);
-  z-index: 1;
-}
-
-.green .changeSlide .slides {
+.tunnel-two {
   position: absolute;
-  top: 0;
+  top: 4080px;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 15;
 }
 
-.green .changeSlide .slides .slide1, .green .changeSlide .slides .slide2, .green .changeSlide .slides .slide3, .green .changeSlide .slides .slide4, .green .changeSlide .slides .slide5, .green .changeSlide .slides .slide6, .green .changeSlide .slides .slide7, .green .changeSlide .slides .slide8, .green .changeSlide .slides .slide9 {
-  float: left;
-  width: 11.11111111111111%;
-  height: 100%;
-}
-
-.green .changeSlide img {
+.tunnel-two .layer {
   position: absolute;
-  top: 0;
+}
+
+.tunnel-two .layer .tunnel-overlay-two {
+  position: absolute;
+  height: 1938px;
+  width: 1440px;
+  z-index: 25;
+}
+
+.tunnel-two .layer .tunnel__stars-two {
+  position: absolute;
+  height: 1440px;
+  width: 1440px;
+  z-index: 0;
+}
+
+.transition-bkg_two {
+  position: absolute;
+  top: 5080px;
   left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 }
 
-.green .changeSlide .description {
+.transition-bkg_two .layer {
   position: absolute;
-  width: 100%;
-  overflow: hidden;
+}
+
+.transition-bkg_two .layer .clouds-abovePlanet {
+  height: 878px;
+  width: 1440px;
+  top: 878px;
+  position: absolute;
+  z-index: 45;
+}
+
+.transition-bkg_two .layer .transition-bkg__stars {
+  position: absolute;
+  height: 1440px;
+  width: 1440px;
+  z-index: -1;
+}
+
+.transition-bkg_two .layer .bkg {
+  position: absolute;
   height: auto;
-  background-color: #26252a;
-  margin-top: 281px;
-  z-index: 1;
-}
-
-.green .changeSlide .description p {
-  text-align: left;
-  font-size: 1em;
-  padding: 10px;
-  color: white;
-  line-height: 1.2em;
-  text-shadow: 1px 1px 1px black;
-}
-
-.green .angle1 {
-  position: absolute;
-  z-index: 1;
-}
-
-.panel__two {
-  margin-bottom: 400px;
-}
-
-.turqoise {
-  background-color: #38ced7;
-}
-
-.bordeaux {
-  background-color: #953543;
+  width: 1440px;
+  z-index: -2;
 }
 
 .image-band {
@@ -378,81 +537,456 @@ header {
   left: 200px;
   width: 10px;
   height: 10px;
-  background-color: #fff;
+}
+
+.planet2 .frame--planet2 {
+  position: absolute;
+  top: 6580px;
+  right: 0px;
+  width: 1440px;
+  height: 1938px;
+  z-index: 30;
+  overflow: hidden;
+}
+
+.planet2 .frame--planet2 .planet2-bkg {
+  position: absolute;
+  right: -270px;
+  width: 1440px;
+  height: auto;
+}
+
+.planet2 .frame--planet2 .planet2-fg {
+  position: absolute;
+  right: -165px;
+  width: 1440px;
+  height: auto;
+  transition-duration: 1s;
+  z-index: 35;
+}
+
+.planet2 .clouds {
+  position: absolute;
+  top: 6580px;
+  right: 0px;
+  width: 1440px;
+  height: 1232px;
+  z-index: 35;
+  transition-duration: 1s;
+}
+
+.planet2 .clouds .cloud {
+  position: absolute;
+  right: -100px;
+  width: 1440px;
+  height: auto;
+  transition: all .2s ease-out;
+  transition-duration: 1s;
+}
+
+.planet2 .clouds .img1 {
+  animation: moveclouds 200s infinite;
+}
+
+.planet2 .clouds .img2 {
+  animation: movecloudsOpposite 100s infinite ease-out;
+}
+
+.planet2 .clouds .img3 {
+  animation: movecloudsOpposite 50s infinite ease-out;
+}
+
+.planet2 .clouds .img4 {
+  animation: moveclouds 40s infinite ease-in;
+}
+
+.tunnel-three {
+  position: absolute;
+  top: 7394px;
+  left: 0;
+}
+
+.tunnel-three .layer {
+  position: absolute;
+}
+
+.tunnel-three .layer .waves {
+  height: 600px;
+  width: 1440px;
+  top: 100px;
+  position: relative;
+  /*width: 100%;*/
+  z-index: -2;
+  background-size: cover;
+  background-image: url("../img/background-wave-transition/rightwave4.png");
+  animation: ease-in-out wave 6s infinite;
+  animation: ease-in-out wave 6s infinite reverse;
+}
+
+.tunnel-three .layer .tunnel-overlay-three {
+  position: absolute;
+  height: 1938px;
+  width: 1440px;
+  z-index: 25;
+  overflow: hidden;
+}
+
+.tunnel-three .layer .tunnel__stars-three {
+  position: absolute;
+  height: 1440px;
+  width: 1440px;
+  z-index: 0;
+}
+
+.transition-bkg_three {
+  position: absolute;
+  top: 8456px;
+  left: 0;
+}
+
+.transition-bkg_three .layer {
+  position: absolute;
+}
+
+.transition-bkg_three .layer .transition-bkg__stars {
+  position: absolute;
+  height: 1440px;
+  width: 1440px;
+  z-index: -1;
+}
+
+.transition-bkg_three .layer .bkg {
+  position: absolute;
+  height: auto;
+  width: 1440px;
+  z-index: -2;
+  opacity: 0.5;
 }
 
 .back-to-top {
   position: fixed;
-  top: 50%;
-  right: 0;
-  z-index: 30;
-  width: 30px;
-  height: 30px;
-  border-radius: 60px;
+  bottom: 170px;
+  left: -170px;
+  width: 200px;
+  height: 142px;
+  text-decoration: uppercase;
   text-align: center;
-  padding: 20px;
+  padding-top: 25px;
   color: white;
-  background-color: #333;
-  z-index: 20;
+  background-color: #ad732a;
+  z-index: 200;
+  transition-duration: 0.5s;
+  cursor: pointer;
 }
 
-section h1, section h3, section p {
-  max-width: 300px;
-  margin: 15px auto;
+.back-to-top p {
+  font-size: 40px;
+  text-decoration: uppercase;
 }
 
-.animate #shoe-front {
-  transform: rotateZ(360deg);
-  transition-duration: 1s;
+.back-to-top .font_large {
+  font-size: 72px;
 }
 
-.animate #shoe-side {
-  transform: translateX(90px) rotateZ(360deg);
-  transition-duration: 1s;
+.back-to-top:hover {
+  transition-duration: 0.5s;
+  left: 0px !important;
 }
 
-@media only screen and (min-width: 768px) {
-  .animate #shoe-side {
-    transform: translateX(160px) rotateZ(360deg);
-  }
+.hero {
+  width: 1440px;
+  height: 1131px;
+  position: relative;
+  top: -1795px;
+  left: 0;
+  z-index: -1;
 }
 
-@media only screen and (min-width: 1024px) {
-  .animate #shoe-side {
-    transform: translateX(230px) rotateZ(360deg);
-  }
+.layer-1, .layer-2, .layer-3, .layer-4 {
+  transform-origin: 0% 0%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-size: cover;
 }
 
-@media only screen and (min-width: 1400px) {
-  .animate #shoe-side {
-    transform: translateX(320px) rotateZ(360deg);
-  }
+.layer-1 {
+  -webkit-animation: parallax_fg1 linear 12s both infinite;
+  animation: parallax_fg1 linear 12s both infinite;
+  background: url(../img/forest/Forest2small.png);
+  background-position: 100% 0%;
 }
 
-.animate #shoe-back {
-  transform: translateX(-100px) rotateZ(360deg);
-  transition-duration: 1s;
+.layer-2 {
+  background: url(../img/forest/Forest1small.png);
+  background-position: 100% 0%;
 }
 
-@media only screen and (min-width: 768px) {
-  .animate #shoe-back {
-    transform: translateX(-160px) rotateZ(360deg);
-  }
+.layer-3 {
+  -webkit-animation: parallax_fg linear 15s both infinite;
+  animation: parallax_fg linear 15s both infinite;
+  background: url(../img/forest/Forest1small.png);
+  background-size: 100%;
+  background-position: 0 -19%;
 }
 
-@media only screen and (min-width: 1024px) {
-  .animate #shoe-back {
-    transform: translateX(-240px) rotateZ(360deg);
-  }
+.layer-4 {
+  background: url(../img/forest/Forest2small.png) no-repeat;
+  background-position: 100% -67%;
 }
 
-@media only screen and (min-width: 1400px) {
-  .animate #shoe-back {
-    transform: translateX(-320px) rotateZ(360deg);
-  }
+.animateTree {
+  -webkit-animation: parallax_fg1 linear 20s both infinite;
+  animation: parallax_fg1 linear 20s both infinite;
+}
+
+.animateTree2 {
+  -webkit-animation: parallax_fg linear 40s both infinite;
+  animation: parallax_fg linear 40s both infinite;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1440px;
+  height: 1440px;
+  overflow: hidden;
+}
+
+footer .footer__title {
+  position: absolute;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  top: 660px;
+  left: 0;
+  transition-duration: 0.5s;
+  color: white;
+}
+
+footer .footer__title .title__title {
+  font-size: 134px;
+  margin-bottom: -36px;
+}
+
+footer .footer__title .title__description {
+  font-size: 44px;
+}
+
+footer .footer__title .para {
+  font-size: 28px;
+  line-height: 1.8em;
+  padding: 33px 248px 0 248px;
+  background: url(../img/border.png) no-repeat;
+  background-position: 50% 0%;
+}
+
+footer .footer__button {
+  position: absolute;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  bottom: 245px;
+  transition-duration: 0.5s;
+  color: white;
+  font-size: 44px;
+}
+
+footer #footer__logo {
+  position: absolute;
+  width: 373px;
+  bottom: 150px;
+  margin: 0 534px;
+}
+
+footer #footer__logo img {
+  margin-left: -23px;
+}
+
+footer .leaves__rotation {
+  animation-delay: 1s;
+  -webkit-animation: planet-rotate 7s linear infinite;
+  animation: planet-rotate 7s linear infinite;
+  z-index: -1;
+  width: 1440px;
+  height: 1440px;
+  border-radius: 1000px;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 570px;
+  left: -36px;
+  transition: 3s;
+  transform-origin: 50%;
+  animation-iteration-count: infinite;
+}
+
+footer .leaves__rotation .leaves {
+  top: -520px;
+  left: 28%;
+  width: 677px;
+  height: 562px;
+  background: url(../img/forest/Leaves2_03.png);
+  position: absolute;
+  z-index: 10;
+}
+
+footer .leaves__rotation_two {
+  animation-delay: 1s;
+  -webkit-animation: planet-rotate 8s linear infinite;
+  animation: planet-rotate 8s linear infinite;
+  z-index: -1;
+  width: 1440px;
+  height: 1440px;
+  border-radius: 1000px;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 570px;
+  left: -36px;
+  transition: 3s;
+  transform-origin: 50%;
+  animation-iteration-count: infinite;
+}
+
+footer .leaves__rotation_two .leaves {
+  top: -520px;
+  left: 28%;
+  width: 677px;
+  height: 562px;
+  background: url(../img/forest/Leaves2_03.png);
+  position: absolute;
+  z-index: 10;
+}
+
+footer .leaves__rotation_three {
+  animation-delay: 1s;
+  -webkit-animation: planet-rotate 9s linear infinite;
+  animation: planet-rotate 9s linear infinite;
+  z-index: -1;
+  width: 1440px;
+  height: 1440px;
+  border-radius: 1000px;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 570px;
+  left: -36px;
+  transition: 3s;
+  transform-origin: 50%;
+  animation-iteration-count: infinite;
+}
+
+footer .leaves__rotation_three .leaves {
+  top: -520px;
+  left: 28%;
+  width: 677px;
+  height: 562px;
+  background: url(../img/forest/Leaves2_03.png);
+  position: absolute;
+  z-index: 10;
+}
+
+footer .leaves__rotation_four {
+  animation-delay: 1s;
+  -webkit-animation: planet-rotate 10s linear infinite;
+  animation: planet-rotate 10s linear infinite;
+  z-index: -1;
+  width: 1440px;
+  height: 1440px;
+  border-radius: 1000px;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 570px;
+  left: -36px;
+  transition: 3s;
+  transform-origin: 50%;
+  animation-iteration-count: infinite;
+}
+
+footer .leaves__rotation_four .leaves {
+  top: -520px;
+  left: 28%;
+  width: 677px;
+  height: 562px;
+  background: url(../img/forest/Leaves2_03.png);
+  position: absolute;
+  z-index: 10;
+}
+
+footer .footer-leaves {
+  position: absolute;
+  bottom: 473px;
+  left: -20px;
+  width: 1600px;
+  height: auto;
+  z-index: -1;
+}
+
+footer .footer-planet {
+  position: absolute;
+  bottom: 0;
+  width: 1440px;
+  height: 970px;
+  z-index: -1;
+}
+
+footer .footer__copyright {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  background-color: rgba(225, 255, 255, 0.9);
+  border-top: 1px solid rgba(0, 0, 0, 0.35);
+  box-shadow: 0px -12px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer .footer__copyright p {
+  color: #7c6b5a;
+  padding: 60px 0 0 35px;
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+footer .footer-logos {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  height: auto;
+  padding-right: 35px;
 }
 
 /* <><><><><><><><><><><><><><><ANIMATIONS<><><><><><><><><>><><> */
+@keyframes moveclouds {
+  100% {
+    /*//margin-top: 1000px;*/
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes movecloudsOpposite {
+  100% {
+    /*//margin-top: 1000px;*/
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0px 100%;
+  }
+  50% {
+    background-position: 500px 100%;
+  }
+  100% {
+    background-position: 0px 100%;
+  }
+}
+
 @keyframes freak-out {
   0% {
     transform: rotate(1deg);
@@ -556,5 +1090,56 @@ section h1, section h3, section p {
     bottom: -12px;
     left: -12px;
     opacity: 0.2;
+  }
+}
+
+@keyframes planet-rotate {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes parallax_fg {
+  0% {
+    background-position: 2000px;
+  }
+  100% {
+    background-position: 1440px;
+  }
+}
+
+@keyframes parallax_fg {
+  0% {
+    background-position: 2765px;
+  }
+  100% {
+    background-position: 1440px;
+  }
+}
+
+@-webkit-keyframes parallax_fg1 {
+  /*  0% {
+    background-position: -2765px 90%;
+  }
+  100% {
+    background-position: -550px 90%;
+  }*/
+  0% {
+    background-position: -27px 90%;
+  }
+  100% {
+    background-position: 1440px 90%;
+  }
+}
+
+@keyframes parallax_fg1 {
+  0% {
+    background-position: -27px 90%;
+  }
+  100% {
+    background-position: 1440px 90%;
   }
 }
