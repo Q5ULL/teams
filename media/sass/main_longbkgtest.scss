@@ -23,11 +23,6 @@ TABLE OF CONTENTS:
 /* 1. VARIABLES  ========================================= */
 
 @import "variables";
-// @import "redmode";
-// @import "pinkmode";
-// @import "bluemode";
-// @font-face {font-family: 'Onick';src: url('webfonts/310FE3_0_0.eot');src: url('webfonts/310FE3_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/310FE3_0_0.woff2') format('woff2'),url('webfonts/310FE3_0_0.woff') format('woff'),url('webfonts/310FE3_0_0.ttf') format('truetype');}
-
 
 /* 2. TYPOGRAPHY  ======================================== */
 
@@ -97,30 +92,50 @@ header{
 	width: 1440px;
 	height: 970px;
 }
-.alien{
-	position: fixed;
-	top: 120px;
-	left: 1000px;
-	@include steady__animation;
+.fixed-container{
+	width: 1440px;
+    position: absolute;
+    // top: 120px;
+    left: 1000px;
+    // @include steady__animation;
+	.alien{
+		position: fixed;
+		top: 50px;
+
+		//@include steady__animation;
+	}
 }
-.alien--sprite__falling{
-	position: fixed;
+.position--tunnelOne{
+	left: 560px;
+	//@include tunnel__animation;
+}
+.position--planetOne{
+	// top: 50px;
+	left: 1060px;
+	//@include steady__animation;
+}
+// .position--planetOne-alien{
+// 	top: 50px;
+// }
+
+.position--tunnelTwo{
 	top: 15%;
 	left: 560px;
-	// width: 300px;
- //    height: 388px;
+	//@include tunnel__animation;
+}
+.position--planetTwo{
+	top: 50px;
+	left: 60px;
+	//@include steady__animation;
+}
+
+.alien--sprite__falling{
   	@include tunnel__animation;
 }
 .alien--sprite__steady{
-	position: fixed;
-	top: 50px;
-	left: 1000px;
-	// @include steady__animation;
-}
-.alien--sprite__planet2{
-	position: fixed;
-	top: 50px;
-	left: 60px;
+	// position: fixed;
+	// top: 50px;
+	// left: 1000px;
 	@include steady__animation;
 }
 .alien--sprite__behind{
