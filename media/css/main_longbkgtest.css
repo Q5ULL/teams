@@ -341,14 +341,43 @@ header {
   transition-duration: 1s;
 }
 
-.planet .frame #bottle-planet1,
-.planet .frame #bottle-planet2,
-.planet .frame #bottle-planet3 {
+.planet .frame #bottle-planet1 {
+  animation-duration: 6s;
   position: absolute;
   width: 1440px;
   height: auto;
   transition: all .2s ease-out;
-  transition-duration: 1s;
+  animation-name: wiggle_x_rotate;
+  transition-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+.planet .frame #bottle-planet2 {
+  animation-duration: 8s;
+  position: absolute;
+  width: 1440px;
+  height: auto;
+  transition: all .2s ease-out;
+  animation-name: wiggle_x_rotate;
+  transition-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+.planet .frame #bottle-planet3 {
+  animation-duration: 10s;
+  position: absolute;
+  width: 1440px;
+  height: auto;
+  transition: all .2s ease-out;
+  animation-name: wiggle_x_rotate;
+  transition-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
 }
 
 .scrollmagic-pin-spacer {
@@ -454,6 +483,22 @@ header {
   height: auto;
   transition: all .2s ease-out;
   transition-duration: 1s;
+}
+
+.planet2 .clouds .img1 {
+  animation: moveclouds 200s infinite;
+}
+
+.planet2 .clouds .img2 {
+  animation: movecloudsOpposite 100s infinite ease-out;
+}
+
+.planet2 .clouds .img3 {
+  animation: movecloudsOpposite 50s infinite ease-out;
+}
+
+.planet2 .clouds .img4 {
+  animation: moveclouds 40s infinite ease-in;
 }
 
 .tunnel-three {
@@ -779,6 +824,20 @@ footer .footer-logos {
 }
 
 /* <><><><><><><><><><><><><><><ANIMATIONS<><><><><><><><><>><><> */
+@keyframes moveclouds {
+  100% {
+    /*//margin-top: 1000px;*/
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes movecloudsOpposite {
+  100% {
+    /*//margin-top: 1000px;*/
+    transform: rotate(-360deg);
+  }
+}
+
 @keyframes freak-out {
   0% {
     transform: rotate(1deg);

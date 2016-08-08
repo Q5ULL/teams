@@ -329,19 +329,20 @@ header{
  	    height: 1170px;
 		z-index: 35;
 		transition-duration: 1s;
-		#bottle-planet1,
-		#bottle-planet2,
+		#bottle-planet1{
+			animation-duration: 6s;
+			@include bottle_animation;
+		}
+		#bottle-planet2{
+			animation-duration: 8s;
+			@include bottle_animation;
+		}
 		#bottle-planet3{
-			position: absolute;
-			width: 1440px;
-			height: auto;
-			transition: all .2s ease-out;
-			transition-duration: 1s;
-
+			animation-duration: 10s;
+			@include bottle_animation;
 		}
 	}
 }
-
 .scrollmagic-pin-spacer{
 	z-index: 30;
 }
@@ -360,18 +361,12 @@ header{
 		left: 50%;
 	}
 	#target{
-		// width: 100px;
-		// height: 100px;
 		img#drunk_badguy{
 			position: absolute;
 		    top: 0;
 		    left: 0px;
 		    width: 190px;
 		    height: 436px;
-		 //    right: -58px; //use later to make badguy come in from left
-		 //    z-index: 40;
-			// width: 20%;
-			// height: 20%;
 		}
 	}	
 }
@@ -460,6 +455,18 @@ header{
 			transition: all .2s ease-out;
 			transition-duration: 1s;
 			//z-index: 35;
+		}
+		.img1 {
+			animation: moveclouds 200s infinite;
+		}
+		.img2 {
+			animation: movecloudsOpposite 100s infinite ease-out;
+		}
+		.img3{
+			animation: movecloudsOpposite 50s infinite ease-out;
+		}
+		.img4{
+			animation: moveclouds 40s infinite ease-in;
 		}
 	}
 }
@@ -701,6 +708,20 @@ footer{
 }	
 
 /* <><><><><><><><><><><><><><><ANIMATIONS<><><><><><><><><>><><> */
+
+@keyframes moveclouds {
+	100% {
+		/*//margin-top: 1000px;*/
+		transform: rotate(360deg);
+	}
+}
+@keyframes movecloudsOpposite {
+	100% {
+		/*//margin-top: 1000px;*/
+		transform: rotate(-360deg);
+	}
+}
+
 
 @keyframes freak-out {
   0% {

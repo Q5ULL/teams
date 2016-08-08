@@ -59,6 +59,18 @@ $desktopXL-breakpoint: 1400px;
     transition-duration: 1s;
 	z-index: 10;
 }
+@mixin bottle_animation{
+	position: absolute;
+	width: 1440px;
+	height: auto;
+	transition: all .2s ease-out;
+	animation-name: wiggle_x_rotate;
+	transition-duration: 0.2s;
+	animation-iteration-count: infinite; //1 -default
+	// animation-direction: reverse; //alternate
+	animation-direction: alternate; //alternate
+	animation-timing-function: ease-out;
+}
 
 @mixin leaves__rotate{
 	z-index: -1;
