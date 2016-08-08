@@ -58,6 +58,7 @@ div.page-wrapper {
   height: 11264px;
   margin: 0 auto;
   box-shadow: 0px 100px 39px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
 header {
@@ -348,6 +349,18 @@ header {
   animation: ease-in-out wave 12s infinite reverse;
 }
 
+.transition-bkg .layer .bottles-directions {
+  height: auto;
+  text-align: center;
+  color: white;
+  width: 1440px;
+  top: 1130px;
+  padding: 0 446px;
+  position: absolute;
+  z-index: 50;
+  font-size: 44px;
+}
+
 .transition-bkg .layer .transition-bkg__stars {
   position: absolute;
   height: 1440px;
@@ -515,6 +528,18 @@ header {
   top: 878px;
   position: absolute;
   z-index: 45;
+}
+
+.transition-bkg_two .layer .clouds-directions {
+  height: auto;
+  text-align: center;
+  color: white;
+  width: 1440px;
+  top: 1278px;
+  padding: 0 392px;
+  position: absolute;
+  z-index: 50;
+  font-size: 44px;
 }
 
 .transition-bkg_two .layer .transition-bkg__stars {

@@ -67,6 +67,7 @@ div.page-wrapper{
 	height: 11264px;
   	margin: 0 auto;	
   	box-shadow: 0px 100px 39px rgba(0,0,0,0.5);
+  	overflow: hidden;	
 }
 header{
 	position: fixed;
@@ -335,6 +336,17 @@ header{
 			animation: ease-in-out wave 12s infinite;
 			animation: ease-in-out wave 12s infinite reverse;
 		}
+		.bottles-directions{
+			height: auto;
+		    text-align: center;
+		    color: white;
+		    width: 1440px;
+		    top: 1130px;
+		    padding: 0 446px;
+		    position: absolute;
+		    z-index: 50;
+		    font-size: 44px;
+		}
 		.transition-bkg__stars{
 			position: absolute;
     	    height: 1440px;
@@ -475,6 +487,17 @@ header{
     		// width: 1440px;
     		z-index: 45;
 		}
+		.clouds-directions{
+			height: auto;
+		    text-align: center;
+		    color: white;
+		    width: 1440px;
+		    top: 1278px;
+		    padding: 0 392px;
+		    position: absolute;
+		    z-index: 50;
+		    font-size: 44px;
+		}
 		.transition-bkg__stars{
 			position: absolute;
     	    height: 1440px;
@@ -537,7 +560,6 @@ header{
  	    height: 1232px;
 		z-index: 35;
 		transition-duration: 1s;
-		//overflow: hidden; -figure out how to get to not get cut off on top/bottom
 		.cloud {
 			position: absolute;
 			right: -100px;
