@@ -33,8 +33,8 @@ $desktopXL-breakpoint: 1400px;
     transition-duration: 0.5s;
 }
 @mixin steady__animation{
-	width: 400px;
-    height: 518px;
+	width: 360px;
+    height: 466px;
 	// background: url(../img/alien/Alien-Falling-sprite.png);
 	// animation: freak-out 1.5s steps(2) infinite;
     background: url(../img/alien/Alien-Floating--small.png) 0 0 no-repeat;

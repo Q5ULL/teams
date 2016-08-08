@@ -95,11 +95,13 @@ header {
   width: 1440px;
   position: absolute;
   left: 1000px;
+  transition-duration: 1s;
 }
 
 .fixed-container .alien {
   position: fixed;
   top: 50px;
+  transition-duration: 1s;
 }
 
 .position--tunnelOne {
@@ -112,13 +114,15 @@ header {
 }
 
 .position--tunnelTwo {
-  top: 15%;
-  left: 560px;
+  left: 465px;
 }
 
 .position--planetTwo {
-  top: 50px;
-  left: 60px;
+  left: 0px;
+}
+
+.position--tunnelThree {
+  left: 658px;
 }
 
 .alien--sprite__falling {
@@ -133,8 +137,8 @@ header {
 }
 
 .alien--sprite__steady {
-  width: 400px;
-  height: 518px;
+  width: 360px;
+  height: 466px;
   background: url(../img/alien/Alien-Floating--small.png) 0 0 no-repeat;
   background-size: 100% auto;
   animation-name: hvr-hang;

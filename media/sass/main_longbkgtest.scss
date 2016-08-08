@@ -97,10 +97,12 @@ header{
     position: absolute;
     // top: 120px;
     left: 1000px;
+    transition-duration: 1s;
     // @include steady__animation;
 	.alien{
 		position: fixed;
 		top: 50px;
+		transition-duration: 1s;
 
 		//@include steady__animation;
 	}
@@ -120,14 +122,16 @@ header{
 // }
 
 .position--tunnelTwo{
-	top: 15%;
-	left: 560px;
+	left: 465px;
 	//@include tunnel__animation;
 }
 .position--planetTwo{
-	top: 50px;
-	left: 60px;
+	left: 0px;
 	//@include steady__animation;
+}
+.position--tunnelThree{
+	left: 658px;
+	//@include tunnel__animation;
 }
 
 .alien--sprite__falling{
