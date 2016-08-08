@@ -182,6 +182,16 @@ $(window).on("scroll", function() {
 		
 	}
 
+	if ($(window).innerWidth() >= 0){
+
+		if(position >= 4756){
+			$(".planet-fg").removeClass("hidden");
+			$('.frame').addClass("hidden");
+			//TweenMax.to($('.frame'), 0.5, {left: "0px", scale: '1'});
+		}
+		
+	}
+
 });
 
 //gets rid of regular image of planet and shows layers that become draggable
