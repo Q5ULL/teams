@@ -62,18 +62,18 @@ $(function () { // wait for document ready
 					{x: 620,	y: -60},
 					{x: 500,	y: -100},
 					{x: 380,	y: -20},
-					{x: 500,	y: 60},
+					{x: 500,	y: 160},
 					{x: 580,	y: -20},
-					{x: 620,	y: 15}
+					{x: 620,	y: -315}
 				]
 		},
 		leave : {
 			curviness: 1.25,
 			autoRotate: true,
 			values: [
-					{x: 200,	y: 20},
-					{x: 330,	y: 130},
-					{x: $(window).width() + 200,	y: 100},
+					{x: 300,	y: -220},
+					{x: 330,	y: -330},
+					{x: $(window).width() + 200,	y: -100},
 				]
 		}
 	};
@@ -87,7 +87,7 @@ $(function () { // wait for document ready
 		.add(TweenMax.to($("#drunk_badguy"), 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
 
 	// build scene
-	var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 500, offset: -100})
+	var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 800, offset: 120})
 		.setPin("#target")
 		.setTween(tween)
 		//.addIndicators() // add indicators (requires plugin)

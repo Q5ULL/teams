@@ -373,9 +373,9 @@ header {
 .panel #target img#drunk_badguy {
   position: absolute;
   top: 0;
-  left: -68px;
-  width: 140px;
-  height: 336px;
+  left: 0px;
+  width: 190px;
+  height: 436px;
 }
 
 .tunnel-two {
