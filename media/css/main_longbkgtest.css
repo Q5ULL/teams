@@ -507,7 +507,7 @@ header {
   width: 1440px;
   height: 1131px;
   position: relative;
-  top: -1673px;
+  top: -1795px;
   left: 0;
   z-index: -1;
 }
@@ -620,6 +620,9 @@ footer #footer__logo img {
 }
 
 footer .leaves__rotation {
+  animation-delay: 1s;
+  -webkit-animation: planet-rotate 7s linear infinite;
+  animation: planet-rotate 7s linear infinite;
   z-index: -1;
   width: 1440px;
   height: 1440px;
@@ -630,10 +633,6 @@ footer .leaves__rotation {
   left: -36px;
   transition: 3s;
   transform-origin: 50%;
-  -webkit-animation: planet-rotate 8s linear infinite;
-  animation: planet-rotate 8s linear infinite;
-  animation-duration: 8s;
-  animation-delay: 0s;
   animation-iteration-count: infinite;
 }
 
@@ -645,6 +644,96 @@ footer .leaves__rotation .leaves {
   background: url(../img/forest/Leaves2_03.png);
   position: absolute;
   z-index: 10;
+}
+
+footer .leaves__rotation_two {
+  animation-delay: 1s;
+  -webkit-animation: planet-rotate 8s linear infinite;
+  animation: planet-rotate 8s linear infinite;
+  z-index: -1;
+  width: 1440px;
+  height: 1440px;
+  border-radius: 1000px;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 570px;
+  left: -36px;
+  transition: 3s;
+  transform-origin: 50%;
+  animation-iteration-count: infinite;
+}
+
+footer .leaves__rotation_two .leaves {
+  top: -520px;
+  left: 28%;
+  width: 677px;
+  height: 562px;
+  background: url(../img/forest/Leaves2_03.png);
+  position: absolute;
+  z-index: 10;
+}
+
+footer .leaves__rotation_three {
+  animation-delay: 1s;
+  -webkit-animation: planet-rotate 9s linear infinite;
+  animation: planet-rotate 9s linear infinite;
+  z-index: -1;
+  width: 1440px;
+  height: 1440px;
+  border-radius: 1000px;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 570px;
+  left: -36px;
+  transition: 3s;
+  transform-origin: 50%;
+  animation-iteration-count: infinite;
+}
+
+footer .leaves__rotation_three .leaves {
+  top: -520px;
+  left: 28%;
+  width: 677px;
+  height: 562px;
+  background: url(../img/forest/Leaves2_03.png);
+  position: absolute;
+  z-index: 10;
+}
+
+footer .leaves__rotation_four {
+  animation-delay: 1s;
+  -webkit-animation: planet-rotate 10s linear infinite;
+  animation: planet-rotate 10s linear infinite;
+  z-index: -1;
+  width: 1440px;
+  height: 1440px;
+  border-radius: 1000px;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 570px;
+  left: -36px;
+  transition: 3s;
+  transform-origin: 50%;
+  animation-iteration-count: infinite;
+}
+
+footer .leaves__rotation_four .leaves {
+  top: -520px;
+  left: 28%;
+  width: 677px;
+  height: 562px;
+  background: url(../img/forest/Leaves2_03.png);
+  position: absolute;
+  z-index: 10;
+}
+
+footer .footer-leaves {
+  position: absolute;
+  bottom: 473px;
+  left: -20px;
+  width: 1600px;
+  height: auto;
+  z-index: -1;
 }
 
 footer .footer-planet {
@@ -790,10 +879,10 @@ footer .footer-logos {
 
 @keyframes planet-rotate {
   from {
-    transform: rotate(-360deg);
+    transform: rotate(-180deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
 }
 

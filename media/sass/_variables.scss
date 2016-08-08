@@ -60,6 +60,34 @@ $desktopXL-breakpoint: 1400px;
 	z-index: 10;
 }
 
+@mixin leaves__rotate{
+	z-index: -1;
+	width: 1440px;
+	height: 1440px;
+	border-radius:1000px;
+	border: 5px solid #fff;
+	position: absolute;
+    top: 570px;
+	left: -36px;
+	transition: 3s;
+	transform-origin: 50%;
+	// -webkit-animation: planet-rotate 8s linear infinite;
+	// animation: planet-rotate 8s linear infinite;
+	// animation-duration: 8s;
+	animation-iteration-count: infinite;
+	.leaves{
+		top: -520px;
+		left: 28%;
+		width: 677px;
+		height: 562px;
+		// border-radius: 40px;
+		background: url(../img/forest/Leaves2_03.png);
+		position: absolute;
+		z-index: 10;
+	}
+}
+
+
 @mixin bp-tablet {
   	@media only screen and ( min-width: $tablet-breakpoint){
 		@content;
