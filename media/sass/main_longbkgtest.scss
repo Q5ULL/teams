@@ -107,6 +107,7 @@ header{
 }
 .position--tunnelOne{
 	left: 560px;
+	z-index: 0;
 	//@include tunnel__animation;
 }
 .position--planetOne{
@@ -271,9 +272,16 @@ header{
 			position: absolute;
     	    height: 1440px;
     		width: 1440px;
-    		z-index: 0;
+    		z-index: -2;
+		}
+		.scene2__tunnel{
+		    position: absolute;
+		    height: auto;
+		    width: 1440px;
+		    z-index: -1;
 		}
     }
+
 
 }
 
