@@ -282,7 +282,11 @@ header{
 			background-size: cover;
 			background-image: url('../img/background-wave-transition/rightwave3.png');
 			//animation: cubic-bezier(0,.25,.91,.72) wave 6s infinite;
+<<<<<<< HEAD
 			animation: ease-in-out wave 6s infinite;
+=======
+			animation: ease-in-out wave 6s infinite reverse;
+>>>>>>> origin/master
 
 		}
 		.tunnel__stars{
@@ -739,6 +743,7 @@ footer{
 	}
 }
 @keyframes wave {
+<<<<<<< HEAD
  0%{
    background-position: 0px 100%;
  }
@@ -748,6 +753,17 @@ footer{
  100% {
    background-position: 0px 100%;
  }
+=======
+  0%{
+    background-position: 0px 100%;
+  }
+  50% {
+    background-position: 500px 100%;
+  }
+  100% {
+    background-position: 0px 100%;
+  }
+>>>>>>> origin/master
 }
 
 @keyframes freak-out {
