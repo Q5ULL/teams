@@ -1,10 +1,11 @@
-div {
+.waves {
 	height: 500px;
+	width: 1440px;
 	position: relative;
-	width: 100%;
+	/*width: 100%;*/
 	background-size: cover;
 	background-image: url('../img/background-wave-transition/rightwave3.png');
-	animation: cubic-bezier(0,.25,.91,.72) wave 4s infinite;
+	animation: cubic-bezier(0,.25,.91,.72) wave 6s infinite;
 }
 
 @keyframes wave {

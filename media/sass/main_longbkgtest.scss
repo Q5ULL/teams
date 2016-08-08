@@ -272,6 +272,19 @@ header{
 			// width: 1440px;
 			// height: auto;
 		}
+		.waves {
+			height: 600px;
+			width: 1440px;
+			top: 200px;
+			position: relative;
+			/*width: 100%;*/
+			z-index: -2;
+			background-size: cover;
+			background-image: url('../img/background-wave-transition/rightwave3.png');
+			//animation: cubic-bezier(0,.25,.91,.72) wave 6s infinite;
+			animation: ease-in wave 6s infinite;
+
+		}
 		.tunnel__stars{
 			position: absolute;
     	    height: 1440px;
@@ -725,7 +738,14 @@ footer{
 		transform: rotate(-360deg);
 	}
 }
-
+@keyframes wave {
+	0%{
+		background-position: 0px;
+	}
+	100% {
+		background-position: 2000px;
+	}
+}
 
 @keyframes freak-out {
   0% {
