@@ -39,9 +39,8 @@ section div {
 
 .showFact {
   position: absolute;
-  top: 4175px;
-  left: 1035px;
-  border: 1px solid white;
+  top: 4200px;
+  left: 1000px;
   width: 0;
   /* width as the % value */
   transform-origin: 50% 50%;
@@ -55,7 +54,7 @@ section div {
 }
 
 .showFact.transform {
-  width: 380px;
+  width: 417px;
   height: 200px;
   transition-duration: 1s;
 }
@@ -72,10 +71,6 @@ section div {
   margin: 0 auto;
   border-radius: 4px;
   text-align: center;
-}
-
-li {
-  color: white;
 }
 
 #slider #image_slider {
@@ -127,12 +122,11 @@ li {
 .nav-bullet ul li .nav {
   margin: 0 auto;
   list-style-type: none;
-  /*     text-indent : -9999px; */
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   float: left;
-  margin: 0 5px;
+  margin: 0 12px;
   background-color: #FFF;
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -146,6 +140,7 @@ li {
 
 .nav-bullet ul li a:hover, .nav-bullet ul li a.active {
   background-color: #bf9756;
+  opacity: 0.8;
 }
 
 .active {
@@ -167,7 +162,10 @@ a.control_prev:hover, a.control_next:hover {
 }
 
 .slide p {
-  padding: 8px;
+  padding: 26px 0px;
+  height: 193px;
+  line-height: 1.3em;
+  background: url(../img/border_slider.png) no-repeat;
 }
 
 .transform .slide {

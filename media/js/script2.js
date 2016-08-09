@@ -5,9 +5,9 @@ $(document).ready( function() {
   $(function() {
 
 //     find the window.height, and check when it scrolls. when scroll is triggered, call the function to check if the animaition tags are there
-  var $window           = $(window),
-      win_height_padded = $window.height() * 1.1;
-      $window.on('scroll', revealOnScroll);
+  	var $window= $(window),
+    win_height_padded = $window.height() * 1.1;
+    $window.on('scroll', revealOnScroll);
 
   function revealOnScroll() {
     var scrolled = $window.scrollTop();
@@ -22,7 +22,7 @@ $(document).ready( function() {
       var $this     = $(this),
           offsetTop = $this.offset().top;
 //       trigger the animation once the div is 25% away from the top of the window
-      if (scrolled + (win_height_padded*.25) > offsetTop) {
+      if (scrolled + (win_height_padded*.75) > offsetTop) {
         //win_height_padded = window height multiplied by 3/4 of space
         if ($this.data('timeout')) {
           window.setTimeout(function(){
@@ -57,19 +57,8 @@ $(document).ready( function() {
 });
   
   
-  
-  
-  
-  
-  
-//   $( 'button' ).click(function() {
-// //  $( "div" ).toggle({ effect: "scale", direction: "horizontal" });
-//   $('h1').toggleClass("transform");
-//     // $('.nav-bullet').toggleClass("transform");
-// });
-  
-  var currentPosition = 0;
-	var slideWidth = 380;
+  	var currentPosition = 0;
+	var slideWidth = 417;
 	var slides = $('.slide');
 	var numberOfSlides = slides.length;
 	// Remove scrollbar in JS
