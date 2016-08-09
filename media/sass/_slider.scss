@@ -30,6 +30,11 @@ section div {
     height: 200px;
   transition-duration: 1s;
 }
+.second_slider{
+  position: absolute;
+  top: 7475px;
+  left: 35px;
+}
 
 #slider {
   position: relative;
@@ -72,50 +77,31 @@ li {
 #rightControl {
     display: none;
 }
-/* a.control_prev, a.control_next {
-  position: absolute;
-  top: 40%;
-  z-index: 999;
-  display: block;
-  padding: 4% 3%;
-  width: auto;
-  height: auto;
-  background: #2a2a2a;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  opacity: 0.8;
-  cursor: pointer;
-  
-} */
 .nav-bullet {
     position: absolute;
     margin: 0 auto;
     left: 50%;
     transform: translateX(-50%);
     padding-top: 170px;
-}
-.nav-bullet ul li {
-    float : left;
-    /*margin-top : 20px;*/
-    margin: 0 auto; 
-/*    width: 100%; */
-    list-style-type: none;
-}
-.nav-bullet ul li a {
-  margin: 0 auto;
-    list-style-type : none;
-/*     text-indent : -9999px; */
-    display : block;
-    width : 15px;
-    height : 15px;
-    float : left;
-    margin : 0 5px;
-    background-color : #FFF;
-    border-radius : 10px;
-    -moz-border-radius : 10px;
-    -webkit-border-radius : 10px;
+    ul li{
+      float : left;
+      margin: 0 auto; 
+      list-style-type: none;
+      .nav{
+        margin: 0 auto;
+        list-style-type : none;
+    /*     text-indent : -9999px; */
+        display : block;
+        width : 15px;
+        height : 15px;
+        float : left;
+        margin : 0 5px;
+        background-color : #FFF;
+        border-radius : 10px;
+        -moz-border-radius : 10px;
+        -webkit-border-radius : 10px;
+      }
+    }
 }
 /*BULLET HIGHLIGHT CLASS*/
 .nav-bullet ul li a.activeBullet {
