@@ -20,7 +20,7 @@ section div {
     transform-origin: 50% 50%;
     transition: all .8s ease-in;
     margin: 0 auto;
-    //overflow: hidden;
+    overflow: hidden;
     text-align: center;
     font-size: 28px;
     color: white;
@@ -28,7 +28,7 @@ section div {
 }
 .showFact.transform {
     width: 417px;
-    height: 200px;
+    height: 250px;
     transition-duration: 1s;
 }
 .second_slider{
@@ -123,7 +123,13 @@ a.control_prev:hover, a.control_next:hover {
 #slideInner{
     transform-origin: 50% 50%;
 }
-
+#slidesContainer{
+    .title_slider{
+        font-size: 30px;
+        text-align: center;
+        color: white;
+    }
+}
 .slide {
     transform: translateX(-50%);
     transition: all 1s ease-in;

@@ -47,6 +47,7 @@ section div {
   transform-origin: 50% 50%;
   transition: all .8s ease-in;
   margin: 0 auto;
+  overflow: hidden;
   text-align: center;
   font-size: 28px;
   color: white;
@@ -55,7 +56,7 @@ section div {
 
 .showFact.transform {
   width: 417px;
-  height: 200px;
+  height: 250px;
   transition-duration: 1s;
 }
 
@@ -154,6 +155,12 @@ a.control_prev:hover, a.control_next:hover {
 
 #slideInner {
   transform-origin: 50% 50%;
+}
+
+#slidesContainer .title_slider {
+  font-size: 30px;
+  text-align: center;
+  color: white;
 }
 
 .slide {
