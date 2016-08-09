@@ -174,14 +174,14 @@ $(window).on("scroll", function() {
 	if ($(window).innerWidth() >= 0){
 
 		if(position_backTop <= 8070){
-			$(".back-to-top").css({"left": "-170px"});
+			$(".back-to-top").css({"left": "-180px"});
 			
 		} else{
 			$(".back-to-top").css({"left": "0"});
 		}
 		
 	}
-	
+
 	//Restart for bottles and clouds
 	if ($(window).innerWidth() >= 0){
 		//$beingDragged2 = .query;
