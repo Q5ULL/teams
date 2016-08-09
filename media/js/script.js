@@ -139,7 +139,7 @@ $(window).on("scroll", function() {
 			$(".alien").removeClass("alien--sprite__falling");
 			$(".alien").addClass("alien--sprite__steady");
 		}
-		if(position_alien >= 3412){
+		if(position_alien >= 3601){
 			$(".fixed-container").removeClass("position--planetOne");
 			$(".fixed-container").removeClass("position--planetTwo");
 			$(".fixed-container").addClass("position--tunnelTwo");
