@@ -22,7 +22,7 @@ $(document).ready( function() {
       var $this     = $(this),
           offsetTop = $this.offset().top;
 //       trigger the animation once the div is 25% away from the top of the window
-      if (scrolled + (win_height_padded*.75) > offsetTop) {
+      if (scrolled + (win_height_padded*.85) > offsetTop) {
         //win_height_padded = window height multiplied by 3/4 of space
         if ($this.data('timeout')) {
           window.setTimeout(function(){
