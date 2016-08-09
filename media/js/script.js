@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 	$(".back-to-top").click(function(){
 		console.log("scrollTo Works");
-		$.scrollTo( $(".big-image"), 3000 );
+		$.scrollTo( $(".big-image"), 5000 );
 		// $.scrollTo( 150, 2000 );//scroll to top: 150
 
 	});
