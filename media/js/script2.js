@@ -58,113 +58,73 @@ $(document).ready( function() {
 });
   
   
-  	var currentPosition = 0;
-	var slideWidth = 417;
-	var slides = $('.slide');
-	var slides_two = $('.slide_two');
-	var numberOfSlides = slides.length;
-	// Remove scrollbar in JS
-	$('#slidesContainer').css('overflow', 'hidden');
 
-	// Wrap all .slides with #slideInner div
-	 slides.wrapAll('<div id="slideInner"></div>')
-	// slides_two.wrapAll('<div id="slideInner"></div>')
-	// Float left to display horizontally, readjust .slides width
-	.css({
-	    'float': 'left',
+
+
+
+	$(".slideshow").each(function() {
+
+		var $the_slideshow = $(this);
+
+	  	var currentPosition = 0;
+		var $slides = $the_slideshow.find('.slide');
+		var $bullets = $the_slideshow.find('#bullets');
+		var slideWidth = 417;
+		var numberOfSlides = $slides.length;
+
+		$bullets.find(".nav").first().addClass("activeBullet");
+
+		// Remove scrollbar in JS
+		$the_slideshow.find('#slidesContainer').css('overflow', 'hidden');
+
+		// Wrap all .slides with #slideInner div
+		$slides.css({
+		    'float': 'left',
 	        'width': slideWidth
-	});
+		});
 
-	// Set #slideInner width equal to total width of all slides
-	$('#slideInner').css('width', slideWidth * numberOfSlides);
-	$('#slideInner_two').css('width', slideWidth * numberOfSlides);
+		// Set #slideInner width equal to total width of all slides
+		$the_slideshow.find('#slideInner').css('width', slideWidth * numberOfSlides);
+		
+	    $the_slideshow.on('click', '.nav', function(evt) {
+		    evt.preventDefault();
+		    
+	        var $item = $(this).closest("li");
+	        currentPosition = $item.index();
 
-	// Insert controls in the DOM
-    // ADDED CLASS 'nav' -->
-	$('#slideshow')
-	    .prepend('<span class="control nav" id="leftControl">Clicking moves left</span>')
-	    .append('<span class="control nav" id="rightControl">Clicking moves right</span>');
-	// $('#slideshow_two')
-	//     .prepend('<span class="control nav_two" id="leftControl">Clicking moves left</span>')
-	//     .append('<span class="control nav_two" id="rightControl">Clicking moves right</span>');
+	        console.log(currentPosition);
+	    
+		    
+	        $bullets.find(".nav").removeClass('activeBullet').eq(currentPosition).addClass('activeBullet');
 
-    //BULLETS MANAGER - TO HIGHLIGHT THE ACTIVE BULLET ON CAROUSEL BUILT
-    showBullets();
+		    // Hide / show controls
+		    // Move slideInner using margin-left
+		    $the_slideshow.find('#slideInner').animate({
+	        //'transformOrigin': '50% 50%'
+		        'marginLeft': slideWidth * (-currentPosition)
+		    });
+		});
 
-	// Hide left arrow control on first load
-	// Create event listeners for .controls clicks
+
+	})
 	
-    //USE EVENT DELEGATION AS YOU HAVE DYNAMICALLY GENERATED NAV ELEMENTS
-    $('#slideshow').on('click', '.nav', function (evt) {
-	    evt.preventDefault();
-	    // Determine new position
-        // USE THIS.ID AS IT'S A BIT FASTER AND CLEANER
-	    if (this.id == 'rightControl') {
-	        if (currentPosition == numberOfSlides - 1) currentPosition = 0;
-	        else currentPosition++;
-	    } else if (this.id == 'leftControl') {
-	        if (currentPosition == 0) currentPosition = numberOfSlides - 1;
-	        else currentPosition--;
-
-        //THE BULLETS RELATED CONDITION
-        } else if($(this).closest("ul").is("#bullets")) {
-            var $item = $(this).closest("li");
-            currentPosition = $item.index();
-        }
-      
-        //BULLETS MANAGER
-        showBullets();
-
-	    // Hide / show controls
-	    // Move slideInner using margin-left
-	    $('#slideInner').animate({
-        //'transformOrigin': '50% 50%'
-	        'marginLeft': slideWidth * (-currentPosition)
-	    });
-	});
-	//USE EVENT DELEGATION AS YOU HAVE DYNAMICALLY GENERATED NAV ELEMENTS
- //    $('#slideshow_two').on('click', '.nav_two', function (e) {
-	//     e.preventDefault();
-	//     // Determine new position
- //        // USE THIS.ID AS IT'S A BIT FASTER AND CLEANER
-	//     if (this.id == 'rightControl') {
-	//         if (currentPosition == numberOfSlides - 1) currentPosition = 0;
-	//         else currentPosition++;
-	//     } else if (this.id == 'leftControl') {
-	//         if (currentPosition == 0) currentPosition = numberOfSlides - 1;
-	//         else currentPosition--;
-
- //        //THE BULLETS RELATED CONDITION
- //        } else if($(this).closest("ul").is("#bullets_two")) {
- //            var $item_two = $(this).closest("li");
- //            currentPosition = $item_two.index();
- //        }
-      
- //        //BULLETS MANAGER
- //        showBullets();
-
-	//     // Hide / show controls
-	//     // Move slideInner using margin-left
-	//     $('#slideInner_two').animate({
- //        //'transformOrigin': '50% 50%'
-	//         'marginLeft': slideWidth * (-currentPosition)
-	//     });
-	// });
-
-    //THE BULLET MANAGER FUNCTION
-    function showBullets() {
-        var $bullets = $('#bullets');
-        $bullets.find(".nav").removeClass('activeBullet');
-        $bullets.find(".nav:eq(" + currentPosition + ")").addClass('activeBullet');
-    }
-    //THE BULLET MANAGER FUNCTION
-    // function showBullets() {
-    //     var $bullets_two = $('#bullets_two');
-    //     $bullets_two.find(".nav_two").removeClass('activeBullet_twp');
-    //     $bullets_two.find(".nav_two:eq(" + currentPosition + ")").addClass('activeBullet_two');
-    // }
     
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* - 08-3-16
 	Plugin to make elements drag and drop, by adding .draggable to the image
 	Dragged Elements dispatch these events: startdrag, stopdrag
