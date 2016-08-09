@@ -153,7 +153,7 @@ $(window).on("scroll", function() {
 			$(".alien").addClass("alien--sprite__steady");
 			$(".alien").removeClass("alien--sprite__falling");
 		}
-		if(position_alien >= 6758){
+		if(position_alien >= 6920){
 			$(".fixed-container").removeClass("position--planetTwo");
 			$(".fixed-container").addClass("position--tunnelThree");
 			$(".alien").addClass("alien--sprite__falling");
