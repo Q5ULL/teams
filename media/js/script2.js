@@ -41,6 +41,7 @@ $(document).ready( function() {
           //     }, 2000);
         }
       }
+      
     });
     // check to see if the tag is on the page, if it isn't remove the tag !!! this only seems to work one way, it should reset but it doesnt work right now
    $(".showFact.transform").each(function (index) {

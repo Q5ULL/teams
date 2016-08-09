@@ -23,7 +23,8 @@ TABLE OF CONTENTS:
 
 /*keep content on float element from going over eachother*/
 /* 1. VARIABLES  ========================================= */
-.open_slider {
+.open_slider,
+.open_slider_two {
   position: absolute;
   top: 3800px;
   left: 1250px;
@@ -793,8 +794,6 @@ header {
   z-index: -2;
   background-size: cover;
   background-image: url("../img/background-wave-transition/rightwave4.png");
-  animation: ease-in-out wave 6s infinite;
-  animation: ease-in-out wave 6s infinite reverse;
 }
 
 .tunnel-three .layer .tunnel-overlay-three {
@@ -1120,7 +1119,7 @@ footer .footer__copyright {
 
 footer .footer__copyright p {
   color: #7c6b5a;
-  padding: 60px 0 0 35px;
+  padding: 55px 0 0 35px;
   text-transform: uppercase;
   font-size: 28px;
 }
@@ -1295,12 +1294,6 @@ footer .footer-logos {
 }
 
 @-webkit-keyframes parallax_fg1 {
-  /*  0% {
-    background-position: -2765px 90%;
-  }
-  100% {
-    background-position: -550px 90%;
-  }*/
   0% {
     background-position: -27px 90%;
   }

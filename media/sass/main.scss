@@ -600,8 +600,8 @@ header{
 			background-size: cover;
 			background-image: url('../img/background-wave-transition/rightwave4.png');
 			//animation: cubic-bezier(0,.25,.91,.72) wave 6s infinite;
-			animation: ease-in-out wave 6s infinite;
-			animation: ease-in-out wave 6s infinite reverse;
+			//animation: ease-in-out wave 6s infinite;
+			//animation: ease-in-out wave 6s infinite reverse;
 		}
     	.tunnel-overlay-three{
     		position: absolute;
@@ -824,7 +824,6 @@ footer{
 		height: 970px;
 		z-index: -1;
 	}
-
 	.footer__copyright{
 		position: absolute;
 		bottom: 0;
@@ -835,7 +834,7 @@ footer{
 		box-shadow: 0px -12px 5px rgba(0,0,0, 0.2);
 		p{
 			color: #7c6b5a;
-			padding: 60px 0 0 35px;
+			padding: 55px 0 0 35px;
 			text-transform: uppercase;
 			font-size: 28px;
 		}
@@ -977,12 +976,6 @@ footer{
 }
 
 @-webkit-keyframes parallax_fg1 {
-/*  0% {
-    background-position: -2765px 90%;
-  }
-  100% {
-    background-position: -550px 90%;
-  }*/
     0% {
     background-position: -27px 90%;
   }
