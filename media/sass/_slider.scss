@@ -20,7 +20,7 @@ section div {
     transform-origin: 50% 50%;
     transition: all .8s ease-in;
     margin: 0 auto;
-    overflow: hidden;
+    //overflow: hidden;
     text-align: center;
     font-size: 28px;
     color: white;
@@ -83,7 +83,7 @@ section div {
     margin: 0 auto;
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 170px;
+    padding-top: 200px;
     ul li{
       float : left;
       margin: 0 auto; 
