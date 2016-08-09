@@ -41,7 +41,7 @@ $(document).ready( function() {
           //     }, 2000);
         }
       }
-      
+
     });
     // check to see if the tag is on the page, if it isn't remove the tag !!! this only seems to work one way, it should reset but it doesnt work right now
    $(".showFact.transform").each(function (index) {
@@ -61,12 +61,14 @@ $(document).ready( function() {
   	var currentPosition = 0;
 	var slideWidth = 417;
 	var slides = $('.slide');
+	var slides_two = $('.slide_two');
 	var numberOfSlides = slides.length;
 	// Remove scrollbar in JS
 	$('#slidesContainer').css('overflow', 'hidden');
 
 	// Wrap all .slides with #slideInner div
-	slides.wrapAll('<div id="slideInner"></div>')
+	 slides.wrapAll('<div id="slideInner"></div>')
+	// slides_two.wrapAll('<div id="slideInner"></div>')
 	// Float left to display horizontally, readjust .slides width
 	.css({
 	    'float': 'left',
@@ -75,12 +77,16 @@ $(document).ready( function() {
 
 	// Set #slideInner width equal to total width of all slides
 	$('#slideInner').css('width', slideWidth * numberOfSlides);
+	$('#slideInner_two').css('width', slideWidth * numberOfSlides);
 
 	// Insert controls in the DOM
     // ADDED CLASS 'nav' -->
 	$('#slideshow')
 	    .prepend('<span class="control nav" id="leftControl">Clicking moves left</span>')
 	    .append('<span class="control nav" id="rightControl">Clicking moves right</span>');
+	// $('#slideshow_two')
+	//     .prepend('<span class="control nav_two" id="leftControl">Clicking moves left</span>')
+	//     .append('<span class="control nav_two" id="rightControl">Clicking moves right</span>');
 
     //BULLETS MANAGER - TO HIGHLIGHT THE ACTIVE BULLET ON CAROUSEL BUILT
     showBullets();
@@ -116,6 +122,34 @@ $(document).ready( function() {
 	        'marginLeft': slideWidth * (-currentPosition)
 	    });
 	});
+	//USE EVENT DELEGATION AS YOU HAVE DYNAMICALLY GENERATED NAV ELEMENTS
+ //    $('#slideshow_two').on('click', '.nav_two', function (e) {
+	//     e.preventDefault();
+	//     // Determine new position
+ //        // USE THIS.ID AS IT'S A BIT FASTER AND CLEANER
+	//     if (this.id == 'rightControl') {
+	//         if (currentPosition == numberOfSlides - 1) currentPosition = 0;
+	//         else currentPosition++;
+	//     } else if (this.id == 'leftControl') {
+	//         if (currentPosition == 0) currentPosition = numberOfSlides - 1;
+	//         else currentPosition--;
+
+ //        //THE BULLETS RELATED CONDITION
+ //        } else if($(this).closest("ul").is("#bullets_two")) {
+ //            var $item_two = $(this).closest("li");
+ //            currentPosition = $item_two.index();
+ //        }
+      
+ //        //BULLETS MANAGER
+ //        showBullets();
+
+	//     // Hide / show controls
+	//     // Move slideInner using margin-left
+	//     $('#slideInner_two').animate({
+ //        //'transformOrigin': '50% 50%'
+	//         'marginLeft': slideWidth * (-currentPosition)
+	//     });
+	// });
 
     //THE BULLET MANAGER FUNCTION
     function showBullets() {
@@ -123,6 +157,12 @@ $(document).ready( function() {
         $bullets.find(".nav").removeClass('activeBullet');
         $bullets.find(".nav:eq(" + currentPosition + ")").addClass('activeBullet');
     }
+    //THE BULLET MANAGER FUNCTION
+    // function showBullets() {
+    //     var $bullets_two = $('#bullets_two');
+    //     $bullets_two.find(".nav_two").removeClass('activeBullet_twp');
+    //     $bullets_two.find(".nav_two:eq(" + currentPosition + ")").addClass('activeBullet_two');
+    // }
     
 });
 /* - 08-3-16
