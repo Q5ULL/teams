@@ -71,9 +71,9 @@ $(function () { // wait for document ready
 			curviness: 1.25,
 			autoRotate: true,
 			values: [
-					{x: 300,	y: -220},
-					{x: 330,	y: -330},
-					{x: $(window).width() + 200,	y: -100},
+					{x: 620,	y: -315},
+					{x: 620,	y: -315},
+					{x: $(window).width() + 200,	y: 0},
 				]
 		}
 	};
