@@ -777,6 +777,7 @@ footer{
     	width: 373px;
     	bottom: 150px;
     	margin: 0 534px;
+    	cursor: pointer;
     	img{
     		margin-left: -23px;
     	}
@@ -839,14 +840,25 @@ footer{
 			font-size: 28px;
 		}
 	}
-	.footer-logos{
+	.footer__social{
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		width: 400px;
-		height: auto;
 		padding-right: 35px;
+		margin-bottom: 10px;
 	}
+	.social_container{
+		text-decoration: none;
+		.footer-logos{
+			width: 100px;
+			transition-duration: 0.5s;
+			&:hover{
+				transition-duration: 0.5s;
+				transform: scale(1.05);
+			}
+		}
+	}
+
 }	
 
 /* <><><><><><><><><><><><><><><ANIMATIONS<><><><><><><><><>><><> */

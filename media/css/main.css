@@ -1026,6 +1026,7 @@ footer #footer__logo {
   width: 373px;
   bottom: 150px;
   margin: 0 534px;
+  cursor: pointer;
 }
 
 footer #footer__logo img {
@@ -1174,13 +1175,26 @@ footer .footer__copyright p {
   font-size: 28px;
 }
 
-footer .footer-logos {
+footer .footer__social {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 400px;
-  height: auto;
   padding-right: 35px;
+  margin-bottom: 10px;
+}
+
+footer .social_container {
+  text-decoration: none;
+}
+
+footer .social_container .footer-logos {
+  width: 100px;
+  transition-duration: 0.5s;
+}
+
+footer .social_container .footer-logos:hover {
+  transition-duration: 0.5s;
+  transform: scale(1.05);
 }
 
 /* <><><><><><><><><><><><><><><ANIMATIONS<><><><><><><><><>><><> */
